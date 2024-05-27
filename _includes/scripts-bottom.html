@@ -1,0 +1,15 @@
+<script src="/assets/js/lightbox.js"></script>
+<script>
+    window.onload = function() {
+        // Background scrolling menu
+        window.onscroll = function() {
+            var a = document.querySelector("#header");
+            a.style.background = 'rgba(0, 0, 0, 0.5)';
+        };
+
+        // Gallery
+        [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
+            el.lightbox = new Lightbox(el);
+        });
+    }
+</script>
