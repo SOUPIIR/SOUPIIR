@@ -2,9 +2,9 @@ import os
 import requests
 import yaml
 
-ACCESS_TOKEN = "f3e7483a7453a7f96863482da2990968"
-USER_ID = "2410931"
-SHOWCASE_ID= "11543517"
+
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+SHOWCASE_ID = os.getenv("SHOWCASE_ID")
 
 
 if not ACCESS_TOKEN or not SHOWCASE_ID:

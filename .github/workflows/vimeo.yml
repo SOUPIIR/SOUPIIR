@@ -23,8 +23,8 @@ jobs:
 
       - name: Run script
         env:
-          ACCESS_TOKEN: ${{ secrets.VIMEO_TOKEN }}
-          SHOWCASE_ID: "1234567"   # ⚠️ Remplace par ton showcase ID
+          ACCESS_TOKEN: ${{ secrets.VIMEO_API_KEY }}
+          SHOWCASE_ID: "11543517"
         run: |
           python fetch_vimeo_showcase.py
 
