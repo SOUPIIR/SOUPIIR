@@ -3,16 +3,16 @@ import requests
 import yaml
 
 
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
 SHOWCASE_ID = os.getenv("SHOWCASE_ID")
 
 
-if not ACCESS_TOKEN or not SHOWCASE_ID:
-    print("❌ ACCESS_TOKEN ou SHOWCASE_ID manquant")
+if not VIMEO_API_KEY or not SHOWCASE_ID:
+    print("❌ VIMEO_API_KEY ou SHOWCASE_ID manquant")
     exit(1)
 
 url = f"https://api.vimeo.com/albums/{SHOWCASE_ID}/videos"
-headers = {"Authorization": f"bearer {ACCESS_TOKEN}"}
+headers = {"Authorization": f"bearer {VIMEO_API_KEY}"}
 
 video_list = []
 page = 1
@@ -30,12 +30,16 @@ while True:
         break
 
     for v in videos:
+        uri_last = v["uri"].split("/")[-1]
+        parts = uri_last.split(":")
+        video_id = parts[0]
+        video_hash = parts[1] if len(parts) > 1 else ""
+
         video_list.append({
-            "id": v["uri"].split("/")[-1],
+            "id": video_id,
+            "hash": video_hash,
             "title": v["name"],
             "description": v.get("description", ""),
-            "url": f"https://vimeo.com/{v['uri'].split('/')[-1]}",
-            "embed_url": f"https://player.vimeo.com/video/{v['uri'].split('/')[-1]}",
             "thumbnail": v["pictures"]["sizes"][-1]["link"] if v.get("pictures") else ""
         })
 

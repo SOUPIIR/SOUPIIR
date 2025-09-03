@@ -1,3 +1,3 @@
 # SOUPIIR
 
-https://soupiir.github.io
+https://www.soupiir.com

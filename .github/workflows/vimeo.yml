@@ -2,8 +2,8 @@ name: Update Vimeo Showcase
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # Tous les jours à 02:00 UTC
-  workflow_dispatch:       # Permet aussi de lancer manuellement
+    - cron: "0 2 * * *"
+  workflow_dispatch:
 
 jobs:
   update-videos:
