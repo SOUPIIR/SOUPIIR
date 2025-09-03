@@ -43,27 +43,27 @@ jobs:
           git pull --rebase
           git push
 
-build-and-deploy:
-    needs: update-videos
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+  build-and-deploy:
+      needs: update-videos
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
+        - name: Setup Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: '3.1'
+            bundler-cache: true
 
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
+        - name: Build Jekyll site
+          run: bundle exec jekyll build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: ./_site
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
