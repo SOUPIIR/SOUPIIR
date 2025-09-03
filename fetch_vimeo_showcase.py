@@ -18,7 +18,7 @@ video_list = []
 page = 1
 
 while True:
-    response = requests.get(url, headers=headers, params={"page": page, "per_page": 50})
+    response = requests.get(url, headers=headers, params={"sort": "manual", "page": page, "per_page": 50})
     if response.status_code != 200:
         print("❌ Erreur API:", response.text)
         break

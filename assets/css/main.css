@@ -1,7 +1,7 @@
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Courier Prime', monospace;
+    font-family: Helvetica, 'Courier Prime', monospace;
 }
 
 header {
@@ -10,6 +10,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 1.5em 0;
+    background-color: #000;
 }
 
 h1 {
@@ -24,6 +25,10 @@ h2 {
 }
 
 /* Menu */
+.home-title {
+    background-image: url(../img/logo_mini.png);
+}
+
 .home-title,
 nav a {
     display: block;
@@ -115,7 +120,7 @@ main {
     top: -50%;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0;
 }
 
