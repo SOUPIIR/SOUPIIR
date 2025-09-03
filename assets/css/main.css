@@ -57,6 +57,7 @@ nav a:hover {
     float: left;
     padding-left: 3em;
     font-size: 1.2em;
+    background-color: #000;
 }
 
 .first-nav {
@@ -88,6 +89,20 @@ main {
 
 .main-video {
     width: 100%;
+}
+
+main.about {
+  background: url(../img/grey.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+}
+
+main.about div {
+    margin-bottom: 1em;
+    margin-left: 3em;
 }
 
 /* Gallery */
@@ -171,8 +186,8 @@ header label,
         width: auto;
     }
 
-    .home-title {
-        float: left;
+    .third-nav li {
+        padding: 0;
     }
 
     .first-nav,
@@ -181,8 +196,6 @@ header label,
     .first-nav li,
     .second-nav li,
     .third-nav li {
-        float: none;
-        padding: 0 0 0 1em;
         width: 100%;
     }
 
@@ -193,24 +206,27 @@ header label,
     header label {
         width: 30px;
         display: block;
-        float: right;
         margin: 0 1em;
         font-size: 40px;
         color: #fff;
         cursor: pointer;
+        position: absolute;
+        top: .4em;
+        right: 0;
     }
 
-    .main-nav {
+    .third-nav {
         display: none;
         height: 220px;
         text-align: center;
+        top: 0;
     }
 
-    #toggle:checked + .main-nav {
+    #toggle:checked + .third-nav {
         display: block;
         clear: both;
         height: 100%;
-        background: rgba(0, 0, 0, -0.5);
+        background: rgba(0, 0, 0);
     }
 
     .gallery h2 {
