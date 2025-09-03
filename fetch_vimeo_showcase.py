@@ -35,12 +35,19 @@ while True:
         video_id = parts[0]
         video_hash = parts[1] if len(parts) > 1 else ""
 
+        thumbnail = ""
+        if v.get("pictures") and v["pictures"].get("sizes"):
+            for s in v["pictures"]["sizes"]:
+                if s["width"] == 295 and s["height"] == 166:
+                    thumbnail = s["link"]
+                    break
+
         video_list.append({
             "id": video_id,
             "hash": video_hash,
             "title": v["name"],
             "description": v.get("description", ""),
-            "thumbnail": v["pictures"]["sizes"][-1]["link"] if v.get("pictures") else ""
+            "thumbnail": thumbnail
         })
 
     if data.get("paging", {}).get("next"):
