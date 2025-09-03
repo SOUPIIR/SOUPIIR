@@ -9,7 +9,6 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    padding: 1.5em 0;
     background-color: #000;
 }
 
@@ -25,9 +24,6 @@ h2 {
 }
 
 /* Menu */
-.home-title {
-    background-image: url(../img/logo_mini.png);
-}
 
 .home-title,
 nav a {
@@ -40,16 +36,19 @@ nav a:hover {
     color: #99989d
 }
 
-.home-title,
-.first-nav,
-.second-nav {
-    float: left;
+.home-title {
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.home-title {
-    width: 20%;
-    font-size: 1.2em;
-    padding-left: 1.5em;
+.home-title a {
+    display: block;
+    background-image: url(../img/logo_mini.png);
+    background-repeat: no-repeat;
+    height:76px;
+    width:170px;
+    text-indent: -9999px;
 }
 
 .first-nav li,
@@ -70,8 +69,9 @@ nav a:hover {
 }
 
 .third-nav {
-    float: right;
-    margin-right: 2em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
 }
 
 .third-nav li {
@@ -83,7 +83,7 @@ main {
     position: relative;
     width: 100%;
     margin: 0 auto 3em;
-    padding-top: 10em;
+    padding-top: 7em;
 }
 
 .main-video {
