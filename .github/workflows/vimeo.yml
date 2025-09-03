@@ -46,6 +46,7 @@ jobs:
   build-and-deploy:
       needs: update-videos
       runs-on: ubuntu-latest
+      environment: github-pages
       steps:
         - name: Checkout repository
           uses: actions/checkout@v4
