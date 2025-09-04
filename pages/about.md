@@ -4,4 +4,6 @@ title: About
 permalink: /about
 ---
 
-{% include about.html %}
+<div class="about-content">
+    {% include about.html %}
+</div>

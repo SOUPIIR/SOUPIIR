@@ -18,9 +18,10 @@ h1 {
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 2em 0;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Menu */
@@ -51,12 +52,10 @@ nav a:hover {
     text-indent: -9999px;
 }
 
-.first-nav li,
-.second-nav li ,
 .third-nav li {
     float: left;
     padding-left: 3em;
-    font-size: 1.2em;
+    font-size: 1em;
     background-color: #000;
 }
 
@@ -79,6 +78,11 @@ nav a:hover {
     padding-left: 1em;
 }
 
+header label,
+#toggle {
+    display: none;
+}
+
 /* Main content */
 main {
     position: relative;
@@ -87,120 +91,32 @@ main {
     padding-top: 7em;
 }
 
-.main-video {
-    width: 100%;
-}
-
 main.about {
-  background: url(../img/grey.gif) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 1000px;
-}
-
-main.about div {
-    margin-bottom: 1em;
-    margin-left: 3em;
-}
-
-/* Gallery */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1em;
-}
-
-.gallery > div {
-    position: relative;
-    cursor: pointer;
+    background: url(../img/grey.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
+    font-size: 1.2em;
 }
 
-.gallery img {
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-.gallery h2 {
-    position: relative;
-    top: -50%;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1em;
-    padding: 0;
-}
-
-.gallery a .img-overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,0);
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transition: .5s;
-}
-
-.gallery a:hover .img-overlay {
-    background-color: rgba(0,0,0,0.3);
-    transition: .5s;
-}
-
-.gallery a:hover {
-    opacity: 0.8;
-}
-
-.gallery::after {
-    content: "";
-}
-
-/* Bio */
-.bio {
-    padding-top: 10em;
-    display: flex;
-    align-items: center;
-}
-
-.bio p {
-    line-height: 1.4;
-    font-size: 1.4em;
-    text-align: center;
-    padding: 0 2em;
-}
-
-header label,
-#toggle {
-    display: none;
+.about-content > div {
+    margin-bottom: 1em;
 }
 
 /* Responsive */
 @media all and (max-width: 991px) {
-    .home-title {
-        width: auto;
-    }
-
     .third-nav li {
         padding: 0;
     }
 
-    .first-nav,
-    .second-nav,
     .third-nav,
-    .first-nav li,
-    .second-nav li,
     .third-nav li {
         width: 100%;
-    }
-
-    .embed-container {
-        margin-top: 10em;
     }
 
     header label {
@@ -229,47 +145,53 @@ header label,
         background: rgba(0, 0, 0);
     }
 
-    .gallery h2 {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        font-size: 1.1em;
-    }
-
     .lightbox .content {
         width: 100% !important;
         height: 30% !important;
     }
-
-    h2 {
-        font-size: 1em;
-        text-align: center;
-    }
-
-    .bio {
-        display: block;
-    }
-
-    .bio p {
-        padding-top: 2em;
-        font-size: 1em;
-    }
 }
 
-/* Main video (Full screen) */
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0; overflow: hidden;
-    max-width: 100%; height: auto;
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: .5rem;
+  margin: 2rem 0;
 }
 
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
 }
