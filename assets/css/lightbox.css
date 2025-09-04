@@ -56,8 +56,8 @@
   color: #fff;
   font-size: 18px;
   position: absolute;
-  top: -15px;
-  right: 0;
+  top: -50px;
+  right: -50px;
   z-index: 3;
   padding: 1px 5px 2px 5px;
   cursor: pointer;
