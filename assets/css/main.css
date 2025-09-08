@@ -28,7 +28,6 @@ strong {
 }
 
 /* Menu */
-
 .home-title,
 nav a {
     display: block;
@@ -219,7 +218,6 @@ main.about::before {
         display: block;
     }
 }
-
 
 /* Grid */
 .grid {
