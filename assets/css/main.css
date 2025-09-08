@@ -227,7 +227,7 @@ main.about::before {
     margin: 2rem 0;
     grid-auto-flow: row dense;
 }
-.test .grid > *:nth-child(5n) {
+.test .grid > *:nth-child(4n) {
     grid-column: span 2;
     grid-row: span 2;
 }
@@ -238,7 +238,8 @@ main.about::before {
 .grid-item.small {
   grid-column: span 1;
 } */
-.grid-item {
+.grid-item,
+.grid-item-mosaic {
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -248,7 +249,8 @@ main.about::before {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.grid-item img {
+.grid-item img,
+.grid-item-mosaic img {
     width: 100%;
     height: auto;
     display: block;
@@ -260,7 +262,17 @@ main.about::before {
     text-align: center;
 }
 
-.grid-item .overlay {
+.grid-item-mosaic h2 {
+    position: absolute;
+    bottom: 0em;
+    font-size: 1em;
+    left: 1em;
+    padding: 1em 0;
+    font-weight: normal;
+}
+
+.grid-item .overlay,
+.grid-item-mosaic .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -275,6 +287,7 @@ main.about::before {
     transition: opacity 0.3s ease;
 }
 
-.grid-item:hover .overlay {
+.grid-item:hover .overlay,
+.grid-item-mosaic:hover .overlay {
     opacity: 1;
 }
