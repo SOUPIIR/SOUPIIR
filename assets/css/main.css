@@ -246,6 +246,12 @@ main.about::before {
     display: block;
 }
 
+.grid-item h2 {
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+}
+
 .grid-item .overlay {
     position: absolute;
     top: 0;

@@ -38,7 +38,7 @@ while True:
         thumbnail = ""
         if v.get("pictures") and v["pictures"].get("sizes"):
             for s in v["pictures"]["sizes"]:
-                if s["width"] == 295 and s["height"] == 166:
+                if s["width"] == 640 and s["height"] == 360:
                     thumbnail = s["link"]
                     break
 
