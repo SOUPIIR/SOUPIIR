@@ -217,6 +217,11 @@ main.about::before {
         pointer-events: auto;
         display: block;
     }
+
+    .grid > *:nth-child(4n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
 /* Grid */
