@@ -52,7 +52,7 @@ nav a {
 
 .third-nav {
     position: absolute;
-    right: 1em;
+    right: 3em;
     top: 2em;
 
     & li {
@@ -65,7 +65,6 @@ nav a {
         text-decoration: none;
         color: white;
         position: relative;
-        padding-bottom: 5px;
 
         &::after {
             content: "";
@@ -100,7 +99,7 @@ main {
     position: relative;
     width: 100%;
     margin: 0 auto 3em;
-    padding-top: 7em;
+    padding-top: 6.2em;
 
     &.about {
         background: url(../img/grey.gif) no-repeat center center/cover;
@@ -162,9 +161,9 @@ main {
         position: absolute;
         bottom: 0em;
         font-size: 1em;
-        left: 1em;
-        padding: 1em 0;
+        padding: 1em;
         font-weight: normal;
+        white-space: normal;
     }
 
     & .overlay {
