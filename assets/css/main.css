@@ -193,6 +193,9 @@ main.about::before {
     /* cursor: url('../img/play-video-1-48.png'), auto; */
 }
 
+.grid-item-mosaic:hover h2 {
+    mix-blend-mode: normal;
+}
 
 /* Responsive */
 @media all and (max-width: 991px) {
