@@ -133,6 +133,67 @@ main.about::before {
     font-size: 1.1em;
 }
 
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: .2rem;
+    grid-auto-flow: row dense;
+}
+
+.grid > *:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item-mosaic {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item-mosaic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item-mosaic h2 {
+    position: absolute;
+    bottom: 0em;
+    font-size: 1em;
+    left: 1em;
+    padding: 1em 0;
+    font-weight: normal;
+    mix-blend-mode: difference;
+}
+
+.grid-item-mosaic .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item-mosaic:hover .overlay {
+    opacity: 1;
+    /* cursor: url('../img/play-video-1-48.png'), auto; */
+}
+
+
 /* Responsive */
 @media all and (max-width: 991px) {
     #toggle {
@@ -222,64 +283,4 @@ main.about::before {
         grid-column: span 1;
         grid-row: span 1;
     }
-}
-
-/* Grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    gap: .2rem;
-    grid-auto-flow: row dense;
-}
-
-.grid > *:nth-child(4n) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.grid-item-mosaic {
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-.grid-item-mosaic img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.grid-item-mosaic h2 {
-    position: absolute;
-    bottom: 0em;
-    font-size: 1em;
-    left: 1em;
-    padding: 1em 0;
-    font-weight: normal;
-    mix-blend-mode: difference;
-}
-
-.grid-item-mosaic .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.grid-item-mosaic:hover .overlay {
-    opacity: 1;
-    /* cursor: url('../img/play-video-1-48.png'), auto; */
 }
