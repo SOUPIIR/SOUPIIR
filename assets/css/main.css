@@ -170,7 +170,6 @@ main.about::before {
     left: 1em;
     padding: 1em 0;
     font-weight: normal;
-    mix-blend-mode: difference;
 }
 
 .grid-item-mosaic .overlay {
@@ -191,10 +190,6 @@ main.about::before {
 .grid-item-mosaic:hover .overlay {
     opacity: 1;
     /* cursor: url('../img/play-video-1-48.png'), auto; */
-}
-
-.grid-item-mosaic:hover h2 {
-    mix-blend-mode: normal;
 }
 
 /* Responsive */
