@@ -25,9 +25,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://soupiir.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://www.soupiir.com
 github_username: soupiir
 domain: soupiir.github.io
+sass:
+  sass_dir: assets/_sass
+  style: compressed
 
 # Build settings
 theme: null
@@ -43,11 +46,6 @@ permalink: pretty
 plugins:
   - jekyll-feed
 
-collections_dir: collections
-
-collections:
-  videos:
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -58,9 +56,7 @@ collections:
 #
 exclude:
   - README.md
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
+  - requirements.txt
   - Gemfile
   - Gemfile.lock
   - CNAME
