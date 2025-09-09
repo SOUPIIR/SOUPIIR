@@ -28,12 +28,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.soupiir.com
 github_username: soupiir
 domain: soupiir.github.io
-sass:
-  sass_dir: assets/_sass
-  style: compressed
 
 # Build settings
 theme: null
+
+sass:
+  sass_dir: assets/_sass
+  style: compressed
 
 markdown: kramdown
 
