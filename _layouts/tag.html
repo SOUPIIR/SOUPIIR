@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="grid">
+  {% assign videos = site.data.videos | where_exp: "v", "v.tags contains page.tag" %}
+  {% for video in videos %}
+    {% include block-mosaic.html
+        id=video.id
+        hash=video.hash
+        title=video.title
+        image=video.thumbnail
+        text=video.description %}
+  {% endfor %}
+</div>

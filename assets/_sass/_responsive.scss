@@ -86,4 +86,9 @@
         grid-column: span 1;
         grid-row: span 1;
     }
+
+    .grid .overlay {
+        opacity: 1;
+        background: none;
+    }
 }
