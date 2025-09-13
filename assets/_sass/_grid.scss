@@ -1,0 +1,49 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: .2rem;
+    grid-auto-flow: row dense;
+
+    & > *:nth-child(4n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+.grid-item-mosaic {
+    position: relative;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    & h2 {
+        position: absolute;
+        bottom: 0em;
+        font-size: 1em;
+        padding: 1em;
+        font-weight: normal;
+        white-space: normal;
+    }
+
+    & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+        /* cursor: url('../img/play-video-1-48.png'), auto; */
+    }
+}
