@@ -82,13 +82,11 @@
         display: block;
     }
 
-    .grid > *:nth-child(4n) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .grid .overlay {
-        opacity: 1;
-        background: none;
+    .grid {
+        display: block;
+        & .overlay {
+            opacity: 1;
+            background: none;
+        }
     }
 }

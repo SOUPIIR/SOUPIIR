@@ -10,8 +10,8 @@
     }
 
     & > div:first-child {
-        grid-column: span 2;
-        grid-row: span 2;
+        grid-column: span 3;
+        grid-row: span 3;
     }
 }
 
@@ -49,6 +49,6 @@
 
     &:hover .overlay {
         opacity: 1;
-        /* cursor: url('../img/play-video-1-48.png'), auto; */
+        cursor: url('../img/Icon_PlayFill_32.png') 16 16, auto !important;
     }
 }
