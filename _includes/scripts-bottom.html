@@ -1,19 +1,23 @@
 <script src="/assets/js/lightbox.js"></script>
 <script>
     window.onload = function() {
-        // Gallery
         [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
             el.lightbox = new Lightbox(el);
         });
 
         document.querySelectorAll('.grid-item-mosaic').forEach(item => {
             const id = item.getAttribute('data-id');
-            const overlay = item.querySelector('.overlay');
+            const video = item.querySelector('.overlay video');
+
+            const videoUrl = `/assets/videos/${id}.mp4`;
+            video.src = videoUrl;
+
             item.addEventListener('mouseenter', () => {
-                overlay.style.backgroundImage = `url('/assets/img/gif/${id}.gif')`;
+                video.play();
             });
             item.addEventListener('mouseleave', () => {
-                overlay.style.backgroundImage = '';
+                video.pause();
+                video.currentTime = 0;
             });
         });
     }

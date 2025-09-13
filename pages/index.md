@@ -32,6 +32,7 @@ permalink: /
               alt="{{video.title}}"
               loading="lazy" />
             <div class="overlay">
+              <video muted loop preload="none" playsinline></video>
               <h2>{{ first_tag }}</h2>
             </div>
           </a>
