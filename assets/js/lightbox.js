@@ -58,6 +58,14 @@ Lightbox.prototype.create = function() {
         _this.close();
     });
 
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape" || e.key === "Esc" || e.keyCode === 27) {
+            if (_this.isOpen()) {
+                _this.close();
+            }
+        }
+    });
+
     var f = function(e) {
         if (_this.isOpen()) return;
         _this.el.classList.remove('show');
