@@ -20,7 +20,7 @@ permalink: /
     {% else %}
       {% assign first_tag = video.tags[0] %}
       {% unless shown_tags contains first_tag %}
-        <div class="grid-item-mosaic link">
+        <div class="grid-item-mosaic link" data-id="{{video.id}}">
           <a href="{{ '/' | append: first_tag | relative_url }}">
             <img
               src="{{video.thumbnail_desktop}}"
