@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div class="back-link"><a href="/">Back</a></div>
+
 <div class="grid">
   {% assign videos = site.data.videos | where_exp: "v", "v.tags contains page.tag" %}
   {% for video in videos %}
@@ -9,7 +11,9 @@ layout: default
         id=video.id
         hash=video.hash
         title=video.title
-        image=video.thumbnail
-        text=video.description %}
+        thumbnail_desktop=video.thumbnail_desktop
+        thumbnail_mobile=video.thumbnail_mobile
+        thumbnail_large=video.thumbnail_large
+        description=video.description %}
   {% endfor %}
 </div>

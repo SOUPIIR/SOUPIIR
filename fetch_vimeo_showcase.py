@@ -37,12 +37,18 @@ while True:
         video_id = parts[0]
         video_hash = parts[1] if len(parts) > 1 else ""
 
-        thumbnail = ""
+        thumbnail_mobile = ""
+        thumbnail_desktop = ""
+        thumbnail_large = ""
+
         if v.get("pictures") and v["pictures"].get("sizes"):
             for s in v["pictures"]["sizes"]:
                 if s["width"] == 640 and s["height"] == 360:
-                    thumbnail = s["link"]
-                    break
+                    thumbnail_mobile = s["link"]
+                elif s["width"] == 960 and s["height"] == 540:
+                    thumbnail_desktop = s["link"]
+                elif s["width"] == 1280 and s["height"] == 720:
+                    thumbnail_large = s["link"]
 
         tags = [t["tag"] for t in v.get("tags", [])]
 
@@ -51,7 +57,9 @@ while True:
             "hash": video_hash,
             "title": v["name"],
             "description": v.get("description", ""),
-            "thumbnail": thumbnail,
+            "thumbnail_mobile": thumbnail_mobile,
+            "thumbnail_desktop": thumbnail_desktop,
+            "thumbnail_large": thumbnail_large,
             "tags": tags,
         })
 

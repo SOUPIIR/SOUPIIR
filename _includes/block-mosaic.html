@@ -1,8 +1,21 @@
 <div class="grid-item-mosaic">
-    <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&progress_bar=1&controls=1" video-id="{{include.id}}" video-hash="{{include.hash}}" video-text="{{include.text}}" video-title="{{include.title}}" lightbox="iframe">
-    <img src="{{include.image}}" alt="" loading="lazy" />
-    <div class="overlay">
-        <h2>{{include.title}}</h2>
-    </div>
+    <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&progress_bar=1&controls=1"
+       video-id="{{include.id}}"
+       video-hash="{{include.hash}}"
+       video-description="{{include.description}}"
+       video-title="{{include.title}}"
+       lightbox="iframe">
+        <img
+            src="{{include.thumbnail_desktop}}"
+            srcset="
+                {{include.thumbnail_mobile}} 640w,
+                {{include.thumbnail_desktop}} 960w,
+                {{include.thumbnail_large}} 1280w"
+            sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
+            alt="{{include.title}}"
+            loading="lazy" />
+        <div class="overlay">
+            <h2>{{include.title}}</h2>
+        </div>
     </a>
 </div>
