@@ -5,5 +5,16 @@
         [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
             el.lightbox = new Lightbox(el);
         });
+
+        document.querySelectorAll('.grid-item-mosaic').forEach(item => {
+            const id = item.getAttribute('data-id');
+            const overlay = item.querySelector('.overlay');
+            item.addEventListener('mouseenter', () => {
+                overlay.style.backgroundImage = `url('/assets/img/gif/${id}.gif')`;
+            });
+            item.addEventListener('mouseleave', () => {
+                overlay.style.backgroundImage = '';
+            });
+        });
     }
 </script>

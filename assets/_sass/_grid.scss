@@ -32,6 +32,8 @@
         padding: 1em;
         font-weight: normal;
         white-space: normal;
+        color: white;
+        z-index: 2;
     }
 
     & .overlay {
@@ -40,9 +42,11 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
         display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-size: cover;
+        background-position: center;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
