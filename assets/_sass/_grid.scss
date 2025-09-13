@@ -51,4 +51,9 @@
         opacity: 1;
         cursor: url('../img/Icon_PlayFill_18.png') 16 16, auto !important;
     }
+
+    &.link:hover .overlay {
+        opacity: 1;
+        cursor: pointer !important;
+    }
 }
