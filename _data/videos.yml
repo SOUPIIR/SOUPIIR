@@ -1,7 +1,6 @@
 - description: null
   hash: b2f814a613
   id: '1115807096'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2055260776-109c0e52bea7f7169474fce47a2386b1e2a85a736cca0f804044a254e83e8aec-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2055260776-109c0e52bea7f7169474fce47a2386b1e2a85a736cca0f804044a254e83e8aec-d_1280x720?&r=pad&region=us
@@ -10,7 +9,6 @@
 - description: null
   hash: c007de0509
   id: '1070703693'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2054777256-66d192517462d7fd22714285d32eda4d0cbd7eccc48caaf126f2da0b414c06c7-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2054777256-66d192517462d7fd22714285d32eda4d0cbd7eccc48caaf126f2da0b414c06c7-d_1280x720?&r=pad&region=us
@@ -19,7 +17,6 @@
 - description: null
   hash: 1d54b678a8
   id: '1021519094'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1988986505-50a30abe63e4f5ec1e9b83161860825c6a205716a314a1fd79dddaa433ffd3b6-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1988986505-50a30abe63e4f5ec1e9b83161860825c6a205716a314a1fd79dddaa433ffd3b6-d_1280x720?&r=pad&region=us
@@ -28,8 +25,6 @@
 - description: null
   hash: ae5da173a6
   id: '1095161817'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2058592463-1efa7701c63357e8c444db4bf2c27ce0f6dae75d7c5978ebf6cfdaf7d77b4846-d_960x540?&r=pad&region=us
@@ -39,7 +34,6 @@
 - description: null
   hash: 5b11289701
   id: '1057626764'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_1280x720?&r=pad&region=us
@@ -48,7 +42,6 @@
 - description: null
   hash: 186f7e6482
   id: '1056318073'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_1280x720?&r=pad&region=us
@@ -57,7 +50,6 @@
 - description: null
   hash: 6beca16215
   id: '1079431545'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2054778563-6cc5f3eb9cc446756b67b31b495b62bf58798dca2e38cc817422acb0e6a38204-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2054778563-6cc5f3eb9cc446756b67b31b495b62bf58798dca2e38cc817422acb0e6a38204-d_1280x720?&r=pad&region=us
@@ -66,8 +58,6 @@
 - description: null
   hash: c76e0462c9
   id: '1085410388'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058591147-4e5fb74cef04f6f018d2ad942cc550b1e26b52846c689b7fc83754bcbd416ed8-d_960x540?&r=pad&region=us
@@ -77,8 +67,6 @@
 - description: null
   hash: 6908e09e6e
   id: '1085411961'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2054778009-b1a5b1e0ff57721f186a816011a81ea6c9bf37cac43c56b6cb2560b7e641b7c8-d_960x540?&r=pad&region=us
@@ -88,8 +76,6 @@
 - description: null
   hash: 12f03177a4
   id: '1095164309'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2054780004-be384c727d0326b7efe90e47ed1465559eb9cb18f73d1c5c6ff3c53fa22a95ba-d_960x540?&r=pad&region=us
@@ -99,8 +85,6 @@
 - description: null
   hash: 6f24f5484f
   id: '1085412586'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_960x540?&r=pad&region=us
@@ -110,8 +94,6 @@
 - description: null
   hash: 7381ec59d9
   id: '1072766882'
-  tags:
-  - A GHOST TRIBUTE
   tags_slugs:
   - a-ghost-tribute
   thumbnail_desktop: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_960x540?&r=pad&region=us
@@ -121,7 +103,6 @@
 - description: null
   hash: 5074e56cef
   id: '1038026686'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1984117140-4fd18eee47340e51c2de6adfd89422a06291f037aedcc2f329e7d11bd86d19f5-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1984117140-4fd18eee47340e51c2de6adfd89422a06291f037aedcc2f329e7d11bd86d19f5-d_1280x720?&r=pad&region=us
@@ -130,7 +111,6 @@
 - description: null
   hash: a5766f730e
   id: '1041764653'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1964601265-804c50187de0acc73f6778fab93ca4590c8210e9ba6d887621e31d7095f4e670-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1964601265-804c50187de0acc73f6778fab93ca4590c8210e9ba6d887621e31d7095f4e670-d_1280x720?&r=pad&region=us
@@ -139,7 +119,6 @@
 - description: null
   hash: a0efafe082
   id: '1049417664'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1973842690-ef7dbd200d16908a58b417f0de99a39a9749399e7838abc2ea7695bb47d55f45-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1973842690-ef7dbd200d16908a58b417f0de99a39a9749399e7838abc2ea7695bb47d55f45-d_1280x720?&r=pad&region=us
@@ -148,8 +127,6 @@
 - description: null
   hash: e22a414d78
   id: '1095163536'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2054780967-2d1e59a2e9da9a62719077aab146e2fe666ad05b65a3649bf419e9f3c5a41898-d_960x540?&r=pad&region=us
@@ -159,7 +136,6 @@
 - description: null
   hash: dbda286ab3
   id: '1055872427'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1982590788-71b959af1e8711e419e86150983ce05c297288a1b706381132467681b9503c2c-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1982590788-71b959af1e8711e419e86150983ce05c297288a1b706381132467681b9503c2c-d_1280x720?&r=pad&region=us
@@ -168,7 +144,6 @@
 - description: null
   hash: 4a535ba535
   id: '1049419504'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058545979-8571f7a693cdad997d8c6f8b0d43d4d1b7494e304bcfd27d78803249f95b3478-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058545979-8571f7a693cdad997d8c6f8b0d43d4d1b7494e304bcfd27d78803249f95b3478-d_1280x720?&r=pad&region=us
@@ -177,8 +152,6 @@
 - description: null
   hash: 89c99e1759
   id: '1095155419'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2054781352-37caccdec9acfa4020ea665f794c72177f94d45afb1e1895e6cc73fa07a46ac1-d_960x540?&r=pad&region=us
@@ -188,7 +161,6 @@
 - description: null
   hash: 34caf37dbe
   id: '1032264319'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058544996-9ecbc0acbcfe68aa01b6fbe467f94695753f25af3cb1d9b73cd93e9ba615fa17-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058544996-9ecbc0acbcfe68aa01b6fbe467f94695753f25af3cb1d9b73cd93e9ba615fa17-d_1280x720?&r=pad&region=us
@@ -197,7 +169,6 @@
 - description: null
   hash: a7abba9b90
   id: '1049418736'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058564167-d15bbedd28f745c9fac923cf8b456b73b6631868d0b31a52cf2c2dc0d58b9e54-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058564167-d15bbedd28f745c9fac923cf8b456b73b6631868d0b31a52cf2c2dc0d58b9e54-d_1280x720?&r=pad&region=us
@@ -206,7 +177,6 @@
 - description: null
   hash: fc4fdd0aa3
   id: '1049417209'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058565449-7f30c143ef754dd55325a490f8c90e0e18138396acbe2340a040be22137bc10c-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058565449-7f30c143ef754dd55325a490f8c90e0e18138396acbe2340a040be22137bc10c-d_1280x720?&r=pad&region=us
@@ -215,7 +185,6 @@
 - description: null
   hash: 79380ce8f3
   id: '1049417272'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058549850-b67ea70bb36a129846cccbd7ea2b7baa2872849757ce91e816a3ecbff67fd2af-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058549850-b67ea70bb36a129846cccbd7ea2b7baa2872849757ce91e816a3ecbff67fd2af-d_1280x720?&r=pad&region=us
@@ -224,8 +193,6 @@
 - description: null
   hash: 4be1301c1c
   id: '1095159758'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2054781628-0ab466e51f0667ec92fd1756a3e1dab53f393556fd9d20788e36f319e4f13d70-d_960x540?&r=pad&region=us
@@ -235,7 +202,6 @@
 - description: null
   hash: d013f71cd6
   id: '1049421356'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058565556-8d123d1719cc447bbbad2725338d9a7ca9af48ced788e8eb5f48a6857037aa5d-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058565556-8d123d1719cc447bbbad2725338d9a7ca9af48ced788e8eb5f48a6857037aa5d-d_1280x720?&r=pad&region=us
@@ -244,7 +210,6 @@
 - description: null
   hash: bc4291cec3
   id: '1049418684'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058547133-c07c1d236f083b4e9e15005f4cdfee6d883f5d1d28b27417313a4989be944a99-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058547133-c07c1d236f083b4e9e15005f4cdfee6d883f5d1d28b27417313a4989be944a99-d_1280x720?&r=pad&region=us
@@ -253,7 +218,6 @@
 - description: null
   hash: c093dee5ac
   id: '1049419723'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058547711-6af12e460139abcbc32e2c0b19549d97ccd71d07774739f57bd076e4b4cbaa7f-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058547711-6af12e460139abcbc32e2c0b19549d97ccd71d07774739f57bd076e4b4cbaa7f-d_1280x720?&r=pad&region=us
@@ -262,8 +226,6 @@
 - description: null
   hash: 0653e8aefa
   id: '1049419225'
-  tags:
-  - '[untitled]'
   tags_slugs:
   - untitled
   thumbnail_desktop: https://i.vimeocdn.com/video/1973853429-41169d58767e6085aa9f5c5cf99b1dc5ee07a83db44dcd0d866caadc386f81ce-d_960x540?&r=pad&region=us
@@ -273,8 +235,6 @@
 - description: null
   hash: 4a3d3465bc
   id: '1049417077'
-  tags:
-  - DANCE OF FADED
   tags_slugs:
   - dance-of-faded
   thumbnail_desktop: https://i.vimeocdn.com/video/2058567695-809e0f540906acafe68449dec37040a20070ad4b7deec4895fee6c825da79c6e-d_960x540?&r=pad&region=us
@@ -284,7 +244,6 @@
 - description: null
   hash: 700b813c40
   id: '1049416907'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058568658-fa1ded244cfe06ef6b155be6bd8bf14f6490d6931008e57efbbc86f55f61c203-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058568658-fa1ded244cfe06ef6b155be6bd8bf14f6490d6931008e57efbbc86f55f61c203-d_1280x720?&r=pad&region=us
@@ -293,7 +252,6 @@
 - description: null
   hash: e80f277faf
   id: '1049416751'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058548410-69db073fdff98092366e3c4f5e11f85309f847d9eb84785ee75dc8425756bad9-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058548410-69db073fdff98092366e3c4f5e11f85309f847d9eb84785ee75dc8425756bad9-d_1280x720?&r=pad&region=us
@@ -302,8 +260,6 @@
 - description: null
   hash: f19fda7e60
   id: '1049419378'
-  tags:
-  - '[untitled]'
   tags_slugs:
   - untitled
   thumbnail_desktop: https://i.vimeocdn.com/video/1973853393-b2491caf31d9941a9190bd023d0271e9def263b592d9c9ef1e8f8ecd2d5e00b9-d_960x540?&r=pad&region=us
@@ -313,7 +269,6 @@
 - description: null
   hash: aeebe2ad86
   id: '1049373990'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058552217-1eba7f3302fc93f35522696339394a7a3892919bd6c42c1bc6bae4dcdc926d53-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058552217-1eba7f3302fc93f35522696339394a7a3892919bd6c42c1bc6bae4dcdc926d53-d_1280x720?&r=pad&region=us
@@ -322,7 +277,6 @@
 - description: null
   hash: ec13c2aff7
   id: '1049417328'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058550884-e5790372a658fb9dc85f13b86aabd701b0b9bec1c8a3dc4070ec1d097dc84615-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058550884-e5790372a658fb9dc85f13b86aabd701b0b9bec1c8a3dc4070ec1d097dc84615-d_1280x720?&r=pad&region=us
@@ -331,7 +285,6 @@
 - description: null
   hash: e6ad3aa512
   id: '1049418086'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058552710-4e330ca58903e56f111f403e562b71ffe2d5aff24dc66f4277e738bc792efa22-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058552710-4e330ca58903e56f111f403e562b71ffe2d5aff24dc66f4277e738bc792efa22-d_1280x720?&r=pad&region=us
@@ -340,7 +293,6 @@
 - description: null
   hash: a1a8cb42b1
   id: '1049418890'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058578075-1ad4b2053f907bd7172e03bfe034e16125d740505439274505434a4bb0c15d56-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058578075-1ad4b2053f907bd7172e03bfe034e16125d740505439274505434a4bb0c15d56-d_1280x720?&r=pad&region=us
@@ -349,7 +301,6 @@
 - description: null
   hash: 1c176cab22
   id: '1049416813'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058578724-8c65ac807b53f042948559aadd514e3c48cf35a77553b7bd2e63ade1894ab29e-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058578724-8c65ac807b53f042948559aadd514e3c48cf35a77553b7bd2e63ade1894ab29e-d_1280x720?&r=pad&region=us
@@ -358,8 +309,6 @@
 - description: null
   hash: 189738dbc2
   id: '1049419071'
-  tags:
-  - '[untitled]'
   tags_slugs:
   - untitled
   thumbnail_desktop: https://i.vimeocdn.com/video/1973853333-3c66a3525cc759b54f8313d1c33515c8050d1e75b6b796f5f5dbf77150ee1fe7-d_960x540?&r=pad&region=us
@@ -369,7 +318,6 @@
 - description: null
   hash: cce483e561
   id: '1049417598'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1973844225-59b0826d0c1cd6a9e7a08e9f96fc292931eb7eb35014568e74d8686f6841395a-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/1973844225-59b0826d0c1cd6a9e7a08e9f96fc292931eb7eb35014568e74d8686f6841395a-d_1280x720?&r=pad&region=us
@@ -378,7 +326,6 @@
 - description: null
   hash: 7c05c7a44b
   id: '1049374844'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058570454-60308cebfca9c531812771788af0f757583ca64ad07865e03696844ec2096403-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058570454-60308cebfca9c531812771788af0f757583ca64ad07865e03696844ec2096403-d_1280x720?&r=pad&region=us
@@ -387,7 +334,6 @@
 - description: null
   hash: bed2fe8e74
   id: '1049418302'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058581929-17981e30bc234c52c90ffafdea9cbcfa6344a2f099708d39ae79c75316d61647-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058581929-17981e30bc234c52c90ffafdea9cbcfa6344a2f099708d39ae79c75316d61647-d_1280x720?&r=pad&region=us
@@ -396,8 +342,6 @@
 - description: null
   hash: db3f6de3e0
   id: '1049417134'
-  tags:
-  - DANCE OF FADED
   tags_slugs:
   - dance-of-faded
   thumbnail_desktop: https://i.vimeocdn.com/video/2058567722-db70d050d4ba09e287f9d349e1f9be9facd8042f5c37dc77a2b2ab297595828b-d_960x540?&r=pad&region=us
@@ -407,7 +351,6 @@
 - description: null
   hash: 8f9a634db7
   id: '1049419783'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058550401-a4c023e84e02edcd03b04f8ced0d4908eba6e17b12ed5e1facc31045b788dbf9-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058550401-a4c023e84e02edcd03b04f8ced0d4908eba6e17b12ed5e1facc31045b788dbf9-d_1280x720?&r=pad&region=us
@@ -416,7 +359,6 @@
 - description: null
   hash: 0b71ceb7bf
   id: '1049418554'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058548963-d8d868a24ab7ae8d2fb6788a627dcddbb8259bc70846ecc5c83bc13bceab47be-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058548963-d8d868a24ab7ae8d2fb6788a627dcddbb8259bc70846ecc5c83bc13bceab47be-d_1280x720?&r=pad&region=us
@@ -425,8 +367,6 @@
 - description: null
   hash: 05e0794727
   id: '1049418804'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/1973863536-2a2b82a9057b56e50c729a79f48b5019bb14e1e91e33a666e52422db60773d3b-d_960x540?&r=pad&region=us
@@ -436,8 +376,6 @@
 - description: null
   hash: 8117487e89
   id: '1049417023'
-  tags:
-  - DANCE OF FADED
   tags_slugs:
   - dance-of-faded
   thumbnail_desktop: https://i.vimeocdn.com/video/2058567743-669e4622786f97ebaae24ca5eb68167fee5e8a302d567799dd8fa23da88d77c4-d_960x540?&r=pad&region=us
@@ -447,7 +385,6 @@
 - description: null
   hash: b40201c0e7
   id: '1049417883'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058553573-093f29b3f03dc8b55df28e0ffab986f2e83516a0e906cf7640233fc42134824a-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058553573-093f29b3f03dc8b55df28e0ffab986f2e83516a0e906cf7640233fc42134824a-d_1280x720?&r=pad&region=us
@@ -456,8 +393,6 @@
 - description: null
   hash: 6ada7ad694
   id: '1095165288'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2028904089-6f1b2c3605e034a6b00ca59e33082fd4ff4572b3aa99a0ca57b98820dcbffbf7-d_960x540?&r=pad&region=us
@@ -467,8 +402,6 @@
 - description: null
   hash: 11ae472a1f
   id: '1095162641'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2028900466-9a29d1678ff288f16e162782bd4860b609c68ccebb24e5f1fcc93c18ea7bb1e3-d_960x540?&r=pad&region=us
@@ -478,8 +411,6 @@
 - description: null
   hash: ea4ab5a0ca
   id: '1095161030'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2058593513-1d82d4e083bcc81393ffa9e91de7d8d56497b91f70fce5a1595f796b85d91c77-d_960x540?&r=pad&region=us
@@ -489,8 +420,6 @@
 - description: null
   hash: 9c3a5108ff
   id: '1095160195'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2058593429-8c2fd797705f0636e6ffd86acfd3d7c44101e4ad481991c289fd873195369fbb-d_960x540?&r=pad&region=us
@@ -500,8 +429,6 @@
 - description: null
   hash: 0ef6839a5c
   id: '1095154950'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2028890115-35b2dfdd4031a99d5b63a01d01aefba255528ac6b863ee05a836c55f1df3dc73-d_960x540?&r=pad&region=us
@@ -511,8 +438,6 @@
 - description: null
   hash: c16256a74b
   id: '1095154298'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2028889512-0494473cd9318a3503ae762cc351f36aceb039ff93cd1ca10fdaac403ffda822-d_960x540?&r=pad&region=us
@@ -522,8 +447,6 @@
 - description: null
   hash: 119a4399e4
   id: '1095153410'
-  tags:
-  - Bekar
   tags_slugs:
   - bekar
   thumbnail_desktop: https://i.vimeocdn.com/video/2028888600-b440da2b2abcc4ea03f9fd5a7fa001434bfb9c7a25c50b8d0573a5355911e4bf-d_960x540?&r=pad&region=us
@@ -533,8 +456,6 @@
 - description: null
   hash: a078d912d3
   id: '1085413494'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_960x540?&r=pad&region=us
@@ -544,8 +465,6 @@
 - description: null
   hash: 5e36457b99
   id: '1085413083'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058587560-b84484f430a107f22958e91520573e6769bc74dcf05e25d2ab8163f76c1c389d-d_960x540?&r=pad&region=us
@@ -555,8 +474,6 @@
 - description: null
   hash: 051799e2f0
   id: '1085412326'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058587156-22d0d9e3ee519cb18a58a6c5d9bab857338cea93a1cfa2a0d43fa7c916ce0f14-d_960x540?&r=pad&region=us
@@ -566,8 +483,6 @@
 - description: null
   hash: a40597619e
   id: '1085411656'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058587059-4d29dd8c93ff30c197d7d2a25b859c6e16fe64af7774fdf9ef1956b131fa2743-d_960x540?&r=pad&region=us
@@ -577,8 +492,6 @@
 - description: null
   hash: 3c7b48a1d9
   id: '1085411373'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058593074-8024bea86280f5885eaa61f27b50fda048905d27da95a052dbb986c7bae19a5e-d_960x540?&r=pad&region=us
@@ -588,8 +501,6 @@
 - description: null
   hash: 7067a03315
   id: '1085411040'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058589408-1cf3b594d3f84546f549f23b7ae0574ac31c7a1322051defa7587f5a6d836037-d_960x540?&r=pad&region=us
@@ -599,8 +510,6 @@
 - description: null
   hash: ac3bc00e12
   id: '1085410854'
-  tags:
-  - Drake - Lost Tapes
   tags_slugs:
   - drake-lost-tapes
   thumbnail_desktop: https://i.vimeocdn.com/video/2058591924-6f8250a60764a902a4e98a070b3d34ce825c6d1d87717972424da3a51de7284f-d_960x540?&r=pad&region=us
@@ -610,7 +519,6 @@
 - description: null
   hash: 328b9f13cc
   id: '1085327947'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058586498-3d0c8511a98234581d0fb4da085779568929152388ba687e79648a09e33f1a7a-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058586498-3d0c8511a98234581d0fb4da085779568929152388ba687e79648a09e33f1a7a-d_1280x720?&r=pad&region=us
@@ -619,8 +527,6 @@
 - description: null
   hash: b539b734fa
   id: '1072810989'
-  tags:
-  - A GHOST TRIBUTE
   tags_slugs:
   - a-ghost-tribute
   thumbnail_desktop: https://i.vimeocdn.com/video/2005893417-273d5c7db390efa049931a716d62169203ff587cd444249f946990739aef6422-d_960x540?&r=pad&region=us
@@ -630,8 +536,6 @@
 - description: null
   hash: ccc5caefa4
   id: '1072327104'
-  tags:
-  - A GHOST TRIBUTE
   tags_slugs:
   - a-ghost-tribute
   thumbnail_desktop: https://i.vimeocdn.com/video/2005892691-f3413d34319576130172848b5dabd98edd2fc32e07cbc44a21fb9ea37dd89b8e-d_960x540?&r=pad&region=us
@@ -641,7 +545,6 @@
 - description: null
   hash: 50b92b6b6d
   id: '1067655593'
-  tags: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058581887-cad34f357f0fc0e615498865d8d591f68d5713f27f1bdb9a8f0d2e700819d1fb-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058581887-cad34f357f0fc0e615498865d8d591f68d5713f27f1bdb9a8f0d2e700819d1fb-d_1280x720?&r=pad&region=us
@@ -650,8 +553,6 @@
 - description: null
   hash: bcf5db2c15
   id: '1118358694'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058533707-ec54b54b41dc3f639e3c41238e262252a0317b8e51765c7492cbd9ce8c1dd719-d_960x540?&r=pad&region=us
@@ -661,8 +562,6 @@
 - description: null
   hash: 9064727b55
   id: '1118358373'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058538241-a763b14869de3ff9109c9bbf607cc4aa62a018a7c0eb016ec9b56145c2d07a05-d_960x540?&r=pad&region=us
@@ -672,8 +571,6 @@
 - description: null
   hash: 760f567a7f
   id: '1118357808'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058538336-99d996586a3bd06195c842947ea58fccba31789eb092e6a4d23f77456cbdb609-d_960x540?&r=pad&region=us
@@ -683,8 +580,6 @@
 - description: null
   hash: b49d7ed854
   id: '1118357780'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058533627-2b7614490eb44dbd4226a384b7e333c06929844785d6f1661fc22783f2d75a16-d_960x540?&r=pad&region=us
@@ -694,8 +589,6 @@
 - description: null
   hash: b8e3f3648c
   id: '1118357750'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058538160-49d7ad3a9eb68d457eb9ac4c7d2390a10bede9ef2bc58ad8257e5ceed7ce318e-d_960x540?&r=pad&region=us
@@ -705,8 +598,6 @@
 - description: null
   hash: 94e951a01d
   id: '1118357367'
-  tags:
-  - SUSHI.IRO
   tags_slugs:
   - sushi-iro
   thumbnail_desktop: https://i.vimeocdn.com/video/2058533517-8dd881f73e5f11de0a5bb3598e26451e3747eaa1f9e7b2bf8254f7a8ebea8940-d_960x540?&r=pad&region=us
