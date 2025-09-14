@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="grid">
-  {% assign videos = site.data.videos | where_exp: "v", "v.tags contains page.tag" %}
+  {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
   {% for video in videos %}
     {% include block-mosaic.html
         id=video.id

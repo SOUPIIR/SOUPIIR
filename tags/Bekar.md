@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: "Bekar"
-permalink: "/Bekar/"
+tag: "bekar"
+permalink: "/bekar/"
 ---

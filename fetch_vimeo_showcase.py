@@ -1,96 +1,122 @@
 import os
 import requests
 import yaml
+import re
+import unicodedata
 
 VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
 SHOWCASE_ID = os.getenv("SHOWCASE_ID")
 
-if not VIMEO_API_KEY or not SHOWCASE_ID:
-    print("❌ VIMEO_API_KEY ou SHOWCASE_ID manquant")
-    exit(1)
 
-url = f"https://api.vimeo.com/albums/{SHOWCASE_ID}/videos"
-headers = {"Authorization": f"bearer {VIMEO_API_KEY}"}
+def slugify(value: str) -> str:
+    value = str(value)
+    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+    value = re.sub(r'[^a-zA-Z0-9]+', '-', value)
+    value = value.strip('-')
+    return value.lower()
 
-video_list = []
-page = 1
 
-while True:
-    response = requests.get(
-        url,
-        headers=headers,
-        params={"sort": "manual", "page": page, "per_page": 50},
-    )
-    if response.status_code != 200:
-        print("❌ Erreur API:", response.text)
-        break
+def fetch_vimeo_videos(api_key: str, showcase_id: str):
+    url = f"https://api.vimeo.com/albums/{showcase_id}/videos"
+    headers = {"Authorization": f"bearer {api_key}"}
 
-    data = response.json()
-    videos = data.get("data", [])
+    video_list = []
+    page = 1
 
-    if not videos:
-        break
+    while True:
+        response = requests.get(
+            url,
+            headers=headers,
+            params={"sort": "manual", "page": page, "per_page": 50},
+        )
 
-    for v in videos:
-        uri_last = v["uri"].split("/")[-1]
-        parts = uri_last.split(":")
-        video_id = parts[0]
-        video_hash = parts[1] if len(parts) > 1 else ""
+        if response.status_code != 200:
+            print("❌ Erreur API:", response.text)
+            break
 
-        thumbnail_mobile = ""
-        thumbnail_desktop = ""
-        thumbnail_large = ""
+        data = response.json()
+        videos = data.get("data", [])
+        if not videos:
+            break
 
-        if v.get("pictures") and v["pictures"].get("sizes"):
-            for s in v["pictures"]["sizes"]:
-                if s["width"] == 640 and s["height"] == 360:
-                    thumbnail_mobile = s["link"]
-                elif s["width"] == 960 and s["height"] == 540:
-                    thumbnail_desktop = s["link"]
-                elif s["width"] == 1280 and s["height"] == 720:
-                    thumbnail_large = s["link"]
+        for v in videos:
+            uri_last = v["uri"].split("/")[-1]
+            parts = uri_last.split(":")
+            video_id = parts[0]
+            video_hash = parts[1] if len(parts) > 1 else ""
 
-        tags = [t["tag"] for t in v.get("tags", [])]
+            thumbnail_mobile = ""
+            thumbnail_desktop = ""
+            thumbnail_large = ""
 
-        video_list.append({
-            "id": video_id,
-            "hash": video_hash,
-            "title": v["name"],
-            "description": v.get("description", ""),
-            "thumbnail_mobile": thumbnail_mobile,
-            "thumbnail_desktop": thumbnail_desktop,
-            "thumbnail_large": thumbnail_large,
-            "tags": tags,
-        })
+            if v.get("pictures") and v["pictures"].get("sizes"):
+                for s in v["pictures"]["sizes"]:
+                    if s["width"] == 640 and s["height"] == 360:
+                        thumbnail_mobile = s["link"]
+                    elif s["width"] == 960 and s["height"] == 540:
+                        thumbnail_desktop = s["link"]
+                    elif s["width"] == 1280 and s["height"] == 720:
+                        thumbnail_large = s["link"]
 
-    if data.get("paging", {}).get("next"):
-        page += 1
-    else:
-        break
+            tags = [t["tag"] for t in v.get("tags", [])]
 
-os.makedirs("_data", exist_ok=True)
+            video_list.append({
+                "id": video_id,
+                "hash": video_hash,
+                "title": v["name"],
+                "description": v.get("description", ""),
+                "thumbnail_mobile": thumbnail_mobile,
+                "thumbnail_desktop": thumbnail_desktop,
+                "thumbnail_large": thumbnail_large,
+                "tags": tags,
+                "tags_slugs": [slugify(t) for t in tags],
+            })
 
-with open("_data/videos.yml", "w", encoding="utf-8") as f:
-    yaml.dump(video_list, f, allow_unicode=True)
+        if data.get("paging", {}).get("next"):
+            page += 1
+        else:
+            break
 
-print(f"✅ Généré _data/videos.yml avec {len(video_list)} vidéos")
+    return video_list
 
-# --- Génération des pages par tag ---
-os.makedirs("tags", exist_ok=True)
 
-tag_template = """---
+def save_yaml(video_list, path="_data/videos.yml"):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        yaml.dump(video_list, f, allow_unicode=True)
+    print(f"✅ Généré {path} avec {len(video_list)} vidéos")
+
+
+def generate_tag_pages(video_list):
+    os.makedirs("tags", exist_ok=True)
+
+    tag_template = """---
 layout: tag
 tag: "__TAG__"
 permalink: "/__TAG__/"
 ---
 """
 
-# Récupération unique des tags
-all_tags = set(t for v in video_list for t in v["tags"])
+    all_tags = set(t for v in video_list for t in v["tags"])
 
-for tag in all_tags:
-    filename = f"tags/{tag}.md"
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(tag_template.replace("__TAG__", tag))
+    for tag in all_tags:
+        tag_slug = slugify(tag)
+        filename = f"tags/{tag_slug}.md"
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(tag_template.replace("__TAG__", tag_slug))
 
-print(f"✅ Généré {len(all_tags)} fichiers dans /tags/")
+    print(f"✅ Généré {len(all_tags)} fichiers dans /tags/")
+
+
+def main():
+    if not VIMEO_API_KEY or not SHOWCASE_ID:
+        print("❌ VIMEO_API_KEY ou SHOWCASE_ID manquant")
+        exit(1)
+
+    videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_ID)
+    save_yaml(videos)
+    generate_tag_pages(videos)
+
+
+if __name__ == "__main__":
+    main()
