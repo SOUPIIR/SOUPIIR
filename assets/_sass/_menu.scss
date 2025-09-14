@@ -10,7 +10,7 @@ nav a {
     display: flex;
     justify-content: center;
 
-    & a {
+    & .logo {
         display: block;
         background-image: url(../img/transparent_logo_mini.png);
         background-repeat: no-repeat;

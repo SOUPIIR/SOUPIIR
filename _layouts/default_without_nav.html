@@ -5,6 +5,10 @@
     {% include headers.html %}
 </head>
 <body>
+    <header id="header">
+        <h1 class="home-title"><span class="logo">SOUPIIR</span></h1>
+    </header>
+
     <main class="{{page.url | slugify: 'pretty'}}">
         {{ content }}
     </main>
