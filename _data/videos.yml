@@ -27,9 +27,9 @@
   id: '1095161817'
   tags_slugs:
   - bekar
-  thumbnail_desktop: https://i.vimeocdn.com/video/2058592463-1efa7701c63357e8c444db4bf2c27ce0f6dae75d7c5978ebf6cfdaf7d77b4846-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2058592463-1efa7701c63357e8c444db4bf2c27ce0f6dae75d7c5978ebf6cfdaf7d77b4846-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2058592463-1efa7701c63357e8c444db4bf2c27ce0f6dae75d7c5978ebf6cfdaf7d77b4846-d_640x360?&r=pad&region=us
+  thumbnail_desktop: https://i.vimeocdn.com/video/2058786066-60a0120d684dc9ec4093040955c3af86cb32e0f6738877b87e85ed6d05f5c3cb-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2058786066-60a0120d684dc9ec4093040955c3af86cb32e0f6738877b87e85ed6d05f5c3cb-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2058786066-60a0120d684dc9ec4093040955c3af86cb32e0f6738877b87e85ed6d05f5c3cb-d_640x360?&r=pad&region=us
   title: BEKAR - L'ORCHESTRE
 - description: null
   hash: 5b11289701
@@ -82,15 +82,6 @@
   thumbnail_large: https://i.vimeocdn.com/video/2054780004-be384c727d0326b7efe90e47ed1465559eb9cb18f73d1c5c6ff3c53fa22a95ba-d_1280x720?&r=pad&region=us
   thumbnail_mobile: https://i.vimeocdn.com/video/2054780004-be384c727d0326b7efe90e47ed1465559eb9cb18f73d1c5c6ff3c53fa22a95ba-d_640x360?&r=pad&region=us
   title: BEKAR - SAISON
-- description: null
-  hash: 6f24f5484f
-  id: '1085412586'
-  tags_slugs:
-  - drake-lost-tapes
-  thumbnail_desktop: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_640x360?&r=pad&region=us
-  title: DRAKE - LOSSES
 - description: null
   hash: 7381ec59d9
   id: '1072766882'
@@ -454,15 +445,6 @@
   thumbnail_mobile: https://i.vimeocdn.com/video/2028888600-b440da2b2abcc4ea03f9fd5a7fa001434bfb9c7a25c50b8d0573a5355911e4bf-d_640x360?&r=pad&region=us
   title: BEKAR - 2K17
 - description: null
-  hash: a078d912d3
-  id: '1085413494'
-  tags_slugs:
-  - drake-lost-tapes
-  thumbnail_desktop: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_640x360?&r=pad&region=us
-  title: DRAKE - DEMONS
-- description: null
   hash: 5e36457b99
   id: '1085413083'
   tags_slugs:
@@ -471,6 +453,15 @@
   thumbnail_large: https://i.vimeocdn.com/video/2058587560-b84484f430a107f22958e91520573e6769bc74dcf05e25d2ab8163f76c1c389d-d_1280x720?&r=pad&region=us
   thumbnail_mobile: https://i.vimeocdn.com/video/2058587560-b84484f430a107f22958e91520573e6769bc74dcf05e25d2ab8163f76c1c389d-d_640x360?&r=pad&region=us
   title: DRAKE - FROM FLORIDA WITH LOVE
+- description: null
+  hash: 6f24f5484f
+  id: '1085412586'
+  tags_slugs:
+  - drake-lost-tapes
+  thumbnail_desktop: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2054780293-5a61393722047fa257916a01b05975113fd1858108800024c17c6a249d39d3fa-d_640x360?&r=pad&region=us
+  title: DRAKE - LOSSES
 - description: null
   hash: 051799e2f0
   id: '1085412326'
@@ -489,6 +480,15 @@
   thumbnail_large: https://i.vimeocdn.com/video/2058587059-4d29dd8c93ff30c197d7d2a25b859c6e16fe64af7774fdf9ef1956b131fa2743-d_1280x720?&r=pad&region=us
   thumbnail_mobile: https://i.vimeocdn.com/video/2058587059-4d29dd8c93ff30c197d7d2a25b859c6e16fe64af7774fdf9ef1956b131fa2743-d_640x360?&r=pad&region=us
   title: DRAKE - LANDED
+- description: null
+  hash: a078d912d3
+  id: '1085413494'
+  tags_slugs:
+  - drake-lost-tapes
+  thumbnail_desktop: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2058587698-0fe75a4da28b2d872b8aa26403c9ed970e419b53e862d6e6aea43ce0dd9ac1e7-d_640x360?&r=pad&region=us
+  title: DRAKE - DEMONS
 - description: null
   hash: 3c7b48a1d9
   id: '1085411373'
