@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {% include headers.html %}
+</head>
+<body>
+    <main class="{{page.url | slugify: 'pretty'}}">
+        {{ content }}
+    </main>
+
+    {% include scripts-bottom.html %}
+</body>
+</html>

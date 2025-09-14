@@ -30,7 +30,7 @@ jobs:
       - name: Run script
         env:
           VIMEO_API_KEY: ${{ secrets.VIMEO_API_KEY }}
-          SHOWCASE_ID: "11543517"
+          SHOWCASE_LIST: ${{ vars.SHOWCASE_LIST }}
         run: |
           python fetch_vimeo_showcase.py
 

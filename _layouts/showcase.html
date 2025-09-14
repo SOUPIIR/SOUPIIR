@@ -1,0 +1,17 @@
+---
+layout: default_without_nav
+---
+
+<div class="grid">
+  {% assign videos = site.data[page.data_file] %}
+  {% for video in videos %}
+    {% include block-mosaic.html
+        id=video.id
+        hash=video.hash
+        title=video.title
+        thumbnail_desktop=video.thumbnail_desktop
+        thumbnail_mobile=video.thumbnail_mobile
+        thumbnail_large=video.thumbnail_large
+        description=video.description %}
+  {% endfor %}
+</div>
