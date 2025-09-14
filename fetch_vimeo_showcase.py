@@ -5,7 +5,8 @@ import re
 import unicodedata
 
 VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
-SHOWCASE_LIST = os.getenv("SHOWCASE_LIST")
+SHOWCASE_SOUPIIR = os.getenv("SHOWCASE_SOUPIIR")
+SHOWCASE_CLIENTS = os.getenv("SHOWCASE_CLIENTS")
 
 def slugify(value: str) -> str:
     value = str(value)
@@ -112,27 +113,24 @@ permalink: "/showcase/{showcase_id}/"
     print(f"✅ Généré page {filename}")
 
 def main():
-    if not VIMEO_API_KEY or not SHOWCASE_LIST:
-        print("❌ VIMEO_API_KEY ou SHOWCASE_LIST manquant")
+    if not VIMEO_API_KEY:
+        print("❌ VIMEO_API_KEY manquant")
         exit(1)
 
-    showcase_ids = [s.strip() for s in SHOWCASE_LIST.split(",")]
-    first_showcase = showcase_ids[0]
-    other_showcases = showcase_ids[1:]
+    if SHOWCASE_SOUPIIR:
+        videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
+        save_yaml(videos, "_datas/videos.yml")
+        generate_tag_pages(videos)  # ✅ uniquement ici
+        print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
 
-    # Premier showcase -> videos.yml
-    videos = fetch_vimeo_videos(VIMEO_API_KEY, first_showcase)
-    save_yaml(videos, "_data/videos.yml")
-    generate_tag_pages(videos)
-    generate_showcase_page(first_showcase, "videos.yml")
-
-    # Autres showcases -> videos_<id>.yml
-    for sid in other_showcases:
-        videos_other = fetch_vimeo_videos(VIMEO_API_KEY, sid)
-        yaml_file = f"videos_{sid}.yml"
-        save_yaml(videos_other, f"_data/{yaml_file}")
-        generate_tag_pages(videos_other)
-        generate_showcase_page(sid, yaml_file)
+    if SHOWCASE_CLIENTS:
+        showcase_ids = [s.strip() for s in SHOWCASE_CLIENTS.split(",") if s.strip()]
+        for sid in showcase_ids:
+            videos_clients = fetch_vimeo_videos(VIMEO_API_KEY, sid)
+            yaml_file = f"videos_{sid}.yml"
+            save_yaml(videos_clients, f"_datas/{yaml_file}")
+            generate_showcase_page(sid, yaml_file)  # ✅ uniquement ici
+        print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) traités")
 
 if __name__ == "__main__":
     main()
