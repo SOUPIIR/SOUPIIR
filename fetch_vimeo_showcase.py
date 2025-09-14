@@ -58,7 +58,8 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                     elif s["width"] == 1280 and s["height"] == 720:
                         thumbnail_large = s["link"]
 
-            tags = [t["tag"] for t in v.get("tags", [])]
+            # On ne garde plus le champ "tags", seulement les slugs
+            tags_slugs = [slugify(t["tag"]) for t in v.get("tags", [])]
 
             video_list.append({
                 "id": video_id,
@@ -68,8 +69,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                 "thumbnail_mobile": thumbnail_mobile,
                 "thumbnail_desktop": thumbnail_desktop,
                 "thumbnail_large": thumbnail_large,
-                "tags": tags,
-                "tags_slugs": [slugify(t) for t in tags],
+                "tags_slugs": tags_slugs,
             })
 
         if data.get("paging", {}).get("next"):
@@ -97,15 +97,15 @@ permalink: "/__TAG__/"
 ---
 """
 
-    all_tags = set(t for v in video_list for t in v["tags"])
+    # Récupération unique des slugs
+    all_slugs = set(slug for v in video_list for slug in v["tags_slugs"])
 
-    for tag in all_tags:
-        tag_slug = slugify(tag)
+    for tag_slug in all_slugs:
         filename = f"tags/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
             f.write(tag_template.replace("__TAG__", tag_slug))
 
-    print(f"✅ Généré {len(all_tags)} fichiers dans /tags/")
+    print(f"✅ Généré {len(all_slugs)} fichiers dans /tags/")
 
 
 def main():

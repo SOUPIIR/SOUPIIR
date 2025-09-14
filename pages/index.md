@@ -8,7 +8,7 @@ permalink: /
   {%- assign shown_tags = "" | split: "" -%}
 
   {% for video in site.data.videos %}
-    {% if video.tags == empty %}
+    {% if video.tags_slugs == empty %}
       {% include block-mosaic.html
           id=video.id
           hash=video.hash
@@ -18,7 +18,7 @@ permalink: /
           thumbnail_large=video.thumbnail_large
           description=video.description %}
     {% else %}
-      {% assign first_tag = video.tags[0] %}
+      {% assign first_tag = video.tags_slugs[0] %}
       {% unless shown_tags contains first_tag %}
         <div class="grid-item-mosaic link" data-id="{{video.id}}">
           <a href="{{ '/' | append: first_tag | slugify: 'pretty' | relative_url }}">
