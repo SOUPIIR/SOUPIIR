@@ -119,7 +119,7 @@ def main():
 
     if SHOWCASE_SOUPIIR:
         videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
-        save_yaml(videos, "_datas/videos.yml")
+        save_yaml(videos, "_data/videos.yml")
         generate_tag_pages(videos)  # ✅ uniquement ici
         print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
 
@@ -128,7 +128,7 @@ def main():
         for sid in showcase_ids:
             videos_clients = fetch_vimeo_videos(VIMEO_API_KEY, sid)
             yaml_file = f"videos_{sid}.yml"
-            save_yaml(videos_clients, f"_datas/{yaml_file}")
+            save_yaml(videos_clients, f"_data/{yaml_file}")
             generate_showcase_page(sid, yaml_file)  # ✅ uniquement ici
         print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) traités")
 
