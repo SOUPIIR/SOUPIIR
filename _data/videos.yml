@@ -251,7 +251,8 @@
 - description: null
   hash: 4be1301c1c
   id: '1095159758'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs:
   - bekar
@@ -520,7 +521,8 @@
 - description: null
   hash: c16256a74b
   id: '1095154298'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs:
   - bekar
