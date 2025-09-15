@@ -25,7 +25,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r _scritps/requirements.txt
 
       - name: Run script
         env:
@@ -33,7 +33,7 @@ jobs:
           SHOWCASE_SOUPIIR: ${{ vars.SHOWCASE_SOUPIIR }}
           SHOWCASE_CLIENTS: ${{ vars.SHOWCASE_CLIENTS }}
         run: |
-          python fetch_vimeo_showcase.py
+          python _scripts/fetch_vimeo_showcase.py
 
       - name: Commit and push changes
         run: |

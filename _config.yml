@@ -57,9 +57,6 @@ plugins:
 #
 exclude:
   - README.md
-  - requirements.txt
   - Gemfile
   - Gemfile.lock
   - CNAME
-  - "vendor/**"
-  - fetch_vimeo_showcase.py
