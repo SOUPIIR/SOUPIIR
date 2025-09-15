@@ -819,7 +819,8 @@
 - description: null
   hash: 9d7f876b68
   id: '1118837617'
-  tags_category: []
+  tags_category:
+  - commercial
   tags_photos:
   - bi-portolio1
   tags_slugs:
