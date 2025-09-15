@@ -115,7 +115,8 @@
 - description: null
   hash: 4a535ba535
   id: '1049419504'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058545979-8571f7a693cdad997d8c6f8b0d43d4d1b7494e304bcfd27d78803249f95b3478-d_960x540?&r=pad&region=us
@@ -305,7 +306,8 @@
 - description: null
   hash: 4a3d3465bc
   id: '1049417077'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs:
   - dance-of-faded
@@ -350,7 +352,8 @@
 - description: null
   hash: aeebe2ad86
   id: '1049373990'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058552217-1eba7f3302fc93f35522696339394a7a3892919bd6c42c1bc6bae4dcdc926d53-d_960x540?&r=pad&region=us
@@ -382,7 +385,8 @@
 - description: null
   hash: a1a8cb42b1
   id: '1049418890'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058578075-1ad4b2053f907bd7172e03bfe034e16125d740505439274505434a4bb0c15d56-d_960x540?&r=pad&region=us
@@ -393,7 +397,7 @@
   hash: d013f71cd6
   id: '1049421356'
   tags_category:
-  - music
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058565556-8d123d1719cc447bbbad2725338d9a7ca9af48ced788e8eb5f48a6857037aa5d-d_960x540?&r=pad&region=us
@@ -415,7 +419,8 @@
 - description: null
   hash: cce483e561
   id: '1049417598'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1973844225-59b0826d0c1cd6a9e7a08e9f96fc292931eb7eb35014568e74d8686f6841395a-d_960x540?&r=pad&region=us
@@ -425,7 +430,8 @@
 - description: null
   hash: 7c05c7a44b
   id: '1049374844'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058570454-60308cebfca9c531812771788af0f757583ca64ad07865e03696844ec2096403-d_960x540?&r=pad&region=us
@@ -435,7 +441,8 @@
 - description: null
   hash: bed2fe8e74
   id: '1049418302'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058581929-17981e30bc234c52c90ffafdea9cbcfa6344a2f099708d39ae79c75316d61647-d_960x540?&r=pad&region=us
