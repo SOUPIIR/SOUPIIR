@@ -60,3 +60,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - CNAME
+  - "vendor/**"
