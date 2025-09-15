@@ -41,6 +41,9 @@
             setTimeout(() => {
                 content.innerHTML = newContent.innerHTML;
 
+                const toggle = document.querySelector("#toggle");
+                if(toggle) toggle.checked = false;
+
                 content.classList.remove("fade-out");
                 content.classList.add("fade-in");
 
