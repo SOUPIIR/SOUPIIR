@@ -56,7 +56,18 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                     elif s["width"] == 1280 and s["height"] == 720:
                         thumbnail_large = s["link"]
 
-            tags_slugs = [slugify(t["tag"]) for t in v.get("tags", [])]
+            tags_slugs = []
+            tags_category = []
+
+            for t in v.get("tags", []):
+                tag_text = t["tag"]
+                if tag_text.startswith("categorie:"):
+                    # On garde uniquement la partie après "categorie:"
+                    parts = tag_text.split(":", 1)
+                    if len(parts) > 1:
+                        tags_category.append(slugify(parts[1]))
+                else:
+                    tags_slugs.append(slugify(tag_text))
 
             video_list.append({
                 "id": video_id,
@@ -67,6 +78,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                 "thumbnail_desktop": thumbnail_desktop,
                 "thumbnail_large": thumbnail_large,
                 "tags_slugs": tags_slugs,
+                "tags_category": tags_category,
             })
 
         if data.get("paging", {}).get("next"):
