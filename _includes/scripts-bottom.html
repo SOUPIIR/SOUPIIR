@@ -1,6 +1,5 @@
-<script src="/assets/js/lightbox.js"></script>
 <script>
-    window.onload = function() {
+    function initVideosAndLightbox(container = document) {
         [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
             el.lightbox = new Lightbox(el);
         });
@@ -21,6 +20,48 @@
             });
         });
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const content = document.querySelector("#content");
+
+        document.body.addEventListener("click", async (e) => {
+            const link = e.target.closest("a");
+
+            if (link && link.getAttribute("href")?.startsWith("/") && !link.hasAttribute("target")) {
+            e.preventDefault();
+
+            content.classList.add("fade-out");
+
+            const response = await fetch(link.href);
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, "text/html");
+            const newContent = doc.querySelector("#content");
+
+            setTimeout(() => {
+                content.innerHTML = newContent.innerHTML;
+
+                content.classList.remove("fade-out");
+                content.classList.add("fade-in");
+
+                initVideosAndLightbox(content);
+
+                history.pushState({}, "", link.href);
+
+                setTimeout(() => content.classList.remove("fade-in"), 300);
+            }, 300);
+            }
+        });
+
+        window.addEventListener("popstate", async () => {
+            const response = await fetch(location.href);
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, "text/html");
+            content.innerHTML = doc.querySelector("#content").innerHTML;
+        });
+    });
+
     console.log(`
 ░▒▓██████████████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓███████▓▒░
 ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░

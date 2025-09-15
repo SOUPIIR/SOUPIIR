@@ -7,10 +7,11 @@
 <body>
     {% include nav.html %}
 
-    <main class="{{page.url | slugify: 'pretty'}}">
+    <main id="content">
         {{ content }}
+        {% include scripts-bottom.html %}
     </main>
 
-    {% include scripts-bottom.html %}
+    <script>initVideosAndLightbox();</script>
 </body>
 </html>

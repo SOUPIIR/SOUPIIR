@@ -4,6 +4,6 @@ title: About
 permalink: /about
 ---
 
-<div class="about-content">
+<div class="{{page.url | slugify: 'pretty'}}">
     {% include about.html %}
 </div>
