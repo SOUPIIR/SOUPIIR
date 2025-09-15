@@ -17,7 +17,8 @@ permalink: /
                 thumbnail_desktop=video.thumbnail_desktop
                 thumbnail_mobile=video.thumbnail_mobile
                 thumbnail_large=video.thumbnail_large
-                description=video.description %}
+                description=video.description
+                tags_category=video.tags_category %}
         {% else %}
             {% assign first_tag = video.tags_slugs[0] %}
             {% unless shown_tags contains first_tag %}
