@@ -3,6 +3,7 @@ layout: default
 title: Home
 permalink: /
 ---
+
 <div class="{{page.url | slugify: 'pretty'}}">
   <div class="grid">
     {%- assign shown_tags = "" | split: "" -%}
@@ -21,7 +22,7 @@ permalink: /
         {% assign first_tag = video.tags_slugs[0] %}
         {% unless shown_tags contains first_tag %}
           <div class="grid-item-mosaic link" data-id="{{video.id}}">
-            <a href="{{ '/' | append: first_tag | slugify: 'pretty' | relative_url }}">
+            <a href="{{ '/' | append: first_tag | slugify: 'pretty' | append: '/' | relative_url }}">
               <img
                 src="{{video.thumbnail_desktop}}"
                 srcset="
