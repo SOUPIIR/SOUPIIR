@@ -11,8 +11,9 @@
 
     <main class="{{page.url | slugify: 'pretty'}}">
         {{ content }}
+        {% include scripts-bottom.html %}
     </main>
 
-    {% include scripts-bottom.html %}
+    <script>initVideosAndLightbox();</script>
 </body>
 </html>
