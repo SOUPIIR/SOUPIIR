@@ -45,7 +45,8 @@
 - description: null
   hash: 5b11289701
   id: '1057626764'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_960x540?&r=pad&region=us
@@ -134,7 +135,8 @@
 - description: null
   hash: a5766f730e
   id: '1041764653'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/1964601265-804c50187de0acc73f6778fab93ca4590c8210e9ba6d887621e31d7095f4e670-d_960x540?&r=pad&region=us

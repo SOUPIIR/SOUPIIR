@@ -12,7 +12,8 @@
 - description: null
   hash: 4e336a9ad5
   id: '1118542372'
-  tags_category: []
+  tags_category:
+  - commercial
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058974140-9b76ef3803d70ae6839a0b02793a4186d7b4fac850a41b1eb9f96d1c27f52266-d_960x540?&r=pad&region=us
@@ -33,7 +34,8 @@
 - description: null
   hash: 6bb9d6e75d
   id: '1118541436'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058976353-a7f505012c2a6a9de0b2959e837f7082b60670c490f59ae9ab951f5b6dba7392-d_960x540?&r=pad&region=us
@@ -53,7 +55,8 @@
 - description: null
   hash: 5b11289701
   id: '1057626764'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_960x540?&r=pad&region=us
@@ -63,7 +66,8 @@
 - description: null
   hash: ce9061c573
   id: '1118541688'
-  tags_category: []
+  tags_category:
+  - commercial
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058791112-1bf88e28627d7a00287888c97cef570ee8b71f64bfc9ef5a294ed22ef7a39ff4-d_960x540?&r=pad&region=us
@@ -73,7 +77,8 @@
 - description: null
   hash: 8af76e7b33
   id: '1118554682'
-  tags_category: []
+  tags_category:
+  - commercial
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058796856-f4940a4654e500d16cde1331fce8b795bd8b1226b0ab55c72da664a6153a2e4b-d_960x540?&r=pad&region=us
@@ -83,7 +88,8 @@
 - description: null
   hash: 08123bc234
   id: '1118677585'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2058950627-f5c089b3b079975cdd26d1a8bc95d21973d00801285440ace5cbe2fa86c3d1e0-d_960x540?&r=pad&region=us
