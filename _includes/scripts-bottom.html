@@ -11,6 +11,10 @@
             const videoUrl = `/assets/videos/${id}.mp4`;
             video.src = videoUrl;
 
+            video.addEventListener('canplay', () => {
+                video.classList.add('is-ready');
+            });
+
             item.addEventListener('mouseenter', () => {
                 video.play();
             });
