@@ -18,7 +18,8 @@ permalink: /
                 thumbnail_mobile=video.thumbnail_mobile
                 thumbnail_large=video.thumbnail_large
                 description=video.description
-                tags_category=video.tags_category %}
+                tags_category=video.tags_category
+                tags_photos=video.tags_photos %}
         {% else %}
             {% assign first_tag = video.tags_slugs[0] %}
             {% unless shown_tags contains first_tag %}
@@ -36,6 +37,9 @@ permalink: /
                 <div class="overlay">
                     <video muted loop preload="none" playsinline></video>
                     <h2>{{ first_tag }}</h2>
+                    {% if include.tags_category != empty %}
+                        <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+                    {% endif %}
                 </div>
                 </a>
             </div>

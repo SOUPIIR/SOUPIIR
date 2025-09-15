@@ -58,14 +58,21 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
 
             tags_slugs = []
             tags_category = []
+            tags_photos = []
 
             for t in v.get("tags", []):
                 tag_text = t["tag"]
+
                 if tag_text.startswith("categorie:"):
-                    # On garde uniquement la partie après "categorie:"
                     parts = tag_text.split(":", 1)
                     if len(parts) > 1:
                         tags_category.append(slugify(parts[1]))
+
+                elif tag_text.startswith("photo:"):
+                    parts = tag_text.split(":", 1)
+                    if len(parts) > 1:
+                        tags_photos.append(slugify(parts[1]))
+
                 else:
                     tags_slugs.append(slugify(tag_text))
 
@@ -79,6 +86,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                 "thumbnail_large": thumbnail_large,
                 "tags_slugs": tags_slugs,
                 "tags_category": tags_category,
+                "tags_photos": tags_photos,
             })
 
         if data.get("paging", {}).get("next"):
@@ -132,7 +140,7 @@ def main():
     if SHOWCASE_SOUPIIR:
         videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
         save_yaml(videos, "_data/videos.yml")
-        generate_tag_pages(videos)  # ✅ uniquement ici
+        generate_tag_pages(videos)
         print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
 
     if SHOWCASE_CLIENTS:
@@ -141,7 +149,7 @@ def main():
             videos_clients = fetch_vimeo_videos(VIMEO_API_KEY, sid)
             yaml_file = f"videos_{sid}.yml"
             save_yaml(videos_clients, f"_data/{yaml_file}")
-            generate_showcase_page(sid, yaml_file)  # ✅ uniquement ici
+            generate_showcase_page(sid, yaml_file)
         print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) traités")
 
 if __name__ == "__main__":

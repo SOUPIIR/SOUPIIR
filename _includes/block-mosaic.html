@@ -1,10 +1,5 @@
 <div class="grid-item-mosaic" data-id="{{include.id}}">
-    <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&progress_bar=1&controls=1&quality=1080p"
-       video-id="{{include.id}}"
-       video-hash="{{include.hash}}"
-       video-description="{{include.description}}"
-       video-title="{{include.title}}"
-       lightbox="iframe">
+    {% if include.tags_photos != empty %}
         <img
             src="{{include.thumbnail_desktop}}"
             srcset="
@@ -14,10 +9,29 @@
             sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
             alt="{{include.title}}"
             loading="lazy" />
-        <div class="overlay">
-            <video muted loop preload="none" playsinline></video>
-            <h2>{{include.title}}</h2>
-            <span>{{include.tags_category}}</span>
-        </div>
-    </a>
+    {% else %}
+        <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&progress_bar=1&controls=1&quality=1080p"
+            video-id="{{include.id}}"
+            video-hash="{{include.hash}}"
+            video-description="{{include.description}}"
+            video-title="{{include.title}}"
+            lightbox="iframe">
+            <img
+                src="{{include.thumbnail_desktop}}"
+                srcset="
+                    {{include.thumbnail_mobile}} 640w,
+                    {{include.thumbnail_desktop}} 960w,
+                    {{include.thumbnail_large}} 1280w"
+                sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
+                alt="{{include.title}}"
+                loading="lazy" />
+            <div class="overlay">
+                <video muted loop preload="none" playsinline></video>
+                <h2>{{include.title}}</h2>
+                {% if include.tags_category != empty %}
+                <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+                {% endif %}
+            </div>
+        </a>
+    {% endif %}
 </div>
