@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="{{page.url | slugify: 'pretty'}}">
-    <div class="grid">
+    <div class="grid tag">
         {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
         {% for video in videos %}
             {% include block-mosaic.html

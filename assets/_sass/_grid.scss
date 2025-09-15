@@ -14,6 +14,7 @@
         grid-row: span 3;
     }
 
+    &.tag > div:first-child,
     &.showcase > div:first-child {
         grid-column: span 2;
         grid-row: span 2;
