@@ -3,17 +3,17 @@ layout: default
 ---
 
 <div class="{{page.url | slugify: 'pretty'}}">
-  <div class="grid">
-    {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
-    {% for video in videos %}
-      {% include block-mosaic.html
-          id=video.id
-          hash=video.hash
-          title=video.title
-          thumbnail_desktop=video.thumbnail_desktop
-          thumbnail_mobile=video.thumbnail_mobile
-          thumbnail_large=video.thumbnail_large
-          description=video.description %}
-    {% endfor %}
-  </div>
+    <div class="grid">
+        {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
+        {% for video in videos %}
+            {% include block-mosaic.html
+                id=video.id
+                hash=video.hash
+                title=video.title
+                thumbnail_desktop=video.thumbnail_desktop
+                thumbnail_mobile=video.thumbnail_mobile
+                thumbnail_large=video.thumbnail_large
+                description=video.description %}
+        {% endfor %}
+    </div>
 </div>

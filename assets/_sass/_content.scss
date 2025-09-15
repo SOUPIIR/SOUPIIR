@@ -5,13 +5,12 @@ main {
     padding-top: 6.2em;
 }
 
-div.about {
+.about {
     background: url(../img/grey.gif) no-repeat center center/cover;
     position: relative;
     min-height: 100vh;
     align-items: center;
     text-align: center;
-    color: #fff;
     margin-top: -6em;
 
     &::before {
@@ -30,7 +29,6 @@ div.about {
         z-index: 2;
         max-width: 1000px;
         padding: 1rem;
-        color: white;
         text-align: left;
         font-size: 1.1em;
         width: 100%;
@@ -51,5 +49,18 @@ div.about {
 
     &.fade-in {
         opacity: 1;
+    }
+}
+
+.not-found {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+
+    h2 {
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
     }
 }

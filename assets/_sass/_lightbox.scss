@@ -76,14 +76,14 @@
         height: 35px;
         z-index: 99999;
         cursor: pointer;
-    }
 
-    & .close svg {
-        width: 18px;
-        height: auto;
-        display: block;
-        overflow: hidden;
-        fill: #fff;
+        & svg {
+            width: 18px;
+            height: auto;
+            display: block;
+            overflow: hidden;
+            fill: #fff;
+        }
     }
 
     &.show {

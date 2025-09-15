@@ -11,7 +11,6 @@
         top: 20px;
         right: 20px;
         z-index: 1100;
-        color: white;
         background: black;
         padding: 0.5rem 1rem;
         border-radius: 5px;
@@ -57,7 +56,6 @@
 
             & a {
                 font-size: 2rem;
-                color: white;
                 text-decoration: none;
             }
         }
@@ -68,7 +66,6 @@
         top: 25px;
         right: 37px;
         font-size: 2.5rem;
-        color: white;
         cursor: pointer;
         z-index: 1200;
         opacity: 0;
@@ -84,6 +81,7 @@
 
     .grid {
         display: block;
+
         & .overlay {
             opacity: 1;
             background: none;
