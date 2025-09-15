@@ -37,7 +37,7 @@
   thumbnail_desktop: https://i.vimeocdn.com/video/2058796915-ea1d873eb7648b4128b29a88b002b3ecd1df66989571645d276afefaf8b264d9-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2058796915-ea1d873eb7648b4128b29a88b002b3ecd1df66989571645d276afefaf8b264d9-d_1280x720?&r=pad&region=us
   thumbnail_mobile: https://i.vimeocdn.com/video/2058796915-ea1d873eb7648b4128b29a88b002b3ecd1df66989571645d276afefaf8b264d9-d_640x360?&r=pad&region=us
-  title: THE SEAMASTER DIVER 300M 007 EDITION
+  title: OMEGA - 007 EDITION
 - description: null
   hash: c007de0509
   id: '1070703693'
@@ -66,9 +66,9 @@
   hash: 08123bc234
   id: '1118677585'
   tags_slugs: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/2058946241-3e66c17850f45f85b82e5293d8853ee495766820b08be05ef84539b99d024c25-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2058946241-3e66c17850f45f85b82e5293d8853ee495766820b08be05ef84539b99d024c25-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2058946241-3e66c17850f45f85b82e5293d8853ee495766820b08be05ef84539b99d024c25-d_640x360?&r=pad&region=us
+  thumbnail_desktop: https://i.vimeocdn.com/video/2058950627-f5c089b3b079975cdd26d1a8bc95d21973d00801285440ace5cbe2fa86c3d1e0-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2058950627-f5c089b3b079975cdd26d1a8bc95d21973d00801285440ace5cbe2fa86c3d1e0-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2058950627-f5c089b3b079975cdd26d1a8bc95d21973d00801285440ace5cbe2fa86c3d1e0-d_640x360?&r=pad&region=us
   title: Tahiti Boy and The Palmtree Family - Low Life
 - description: null
   hash: 1d54b678a8
@@ -78,3 +78,11 @@
   thumbnail_large: https://i.vimeocdn.com/video/1988986505-50a30abe63e4f5ec1e9b83161860825c6a205716a314a1fd79dddaa433ffd3b6-d_1280x720?&r=pad&region=us
   thumbnail_mobile: https://i.vimeocdn.com/video/1988986505-50a30abe63e4f5ec1e9b83161860825c6a205716a314a1fd79dddaa433ffd3b6-d_640x360?&r=pad&region=us
   title: LA RUSE - SKINNY BITCH
+- description: null
+  hash: 5b11289701
+  id: '1057626764'
+  tags_slugs: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2058594730-51d9e1521cfd3a18a1cb1c3d16f97f060723ce51c6b2d612d21652fcc570fac2-d_640x360?&r=pad&region=us
+  title: CAMBRURE - LE  CRAN
