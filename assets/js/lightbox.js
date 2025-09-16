@@ -19,7 +19,6 @@ Lightbox.prototype.init = function() {
     if (!this.el) this.create();
 
     if (this.gallery) {
-        // Récupère toutes les balises ayant le même data-gallery
         this.images = Array.from(document.querySelectorAll('[data-gallery="'+this.gallery+'"]'));
 
         // Masquer toutes sauf la première
@@ -108,21 +107,9 @@ Lightbox.prototype.create = function() {
 }
 
 Lightbox.prototype.loadImage = function() {
-    var _this = this;
-
     this.setDimensions(this.width, this.height);
-
-    // if (!this.image) {
-        this.image = new Image();
-
-        // this.image.addEventListener('load', function() {
-        //     var dim = _this.fitToSize(this.naturalWidth, this.naturalHeight, _this.width, _this.height);
-        //     _this.setDimensions(dim.width, dim.height);
-        // });
-
-        this.image.src = this.href;
-    // }
-
+    this.image = new Image();
+    this.image.src = this.href;
     this.body.appendChild(this.image);
 }
 
@@ -152,7 +139,7 @@ Lightbox.prototype.loadIframe = function() {
 Lightbox.prototype.open = function() {
     if (this.gallery) {
         // récupère toutes les images de ce groupe
-        this.images = Array.from(document.querySelectorAll('[data-gallery="'+this.gallery+'"]'));
+        this.images = Array.from(document.querySelectorAll('[data-gallery="' + this.gallery + '"]'));
 
         // trouve l’index de l’image cliquée
         this.index = this.images.indexOf(this.trigger);

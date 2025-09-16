@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title:
 permalink: /
 ---
 
@@ -24,24 +24,24 @@ permalink: /
             {% for t in video.tags_slugs %}
             {% unless shown_tags contains t %}
                 <div class="grid-item-mosaic link" data-id="{{video.id}}">
-                <a href="{{ '/' | append: t | slugify: 'pretty' | append: '/' | relative_url }}">
-                    <img
-                    src="{{video.thumbnail_desktop}}"
-                    srcset="
-                        {{video.thumbnail_mobile}} 640w,
-                        {{video.thumbnail_desktop}} 960w,
-                        {{video.thumbnail_large}} 1280w"
-                    sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-                    alt="{{video.title}}"
-                    loading="lazy" />
-                    <div class="overlay">
-                    <video muted loop preload="none" playsinline></video>
-                    <h2>{{ t }}</h2>
-                    {% if video.tags_category != empty %}
-                        <span class="{{video.tags_category}}">{{video.tags_category}}</span>
-                    {% endif %}
-                    </div>
-                </a>
+                    <a href="{{ '/' | append: t | slugify: 'pretty' | append: '/' | relative_url }}">
+                        <img
+                            src="{{video.thumbnail_desktop}}"
+                            srcset="
+                                {{video.thumbnail_mobile}} 640w,
+                                {{video.thumbnail_desktop}} 960w,
+                                {{video.thumbnail_large}} 1280w"
+                            sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
+                            alt="{{video.title}}"
+                            loading="lazy" />
+                        <div class="overlay">
+                            <video muted loop preload="none" playsinline></video>
+                            <h2>{{ t }}</h2>
+                            {% if video.tags_category != empty %}
+                                <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{video.tags_category}}">{{video.tags_category}}</span></a>
+                            {% endif %}
+                        </div>
+                    </a>
                 </div>
                 {%- assign shown_tags = shown_tags | push: t -%}
             {% endunless %}

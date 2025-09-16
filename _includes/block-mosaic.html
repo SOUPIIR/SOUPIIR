@@ -29,7 +29,7 @@
                 <video muted loop preload="none" playsinline></video>
                 <h2>{{include.title}}</h2>
                 {% if include.tags_category != empty %}
-                <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+                    <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{include.tags_category}}">{{include.tags_category}}</span></a>
                 {% endif %}
             </div>
         </a>

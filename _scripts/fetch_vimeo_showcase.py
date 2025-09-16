@@ -106,6 +106,7 @@ def generate_category_pages(video_list):
     os.makedirs("categories", exist_ok=True)
     tag_template = """---
 layout: category
+title: "__CATEGORY_TAG__"
 tag: "__CATEGORY_TAG__"
 permalink: "/__CATEGORY_TAG__/"
 ---
@@ -122,6 +123,7 @@ def generate_group_pages(video_list):
     os.makedirs("groups", exist_ok=True)
     tag_template = """---
 layout: group
+title: "__GROUP_TAG__"
 tag: "__GROUP_TAG__"
 permalink: "/__GROUP_TAG__/"
 ---
