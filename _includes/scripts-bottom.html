@@ -4,7 +4,7 @@
             el.lightbox = new Lightbox(el);
         });
 
-        document.querySelectorAll('.grid-item-mosaic.videos').forEach(item => {
+        document.querySelectorAll('.grid-item-mosaic.videos, .grid-item-mosaic.link').forEach(item => {
             const id = item.getAttribute('data-id');
             const video = item.querySelector('.overlay video');
 
