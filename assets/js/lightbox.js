@@ -1,4 +1,3 @@
-
 var Lightbox = function(elem) {
     this.trigger = elem;
     this.el = document.querySelector('.lightbox');
@@ -8,6 +7,7 @@ var Lightbox = function(elem) {
     this.text = elem.getAttribute('video-description');
     this.title = elem.getAttribute('video-title');
     this.href = elem.getAttribute('url') || elem.getAttribute('href');
+    this.gallery = elem.getAttribute('data-gallery');
     this.image = null;
     this.video = null;
     this.init();
@@ -16,14 +16,24 @@ var Lightbox = function(elem) {
 Lightbox.prototype.init = function() {
     var _this = this;
 
-    if (!this.el)
-        this.create();
+    if (!this.el) this.create();
+
+    if (this.gallery) {
+        // Récupère toutes les balises ayant le même data-gallery
+        this.images = Array.from(document.querySelectorAll('[data-gallery="'+this.gallery+'"]'));
+
+        // Masquer toutes sauf la première
+        this.images.slice(1).forEach(function(el) {
+            el.style.display = 'none';
+        });
+    }
 
     this.trigger.addEventListener('click', function(e) {
         e.preventDefault();
         _this.open();
     });
 }
+
 
 Lightbox.prototype.create = function() {
     var _this = this,
@@ -62,6 +72,12 @@ Lightbox.prototype.create = function() {
                 _this.close();
             }
         }
+        if (e.key === "ArrowRight") {
+            _this.next();
+        }
+        if (e.key === "ArrowLeft") {
+            _this.prev();
+        }
     });
 
     var f = function(e) {
@@ -74,6 +90,21 @@ Lightbox.prototype.create = function() {
     this.el.addEventListener('webkitTransitionEnd', f, false);
     this.el.addEventListener('mozTransitionEnd', f, false);
     this.el.addEventListener('msTransitionEnd', f, false);
+
+    if (this.gallery && this.type === 'image') {
+        var prev = document.createElement('div');
+        var next = document.createElement('div');
+        prev.classList.add('nav', 'prev');
+        next.classList.add('nav', 'next');
+        prev.innerHTML = '&#10094;'; // chevron gauche
+        next.innerHTML = '&#10095;'; // chevron droit
+
+        this.content.appendChild(prev);
+        this.content.appendChild(next);
+
+        prev.addEventListener('click', function() { _this.prev(); });
+        next.addEventListener('click', function() { _this.next(); });
+    }
 }
 
 Lightbox.prototype.loadImage = function() {
@@ -81,16 +112,16 @@ Lightbox.prototype.loadImage = function() {
 
     this.setDimensions(this.width, this.height);
 
-    if (!this.image) {
+    // if (!this.image) {
         this.image = new Image();
 
-        this.image.addEventListener('load', function() {
-            var dim = _this.fitToSize(this.naturalWidth, this.naturalHeight, _this.width, _this.height);
-            _this.setDimensions(dim.width, dim.height);
-        });
+        // this.image.addEventListener('load', function() {
+        //     var dim = _this.fitToSize(this.naturalWidth, this.naturalHeight, _this.width, _this.height);
+        //     _this.setDimensions(dim.width, dim.height);
+        // });
 
         this.image.src = this.href;
-    }
+    // }
 
     this.body.appendChild(this.image);
 }
@@ -119,20 +150,62 @@ Lightbox.prototype.loadIframe = function() {
 }
 
 Lightbox.prototype.open = function() {
-    switch(this.type) {
-        case 'image':
-            this.loadImage();
-            break;
-        case 'video':
-            this.loadVideo();
-            break;
-        default:
-            this.loadIframe();
+    if (this.gallery) {
+        // récupère toutes les images de ce groupe
+        this.images = Array.from(document.querySelectorAll('[data-gallery="'+this.gallery+'"]'));
+
+        // trouve l’index de l’image cliquée
+        this.index = this.images.indexOf(this.trigger);
+
+        // met à jour href/type
+        this.href = this.images[this.index].getAttribute('href');
+        this.type = this.images[this.index].getAttribute('lightbox');
+
+        this.showMedia();
+
+        // création dynamique des boutons nav
+        this.addNav();
+    } else {
+        this.showMedia();
+
+        // supprime les nav existantes si c'est une vidéo
+        this.content.querySelectorAll('.nav').forEach(el => el.remove());
     }
 
     this.el.classList.add('show');
     this.el.offsetHeight; // force render
     this.el.classList.add('open');
+}
+
+Lightbox.prototype.addNav = function() {
+    var _this = this;
+
+    // Supprime les nav existantes
+    this.content.querySelectorAll('.nav').forEach(el => el.remove());
+
+    // Création seulement pour galerie d'images avec 2+ éléments
+    if (this.gallery && this.type === 'image' && this.images.length > 1) {
+        var prev = document.createElement('div');
+        var next = document.createElement('div');
+        prev.classList.add('nav', 'prev');
+        next.classList.add('nav', 'next');
+        prev.innerHTML = '&#10094;'; // chevron gauche
+        next.innerHTML = '&#10095;'; // chevron droit
+        this.content.appendChild(prev);
+        this.content.appendChild(next);
+
+        prev.addEventListener('click', function() { _this.prev(); });
+        next.addEventListener('click', function() { _this.next(); });
+    }
+}
+
+Lightbox.prototype.showMedia = function() {
+    this.body.innerHTML = '';
+    switch(this.type) {
+        case 'image': this.loadImage(); break;
+        case 'video': this.loadVideo(); break;
+        default: this.loadIframe();
+    }
 }
 
 Lightbox.prototype.close = function() {
@@ -141,6 +214,24 @@ Lightbox.prototype.close = function() {
 
 Lightbox.prototype.isOpen = function() {
     return this.el.classList.contains('open');
+}
+
+Lightbox.prototype.next = function() {
+    if (!this.gallery) return;
+    this.index = (this.index + 1) % this.images.length;
+    this.href = this.images[this.index].getAttribute('href');
+    this.type = this.images[this.index].getAttribute('lightbox');
+    this.body.innerHTML = '';
+    this.showMedia();
+}
+
+Lightbox.prototype.prev = function() {
+    if (!this.gallery) return;
+    this.index = (this.index - 1 + this.images.length) % this.images.length;
+    this.href = this.images[this.index].getAttribute('href');
+    this.type = this.images[this.index].getAttribute('lightbox');
+    this.body.innerHTML = '';
+    this.showMedia();
 }
 
 Lightbox.prototype.setDimensions = function(w, h) {

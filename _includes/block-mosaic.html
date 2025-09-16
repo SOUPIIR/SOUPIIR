@@ -1,14 +1,16 @@
 <div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
     {% if include.tags_photos != empty %}
-        <img
-            src="{{include.thumbnail_desktop}}"
-            srcset="
-                {{include.thumbnail_mobile}} 640w,
-                {{include.thumbnail_desktop}} 960w,
-                {{include.thumbnail_large}} 1280w"
-            sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-            alt="{{include.title}}"
-            loading="lazy" />
+        <a href="{{include.thumbnail_desktop}}" lightbox="image" data-gallery="{{include.tags_photos}}">
+            <img
+                src="{{include.thumbnail_desktop}}"
+                srcset="
+                    {{include.thumbnail_mobile}} 640w,
+                    {{include.thumbnail_desktop}} 960w,
+                    {{include.thumbnail_large}} 1280w"
+                sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
+                alt="{{include.title}}"
+                loading="lazy" />
+        </a>
     {% else %}
         <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
             video-description="{{include.description}}"
