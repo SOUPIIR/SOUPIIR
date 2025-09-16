@@ -4,7 +4,7 @@
             el.lightbox = new Lightbox(el);
         });
 
-        document.querySelectorAll('.grid-item-mosaic').forEach(item => {
+        document.querySelectorAll('.grid-item-mosaic.videos').forEach(item => {
             const id = item.getAttribute('data-id');
             const video = item.querySelector('.overlay video');
 
@@ -28,15 +28,10 @@
     document.addEventListener("DOMContentLoaded", () => {
         const content = document.querySelector("#content");
 
-        document.body.addEventListener("click", async (e) => {
-            const link = e.target.closest("a");
-
-            if (link && link.getAttribute("href")?.startsWith("/") && !link.hasAttribute("target")) {
-            e.preventDefault();
-
+        async function loadPage(url, push = true) {
             content.classList.add("fade-out");
 
-            const response = await fetch(link.href);
+            const response = await fetch(url);
             const text = await response.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(text, "text/html");
@@ -46,26 +41,37 @@
                 content.innerHTML = newContent.innerHTML;
 
                 const toggle = document.querySelector("#toggle");
-                if(toggle) toggle.checked = false;
+                if (toggle) toggle.checked = false;
 
                 content.classList.remove("fade-out");
                 content.classList.add("fade-in");
 
                 initVideosAndLightbox(content);
 
-                history.pushState({}, "", link.href);
+                if (push) history.pushState({}, "", url);
 
                 setTimeout(() => content.classList.remove("fade-in"), 300);
             }, 300);
+        }
+
+        document.body.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (link && link.getAttribute("href")?.startsWith("/") && !link.hasAttribute("target")) {
+                e.preventDefault();
+                loadPage(link.href, true);
             }
         });
 
-        window.addEventListener("popstate", async () => {
-            const response = await fetch(location.href);
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, "text/html");
-            content.innerHTML = doc.querySelector("#content").innerHTML;
+        window.addEventListener("popstate", () => {
+            loadPage(location.href, false);
+        });
+
+        window.addEventListener("keydown", (e) => {
+            if (e.altKey && e.key === "ArrowLeft") {
+                history.back();
+            } else if (e.altKey && e.key === "ArrowRight") {
+                history.forward();
+            }
         });
     });
 

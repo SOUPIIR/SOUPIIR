@@ -1,4 +1,4 @@
-<div class="grid-item-mosaic" data-id="{{include.id}}">
+<div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" data-id="{{include.id}}">
     {% if include.tags_photos != empty %}
         <img
             src="{{include.thumbnail_desktop}}"
