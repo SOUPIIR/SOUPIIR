@@ -2,7 +2,7 @@
 layout: default_without_nav
 ---
 
-<div class="{{page.url | slugify: 'pretty'}}">
+<div class="{{ page.url | slugify: 'pretty' }}">
     <div class="grid showcase">
         {% assign videos = site.data[page.data_file] %}
         {% for video in videos %}

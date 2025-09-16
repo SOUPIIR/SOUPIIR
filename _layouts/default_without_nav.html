@@ -9,7 +9,7 @@
         <h1 class="home-title"><span class="logo">SOUPIIR</span></h1>
     </header>
 
-    <main class="{{page.url | slugify: 'pretty'}}">
+    <main class="{{ page.url | slugify: 'pretty' }}">
         {{ content }}
         {% include scripts-bottom.html %}
     </main>
