@@ -87,4 +87,15 @@
             background: none;
         }
     }
+
+    .grid-item-mosaic {
+        & h2 {
+            padding: 1em;
+        }
+
+        & span {
+            top: 1.3em;
+            bottom: auto;
+        }
+    }
 }

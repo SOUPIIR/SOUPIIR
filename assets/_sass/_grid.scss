@@ -34,14 +34,14 @@
     & h2 {
         position: relative;
         z-index: 2; /* au-dessus de la vidéo */
-        padding: 1em;
+        padding: 1em 5em 1em 1em;
         font-size: 1em;
     }
 
     & span {
         position: absolute;
         right: 1.5em;
-        top: 1.3em;
+        bottom: 1.3em;
         display: block;
         padding: .3em .5em;
         border-radius: 4px;
@@ -81,7 +81,7 @@
             object-fit: cover;
             z-index: 1;
             opacity: 0;
-            transition: opacity .8s ease;
+            transition: opacity 1.2s ease;
 
             &.is-ready {
                 opacity: 1;
