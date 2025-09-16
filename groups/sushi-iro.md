@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: group
 tag: "sushi-iro"
 permalink: "/sushi-iro/"
 ---

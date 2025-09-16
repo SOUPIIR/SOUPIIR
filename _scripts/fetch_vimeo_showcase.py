@@ -102,20 +102,36 @@ def save_yaml(video_list, path):
         yaml.dump(video_list, f, allow_unicode=True)
     print(f"✅ Généré {path} avec {len(video_list)} vidéos")
 
-def generate_tag_pages(video_list):
-    os.makedirs("tags", exist_ok=True)
+def generate_category_pages(video_list):
+    os.makedirs("categories", exist_ok=True)
     tag_template = """---
-layout: tag
-tag: "__TAG__"
-permalink: "/__TAG__/"
+layout: category
+tag: "__CATEGORY_TAG__"
+permalink: "/__CATEGORY_TAG__/"
+---
+"""
+    all_slugs = set(slug for v in video_list for slug in v["tags_category"])
+    for tag_slug in all_slugs:
+        filename = f"categories/{tag_slug}.md"
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(tag_template.replace("__CATEGORY_TAG__", tag_slug))
+    print(f"✅ Généré {len(all_slugs)} fichiers dans /categories/")
+
+
+def generate_group_pages(video_list):
+    os.makedirs("groups", exist_ok=True)
+    tag_template = """---
+layout: group
+tag: "__GROUP_TAG__"
+permalink: "/__GROUP_TAG__/"
 ---
 """
     all_slugs = set(slug for v in video_list for slug in v["tags_slugs"])
     for tag_slug in all_slugs:
-        filename = f"tags/{tag_slug}.md"
+        filename = f"groups/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
-            f.write(tag_template.replace("__TAG__", tag_slug))
-    print(f"✅ Généré {len(all_slugs)} fichiers dans /tags/")
+            f.write(tag_template.replace("__GROUP_TAG__", tag_slug))
+    print(f"✅ Généré {len(all_slugs)} fichiers dans /groups/")
 
 def generate_showcase_page(showcase_id, data_file):
     os.makedirs("showcases", exist_ok=True)
@@ -140,7 +156,8 @@ def main():
     if SHOWCASE_SOUPIIR:
         videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
         save_yaml(videos, "_data/videos.yml")
-        generate_tag_pages(videos)
+        generate_group_pages(videos)
+        generate_category_pages(videos)
         print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
 
     if SHOWCASE_CLIENTS:
