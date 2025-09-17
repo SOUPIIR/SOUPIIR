@@ -99,6 +99,7 @@
     }
 
     &.link:hover .overlay {
+        opacity: 1;
         cursor: url('../img/cursor-cross-pointer-icon-1881152-512.png') 16 16, auto !important;
     }
 }
