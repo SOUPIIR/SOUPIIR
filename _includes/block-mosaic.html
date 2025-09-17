@@ -1,6 +1,6 @@
 <div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
     {% if include.tags_photos != empty %}
-        <a href="{{include.thumbnail_desktop}}" lightbox="image" data-gallery="{{include.tags_photos}}">
+        <a href="{{include.thumbnail_large}}" lightbox="image" data-gallery="{{include.tags_photos}}">
             <img
                 src="{{include.thumbnail_desktop}}"
                 srcset="
