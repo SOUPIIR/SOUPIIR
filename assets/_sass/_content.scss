@@ -23,6 +23,9 @@ main {
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
     }
+}
+.about-content {
+    padding: 10em;
 
     & > div {
         position: relative;
@@ -33,10 +36,6 @@ main {
         font-size: 1.1em;
         width: 100%;
         margin: 0 auto;
-
-        &:first-child {
-            padding-top: 10em;
-        }
     }
 }
 
@@ -99,4 +98,33 @@ main {
                 color: #bcbcbe;
             }
         }
+}
+
+.contact .video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    padding: 1rem 2rem;
+    text-align: left;
+    font-size: 1.1em;
+    width: 100%;
+    margin: 10em auto 0;
+    text-align: center;
+
+    h1 {
+        padding-bottom: 1em;
+    }
+}
+
+.copyright {
+    font-size: .7em;
+    margin-top: 2em;
 }
