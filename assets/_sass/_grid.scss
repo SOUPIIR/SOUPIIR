@@ -38,6 +38,10 @@
         font-size: 1em;
     }
 
+    & a {
+        cursor: inherit !important;
+    }
+
     & span {
         position: absolute;
         right: 1.5em;
@@ -89,7 +93,7 @@
         }
     }
 
-    &:hover .overlay {
+    &.videos:hover .overlay {
         opacity: 1;
         cursor: url('../img/Icon_PlayFill_18.png') 16 16, auto !important;
     }
