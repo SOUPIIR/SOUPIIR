@@ -122,9 +122,17 @@ main {
     h1 {
         padding-bottom: 1em;
     }
+
+    p {
+        margin-bottom: .4em;
+    }
+
+    a:hover {
+        color: #bcbcbe;
+    }
 }
 
 .copyright {
     font-size: .7em;
-    margin-top: 2em;
+    margin-top: 3em;
 }
