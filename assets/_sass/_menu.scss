@@ -12,17 +12,11 @@ nav a {
 
     & .logo {
         display: block;
-        background-image: url(../img/anim1-unscreen.gif);
+        background-image: url(../img/unnamed.gif);
         background-repeat: no-repeat;
         height: 90px;
         width: 190px;
         text-indent: -9999px;
-        background-position: -227px -140px;
-
-        &:hover {
-            background-image: url(../img/anim2.gif);
-            background-position: -85px -140px
-        }
     }
 }
 
