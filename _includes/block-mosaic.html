@@ -1,6 +1,15 @@
+{% assign gallery = '' %}
+{% if include.tags_photos != empty %}
+  {% assign gallery = include.tags_photos | join: ',' %}
+{% elsif include.tags_videos != empty %}
+  {% assign gallery = include.tags_videos | join: ',' %}
+{% endif %}
+
 <div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
+
     {% if include.tags_photos != empty %}
-        <a href="{{include.thumbnail_large}}" lightbox="image" data-gallery="{{include.tags_photos}}">
+        <a href="{{include.thumbnail_large}}" lightbox="image" video-title="{{include.title}}" video-description=""
+           {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
                 src="{{include.thumbnail_desktop}}"
                 srcset="
@@ -13,9 +22,10 @@
         </a>
     {% else %}
         <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
-            video-description="{{include.description}}"
-            video-title="{{include.title}}"
-            lightbox="iframe">
+           video-description="{{include.description}}"
+           video-title="{{include.title}}"
+           lightbox="iframe"
+           {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
                 src="{{include.thumbnail_desktop}}"
                 srcset="
@@ -29,7 +39,9 @@
                 <video muted loop preload="none" playsinline></video>
                 <h2>{{include.title}}</h2>
                 {% if include.tags_category != empty %}
-                    <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{include.tags_category}}">{{include.tags_category}}</span></a>
+                    <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
+                        <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+                    </a>
                 {% endif %}
             </div>
         </a>

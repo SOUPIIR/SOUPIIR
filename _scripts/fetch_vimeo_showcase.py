@@ -59,6 +59,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
             tags_slugs = []
             tags_category = []
             tags_photos = []
+            tags_videos = []
 
             for t in v.get("tags", []):
                 tag_text = t["tag"]
@@ -72,6 +73,11 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                     parts = tag_text.split(":", 1)
                     if len(parts) > 1:
                         tags_photos.append(slugify(parts[1]))
+
+                elif tag_text.startswith("video:"):
+                    parts = tag_text.split(":", 1)
+                    if len(parts) > 1:
+                        tags_videos.append(slugify(parts[1]))
 
                 else:
                     tags_slugs.append(slugify(tag_text))
@@ -87,6 +93,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                 "tags_slugs": tags_slugs,
                 "tags_category": tags_category,
                 "tags_photos": tags_photos,
+                "tags_videos": tags_videos,
             })
 
         if data.get("paging", {}).get("next"):

@@ -27,11 +27,11 @@
 
         document.querySelectorAll('[data-gallery]').forEach((el, i, arr) => {
             const group = el.getAttribute('data-gallery');
-            const others = document.querySelectorAll('[data-gallery="'+group+'"]');
+            const others = document.querySelectorAll('[data-gallery="' + group + '"]');
 
             others.forEach((item, idx) => {
                 if (idx > 0) {
-                item.closest('.grid-item-mosaic').style.display = 'none';
+                    item.closest('.grid-item-mosaic').style.display = 'none';
                 }
             });
         });
