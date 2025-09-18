@@ -834,6 +834,7 @@
   tags_category: []
   tags_photos: []
   tags_slugs:
+  - video-bi-portolio1
   - beauty-interrupted
   thumbnail_desktop: https://i.vimeocdn.com/video/2059151274-98f62b96cdb61e967a157e55c6ea8f70bd1a3aa48d223078ebc97a2ea874ec76-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2059151274-98f62b96cdb61e967a157e55c6ea8f70bd1a3aa48d223078ebc97a2ea874ec76-d_1280x720?&r=pad&region=us
@@ -1208,7 +1209,6 @@
   tags_category: []
   tags_photos:
   - csportfolio4
-  - csportfolio2
   tags_slugs:
   - contours-of-silence
   thumbnail_desktop: https://i.vimeocdn.com/video/2059934249-c84fe4727981943203bea71d506bed9ac2ec91f67a913fcbdd62fb9af9d72228-d_960x540?&r=pad&region=us
