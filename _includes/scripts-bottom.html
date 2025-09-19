@@ -1,5 +1,5 @@
 <script>
-    function initVideosAndLightbox(container = document) {
+    function initPage(container = document) {
         [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
             el.lightbox = new Lightbox(el);
         });
@@ -58,7 +58,7 @@
                 content.classList.remove("fade-out");
                 content.classList.add("fade-in");
 
-                initVideosAndLightbox(content);
+                initPage(content);
 
                 if (push) history.pushState({}, "", url);
 
