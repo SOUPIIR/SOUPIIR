@@ -1,9 +1,9 @@
 
-.grid.beauty-interrupted > *:nth-child(1n) {
+.grid.tag.beauty-interrupted > *:nth-child(1n) {
     grid-column: span 2;
     grid-row: span 2;
 }
-.grid.contours-of-silence > *:nth-child(1n) {
+.grid.tag.contours-of-silence > *:nth-child(1n) {
     grid-column: span 1;
     grid-row: span 1;
 }

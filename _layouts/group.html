@@ -2,22 +2,20 @@
 layout: default
 ---
 
-<div class="{{ page.url | slugify: 'pretty' }}">
-    <div class="back-link-container"><a href="/" id="back-link">Back</a></div>
-    <div class="grid tag">
-        {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
-        {% for video in videos %}
-            {% include block-mosaic.html
-                id=video.id
-                hash=video.hash
-                title=video.title
-                thumbnail_desktop=video.thumbnail_desktop
-                thumbnail_mobile=video.thumbnail_mobile
-                thumbnail_large=video.thumbnail_large
-                description=video.description
-                tags_category=video.tags_category
-                tags_photos=video.tags_photos
-                tags_videos=video.tags_videos %}
-        {% endfor %}
-    </div>
+<div class="back-link-container"><a href="/" id="back-link">Back</a></div>
+<div class="grid tag {{ page.url | slugify: 'pretty' }}">
+    {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
+    {% for video in videos %}
+        {% include block-mosaic.html
+            id=video.id
+            hash=video.hash
+            title=video.title
+            thumbnail_desktop=video.thumbnail_desktop
+            thumbnail_mobile=video.thumbnail_mobile
+            thumbnail_large=video.thumbnail_large
+            description=video.description
+            tags_category=video.tags_category
+            tags_photos=video.tags_photos
+            tags_videos=video.tags_videos %}
+    {% endfor %}
 </div>
