@@ -18,15 +18,22 @@ main {
 }
 
 .not-found {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 768px;
+    position: relative;
+
+    a:hover {
+        color: #bcbcbe;
+    }
 
     h2 {
-        margin: 30px 0;
-        font-size: 4em;
-        line-height: 1;
-        letter-spacing: -1px;
+        position: absolute;
+        bottom: 10em;
+        right: 39%;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        text-align: center;
     }
 }
 
