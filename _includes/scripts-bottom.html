@@ -35,6 +35,14 @@
                 }
             });
         });
+
+        const backLink = document.querySelector("#back-link");
+        if (backLink) {
+            backLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                history.back();
+            });
+        }
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -60,7 +68,7 @@
 
                 initPage(content);
 
-                if (push) history.pushState({}, "", url);
+                if (push) history.pushState({ url }, "", url);
 
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
@@ -76,8 +84,12 @@
             }
         });
 
-        window.addEventListener("popstate", () => {
-            loadPage(location.href, false);
+        window.addEventListener("popstate", (e) => {
+            if (e.state && e.state.url) {
+                loadPage(e.state.url, false);
+            } else {
+                loadPage(location.href, false);
+            }
         });
 
         window.addEventListener("keydown", (e) => {
