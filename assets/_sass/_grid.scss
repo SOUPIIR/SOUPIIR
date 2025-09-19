@@ -51,6 +51,7 @@
         border-radius: 4px;
         z-index: 2; /* au-dessus de la vidéo */
         font-size: .7em;
+        opacity: 0;
 
         &.music {
             background-color: whitesmoke;
@@ -66,6 +67,10 @@
             background-color: whitesmoke;
             color: #000;
         }
+    }
+
+    &:hover span {
+        opacity: 1;
     }
 
     & .overlay {

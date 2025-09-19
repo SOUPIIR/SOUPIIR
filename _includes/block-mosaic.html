@@ -8,8 +8,11 @@
 <div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
 
     {% if include.tags_photos != empty %}
-        <a href="{{include.thumbnail_large}}" lightbox="image" video-title="{{include.title}}" video-description=""
-           {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
+        <a href="{{include.thumbnail_large}}"
+            video-title="{{include.title}}"
+            video-description="{{include.desciption}}"
+            lightbox="image"
+            {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
                 src="{{include.thumbnail_desktop}}"
                 srcset="
@@ -38,12 +41,12 @@
             <div class="overlay">
                 <video muted loop preload="none" playsinline></video>
                 <h2>{{include.title}}</h2>
-                {% if include.tags_category != empty %}
-                    <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
-                        <span class="{{include.tags_category}}">{{include.tags_category}}</span>
-                    </a>
-                {% endif %}
             </div>
         </a>
+        {% if include.tags_category != empty %}
+            <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
+                <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+            </a>
+        {% endif %}
     {% endif %}
 </div>
