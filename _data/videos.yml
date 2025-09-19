@@ -166,9 +166,9 @@
   tags_photos: []
   tags_slugs: []
   tags_videos: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/2060761918-efda43ae0e8400eec386d23eb79436f774a8f355fd2c23e670086d06dec88d9b-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2060761918-efda43ae0e8400eec386d23eb79436f774a8f355fd2c23e670086d06dec88d9b-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2060761918-efda43ae0e8400eec386d23eb79436f774a8f355fd2c23e670086d06dec88d9b-d_640x360?&r=pad&region=us
+  thumbnail_desktop: https://i.vimeocdn.com/video/1973842690-ef7dbd200d16908a58b417f0de99a39a9749399e7838abc2ea7695bb47d55f45-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/1973842690-ef7dbd200d16908a58b417f0de99a39a9749399e7838abc2ea7695bb47d55f45-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/1973842690-ef7dbd200d16908a58b417f0de99a39a9749399e7838abc2ea7695bb47d55f45-d_640x360?&r=pad&region=us
   title: GREY
 - description: null
   hash: e22a414d78
