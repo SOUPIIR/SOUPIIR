@@ -41,19 +41,19 @@ main {
     padding: 0;
 }
 
-.back-link {
+.back-link-container {
     display: block;
-    padding: 0 0 1em 3em;
-    background: url(../img/Icon_PlayFill_32_reverse.png) 15px 0 no-repeat;
     position: fixed;
     top: 2.5em;
     left: 1.5em;
     z-index: 8000;
-    text-transform: uppercase;
 
         a {
-            text-decoration: none;
             position: relative;
+            padding: 0 0 1em 3em;
+            background: url(../img/Icon_PlayFill_32_reverse.png) 15px 0 no-repeat;
+            text-decoration: none;
+            text-transform: uppercase;
 
             &::after {
                 content: "";

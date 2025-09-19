@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="{{ page.url | slugify: 'pretty' }}">
-    <div class="back-link"><a href="/">Back</a></div>
+    <div class="back-link-container"><a href="/" id="back-link">Back</a></div>
     <div class="grid tag">
         {% assign videos = site.data.videos | where_exp: "v", "v.tags_slugs contains page.tag" %}
         {% for video in videos %}
