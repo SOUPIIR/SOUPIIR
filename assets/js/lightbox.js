@@ -171,7 +171,7 @@ Lightbox.prototype.addNav = function() {
     this.content.querySelectorAll('.nav').forEach(el => el.remove());
 
     // Création seulement pour galerie d'images avec 2+ éléments
-    if (this.gallery && this.type === 'image' && this.images.length > 1) {
+    if (this.gallery) {
         var prev = document.createElement('div');
         var next = document.createElement('div');
         prev.classList.add('nav', 'prev');
