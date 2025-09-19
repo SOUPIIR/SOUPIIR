@@ -35,11 +35,11 @@ layout: default
                         <div class="overlay">
                             <video muted loop preload="none" playsinline></video>
                             <h2>{{ t }}</h2>
-                            {% if video.tags_category != empty %}
-                                <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{video.tags_category}}">{{video.tags_category}}</span></a>
-                            {% endif %}
                         </div>
                     </a>
+                    {% if video.tags_category != empty %}
+                        <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{video.tags_category}}">{{video.tags_category}}</span></a>
+                    {% endif %}
                 </div>
                 {%- assign shown_tags = shown_tags | push: t -%}
             {% endunless %}
