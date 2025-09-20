@@ -5,7 +5,12 @@
 
     .grid-item-mosaic {
         padding-bottom: .2em;
+
+        h2 {
+            mix-blend-mode: normal
+        }
     }
+
     .burger {
         display: block;
         font-size: 2rem;
