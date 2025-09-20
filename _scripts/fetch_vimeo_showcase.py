@@ -3,7 +3,6 @@ import requests
 import yaml
 import re
 import unicodedata
-from datetime import date
 
 VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
 SHOWCASE_SOUPIIR = os.getenv("SHOWCASE_SOUPIIR")
