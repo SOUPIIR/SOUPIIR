@@ -2,6 +2,7 @@
 layout: default
 title:
 permalink: /
+sitemap: true
 ---
 
 <div class="grid">

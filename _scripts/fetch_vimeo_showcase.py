@@ -112,13 +112,11 @@ def save_yaml(video_list, path):
 
 def generate_category_pages(video_list):
     os.makedirs("categories", exist_ok=True)
-    today = date.today().isoformat()
     tag_template = """---
 layout: category
 title: "__CATEGORY_TAG__"
 tag: "__CATEGORY_TAG__"
 permalink: "/__CATEGORY_TAG__/"
-date: __DATE__
 sitemap: true
 ---
 """
@@ -126,20 +124,18 @@ sitemap: true
     for tag_slug in all_slugs:
         filename = f"categories/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
-            content = tag_template.replace("__CATEGORY_TAG__", tag_slug).replace("__DATE__", today)
+            content = tag_template.replace("__CATEGORY_TAG__", tag_slug)
             f.write(content)
     print(f"✅ Généré {len(all_slugs)} fichiers dans /categories/")
 
 
 def generate_group_pages(video_list):
     os.makedirs("groups", exist_ok=True)
-    today = date.today().isoformat()
     tag_template = """---
 layout: group
 title: "__GROUP_TAG__"
 tag: "__GROUP_TAG__"
 permalink: "/__GROUP_TAG__/"
-date: __DATE__
 sitemap: true
 ---
 """
@@ -147,7 +143,7 @@ sitemap: true
     for tag_slug in all_slugs:
         filename = f"groups/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
-            content = tag_template.replace("__GROUP_TAG__", tag_slug).replace("__DATE__", today)
+            content = tag_template.replace("__GROUP_TAG__", tag_slug)
             f.write(content)
     print(f"✅ Généré {len(all_slugs)} fichiers dans /groups/")
 

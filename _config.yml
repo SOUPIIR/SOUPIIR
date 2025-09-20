@@ -19,11 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: SOUPIIR
-email: your-email@example.com
+email: hello@soupiir.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  SOUPIIR is a French creative studio somewhere between a lab, a mirage, and a film set.
+  It blends the real and the unreal, poetry and code, chaos and precision.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.soupiir.com
 github_username: soupiir
