@@ -7,21 +7,20 @@
         document.querySelectorAll('.grid-item-mosaic.videos, .grid-item-mosaic.link').forEach(item => {
             const id = item.getAttribute('data-id');
             const video = item.querySelector('.overlay video');
+            const overlay = item.querySelector('.overlay');
 
             const videoUrl = `/assets/videos/${id}.mp4`;
             video.src = videoUrl;
 
-            video.addEventListener('canplay', () => {
-                video.classList.add('is-ready');
-            });
-
-            item.addEventListener('mouseenter', () => {
+            overlay.addEventListener('mouseenter', () => {
+                video.classList.add('is-visible');
                 video.play();
             });
-            item.addEventListener('mouseleave', () => {
+
+            overlay.addEventListener('mouseleave', () => {
                 video.pause();
                 video.currentTime = 0;
-                // video.classList.remove('is-ready');
+                video.classList.remove('is-visible');
             });
         });
 
