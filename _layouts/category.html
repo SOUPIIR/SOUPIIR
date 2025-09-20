@@ -4,6 +4,7 @@ layout: default
 
 <div class="back-link-container"><a href="#" id="back-link">Back</a></div>
 <div class="grid tag {{ page.url | slugify: 'pretty' }}">
+    {%- assign shown_tags = "" | split: "" -%}
     {% assign videos = site.data.videos | where_exp: "v", "v.tags_category contains page.tag" %}
     {% for video in videos %}
         {% if video.tags_slugs == empty %}
