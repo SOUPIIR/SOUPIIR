@@ -3,6 +3,7 @@ import requests
 import yaml
 import re
 import unicodedata
+from datetime import date
 
 VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
 SHOWCASE_SOUPIIR = os.getenv("SHOWCASE_SOUPIIR")
@@ -111,35 +112,43 @@ def save_yaml(video_list, path):
 
 def generate_category_pages(video_list):
     os.makedirs("categories", exist_ok=True)
+    today = date.today().isoformat()
     tag_template = """---
 layout: category
 title: "__CATEGORY_TAG__"
 tag: "__CATEGORY_TAG__"
 permalink: "/__CATEGORY_TAG__/"
+date: __DATE__
+sitemap: true
 ---
 """
     all_slugs = set(slug for v in video_list for slug in v["tags_category"])
     for tag_slug in all_slugs:
         filename = f"categories/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
-            f.write(tag_template.replace("__CATEGORY_TAG__", tag_slug))
+            content = tag_template.replace("__CATEGORY_TAG__", tag_slug).replace("__DATE__", today)
+            f.write(content)
     print(f"✅ Généré {len(all_slugs)} fichiers dans /categories/")
 
 
 def generate_group_pages(video_list):
     os.makedirs("groups", exist_ok=True)
+    today = date.today().isoformat()
     tag_template = """---
 layout: group
 title: "__GROUP_TAG__"
 tag: "__GROUP_TAG__"
 permalink: "/__GROUP_TAG__/"
+date: __DATE__
+sitemap: true
 ---
 """
     all_slugs = set(slug for v in video_list for slug in v["tags_slugs"])
     for tag_slug in all_slugs:
         filename = f"groups/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
-            f.write(tag_template.replace("__GROUP_TAG__", tag_slug))
+            content = tag_template.replace("__GROUP_TAG__", tag_slug).replace("__DATE__", today)
+            f.write(content)
     print(f"✅ Généré {len(all_slugs)} fichiers dans /groups/")
 
 def generate_showcase_page(showcase_id, data_file):
@@ -150,6 +159,7 @@ layout: showcase
 title: "Showcase {showcase_id}"
 data_file: "{data_file_no_ext}"
 permalink: "/showcase/{showcase_id}/"
+sitemap: false
 ---
 """
     filename = f"showcases/showcase-{showcase_id}.md"
