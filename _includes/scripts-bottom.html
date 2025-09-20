@@ -13,8 +13,13 @@
             video.src = videoUrl;
 
             overlay.addEventListener('mouseenter', () => {
+                if (!video.src) {
+                    video.src = `/assets/videos/${id}.mp4`;
+                }
                 video.classList.add('is-visible');
-                video.play();
+                video.play().catch(err => {
+                    console.warn("La vidéo n'a pas pu démarrer :", err);
+                });
             });
 
             overlay.addEventListener('mouseleave', () => {
