@@ -101,10 +101,6 @@ main {
 .contact-content {
     position: relative;
     z-index: 2;
-    max-width: 400px;
-    padding: 1rem 2rem;
-    text-align: left;
-    font-size: 1.1em;
     width: 100%;
     margin: 10em auto 0;
     text-align: center;
@@ -115,7 +111,7 @@ main {
     }
 
     p {
-        margin-bottom: .4em;
+        margin-bottom: .7em;
     }
 
     a:hover {
