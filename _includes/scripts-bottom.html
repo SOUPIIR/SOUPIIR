@@ -9,14 +9,51 @@
             const video = item.querySelector('.overlay video');
             const overlay = item.querySelector('.overlay');
 
+            if (!video || !overlay) {
+                console.warn('video or overlay missing for item', item);
+                return;
+            }
+
+            video.muted = true;
+            video.playsInline = true;
+
+            let loaded = false;
+            const markLoaded = (evt) => {
+                loaded = true;
+                video.classList.add('is-ready');
+            };
+
+            video.addEventListener('loadeddata', markLoaded, { once: true });
+            video.addEventListener('canplay', markLoaded, { once: true });
+            video.addEventListener('canplaythrough', markLoaded, { once: true });
+
+            const showAndPlay = () => {
+                video.classList.add('is-visible');
+                video.play().catch(err => {
+                    console.warn('video.play() failed for', id, err);
+                });
+            };
+
             overlay.addEventListener('mouseenter', () => {
                 if (!video.src) {
                     video.src = `/assets/videos/${id}.mp4`;
+                    video.load();
                 }
-                video.classList.add('is-visible');
-                video.play().catch(err => {
-                    console.warn("La vidéo n'a pas pu démarrer :", err);
-                });
+
+                if (video.readyState >= 3 || loaded) {
+                    showAndPlay();
+                    return;
+                }
+
+                const onFirstPlayable = () => {
+                    showAndPlay();
+                    video.removeEventListener('loadeddata', onFirstPlayable);
+                    video.removeEventListener('canplay', onFirstPlayable);
+                    video.removeEventListener('canplaythrough', onFirstPlayable);
+                };
+                video.addEventListener('loadeddata', onFirstPlayable, { once: true });
+                video.addEventListener('canplay', onFirstPlayable, { once: true });
+                video.addEventListener('canplaythrough', onFirstPlayable, { once: true });
             });
 
             overlay.addEventListener('mouseleave', () => {
