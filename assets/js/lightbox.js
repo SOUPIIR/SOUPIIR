@@ -21,7 +21,7 @@ Lightbox.prototype.init = function() {
     if (!this.el) this.create();
 
     if (this.gallery) {
-        this.images = Array.from(document.querySelectorAll('[data-gallery="'+this.gallery+'"]'));
+        this.images = Array.from(document.querySelectorAll('[data-gallery="' + this.gallery + '"]'));
         this.images.slice(1).forEach(function(el) {
             el.style.display = 'none';
         });
@@ -65,10 +65,6 @@ Lightbox.prototype.create = function() {
         _this.body.innerHTML = '';
     }
     this.el.addEventListener('transitionend', f, false);
-
-    if (this.gallery && this.type === 'image') {
-        this.addNav();
-    }
 }
 
 Lightbox.prototype.loadImage = function() {
@@ -126,7 +122,7 @@ Lightbox.prototype.addNav = function() {
     var _this = this;
     this.content.querySelectorAll('.nav').forEach(el => el.remove());
 
-    if (this.gallery && this.images.length > 1) {
+    if (this.gallery && this.images && this.images.length > 1) {
         var prev = document.createElement('div');
         var next = document.createElement('div');
         prev.classList.add('nav', 'prev');
