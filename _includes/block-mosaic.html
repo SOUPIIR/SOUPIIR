@@ -39,7 +39,7 @@
                 loading="lazy" />
             <div class="overlay">
                 <video muted loop preload="none" playsinline></video>
-                <h2>{{include.title}}</h2>
+                <h2 data-content="{{include.title}}" class="glitch">{{include.title}}</h2>
             </div>
         </a>
         {% if include.tags_category != empty %}
