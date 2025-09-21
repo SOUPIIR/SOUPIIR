@@ -186,11 +186,20 @@ h2 {
     mix-blend-mode: normal;
 }
 
+h2.glitch:before,
+h2.glitch:after {
+    padding: 1em 5em 1em 1em;
+}
+
+span.glitch:before,
+span.glitch:after {
+    padding: .5em 1em;
+}
+
 .glitch:after {
     content: attr(data-content);
     position: absolute;
     left: 1px;
-    padding: 1em 5em 1em 1em;
     text-shadow: -1px 0 red;
     top: 0;
     color: white;
@@ -268,7 +277,6 @@ h2 {
 .glitch:before {
     content: attr(data-content);
     position: absolute;
-    padding: 1em 5em 1em 1em;
     left: -1px;
     text-shadow: 1px 0 blue;
     top: 0;

@@ -44,7 +44,7 @@
         </a>
         {% if include.tags_category != empty %}
             <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
-                <span class="{{include.tags_category}}">{{include.tags_category}}</span>
+                <span class="glitch {{include.tags_category}}" data-content="{{include.tags_category}}">{{include.tags_category}}</span>
             </a>
         {% endif %}
     {% endif %}

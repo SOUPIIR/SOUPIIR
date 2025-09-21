@@ -41,7 +41,8 @@ sitemap: true
                         </div>
                     </a>
                     {% if video.tags_category != empty %}
-                        <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}"><span class="{{video.tags_category}}">{{video.tags_category}}</span></a>
+                        <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
+                        <span  class="glitch {{video.tags_category}}" data-content="{{video.tags_category}}">{{video.tags_category}}</span></a>
                     {% endif %}
                 </div>
                 {%- assign shown_tags = shown_tags | push: t -%}
