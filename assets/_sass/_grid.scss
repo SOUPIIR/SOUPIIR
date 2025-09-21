@@ -46,7 +46,7 @@
     & span {
         position: absolute;
         right: 1.5em;
-        bottom: 1.3em;
+        bottom: 1.25em;
         display: block;
         padding: .5em 1em;
         border-radius: 6px;
@@ -59,21 +59,8 @@
             transform 0.3s ease,
             background-color 0.3s ease,
             box-shadow 0.3s ease;
-
-        &.music {
-            background-color: whitesmoke;
-            color: #000;
-        }
-
-        &.ads {
-            background-color: whitesmoke;
-            color: #000;
-        }
-
-        &.short {
-            background-color: whitesmoke;
-            color: #000;
-        }
+        background-color: whitesmoke;
+        color: #000;
 
         &:hover {
             transform: scale(1.1);
