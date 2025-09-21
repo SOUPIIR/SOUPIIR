@@ -1,16 +1,15 @@
 {% assign gallery = '' %}
 {% if include.tags_photos != empty %}
-  {% assign gallery = include.tags_photos | join: ',' %}
+    {% assign gallery = include.tags_photos | join: ',' %}
 {% elsif include.tags_videos != empty %}
-  {% assign gallery = include.tags_videos | join: ',' %}
+    {% assign gallery = include.tags_videos | join: ',' %}
 {% endif %}
 
 <div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
-
     {% if include.tags_photos != empty %}
         <a href="{{include.thumbnail_large}}"
-            video-title="{{include.title}}"
-            video-description="{{include.desciption}}"
+            data-title="{{include.title}}"
+            data-description="{{include.desciption}}"
             lightbox="image"
             {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
@@ -25,8 +24,8 @@
         </a>
     {% else %}
         <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
-           video-description="{{include.description}}"
-           video-title="{{include.title}}"
+           data-title="{{include.title}}"
+           data-description="{{include.description}}"
            lightbox="iframe"
            {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
