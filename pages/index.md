@@ -37,7 +37,7 @@ sitemap: true
                             loading="lazy" />
                         <div class="overlay">
                             <video muted loop preload="none" playsinline></video>
-                            <h2>{{ t }}</h2>
+                            <h2 data-content="{{ t }}" class="glitch">{{ t }}</h2>
                         </div>
                     </a>
                     {% if video.tags_category != empty %}

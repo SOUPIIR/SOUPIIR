@@ -36,7 +36,7 @@
         z-index: 2;
         padding: 1em 5em 1em 1em;
         font-size: 1em;
-        width: 80%;
+        width: 100%;
         mix-blend-mode: difference;
     }
 
@@ -182,11 +182,11 @@
     }
 }
 
-.tag h2 {
+h2 {
     mix-blend-mode: normal;
 }
 
-.tag .glitch:after {
+.glitch:after {
     content: attr(data-content);
     position: absolute;
     left: 1px;
@@ -265,7 +265,7 @@
     }
 }
 
-.tag .glitch:before {
+.glitch:before {
     content: attr(data-content);
     position: absolute;
     padding: 1em 5em 1em 1em;
