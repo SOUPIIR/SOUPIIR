@@ -1,24 +1,24 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: $background-color;
+    color: $base-color;
     font-family: "Sansation", Helvetica, 'Courier Prime', monospace;
 }
 
 header {
-    width: 100%;
     position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
 h1 {
-    font-size: 1.6em;
     padding-bottom: 2em;
+    font-size: 1.6em;
 }
 
 h2 {
-    font-size: 1.2em;
     padding: 2em 0;
+    font-size: 1.2em;
     text-transform: uppercase;
     font-weight: bold;
 }
