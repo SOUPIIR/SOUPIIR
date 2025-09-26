@@ -24,8 +24,11 @@ nav a {
     right: 3em;
     top: 2.4em;
 
+    & ul {
+        display: flex;
+    }
+
     & li {
-        float: left;
         padding-left: 2em;
 
         & a {
@@ -53,6 +56,13 @@ nav a {
                 color: $hover-color;
             }
         }
+    }
+
+    & .icon {
+        display: inline-block;
+        position: relative;
+        bottom: .2em;
+        width: 1.5em;
     }
 }
 
