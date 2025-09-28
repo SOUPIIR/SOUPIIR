@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   SOUPIIR is a French creative studio somewhere between a lab, a mirage, and a film set.
   It blends the real and the unreal, poetry and code, chaos and precision.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://www.soupiir.com
+url: https://soupiir.com
 github_username: soupiir
 domain: soupiir.github.io
 

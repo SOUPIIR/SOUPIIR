@@ -5,46 +5,46 @@
     {% assign gallery = include.tags_videos | join: ',' %}
 {% endif %}
 
-<div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{include.id}}"{% endif %}>
+<div class="grid-item-mosaic {% if include.tags_photos != empty %}photos{% else %}videos{% endif %}" {% if include.tags_photos == empty %}data-id="{{ include.id }}"{% endif %}>
     {% if include.tags_photos != empty %}
-        <a href="{{include.thumbnail_large}}"
-            data-title="{{include.title}}"
-            data-description="{{include.desciption}}"
+        <a href="{{ include.thumbnail_large }}"
+            data-title="{{ include.title }}"
+            data-description="{{ include.desciption }}"
             lightbox="image"
             {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
-                src="{{include.thumbnail_desktop}}"
+                src="{{ include.thumbnail_desktop }}"
                 srcset="
-                    {{include.thumbnail_mobile}} 640w,
-                    {{include.thumbnail_desktop}} 960w,
-                    {{include.thumbnail_large}} 1280w"
+                    {{ include.thumbnail_mobile }} 640w,
+                    {{ include.thumbnail_desktop }} 960w,
+                    {{ include.thumbnail_large }} 1280w"
                 sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-                alt="{{include.title}}"
+                alt="{{ include.title }}"
                 loading="lazy" />
         </a>
     {% else %}
-        <a href="https://player.vimeo.com/video/{{include.id}}?h={{include.hash}}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
-           data-title="{{include.title}}"
-           data-description="{{include.description}}"
+        <a href="https://player.vimeo.com/video/{{ include.id }}?h={{ include.hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
+           data-title="{{ include.title }}"
+           data-description="{{ include.description }}"
            lightbox="iframe"
-           {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
+           {% if gallery != '' %}data-gallery="{{ gallery }}"{% endif %}>
             <img
-                src="{{include.thumbnail_desktop}}"
+                src="{{ include.thumbnail_desktop }}"
                 srcset="
-                    {{include.thumbnail_mobile}} 640w,
-                    {{include.thumbnail_desktop}} 960w,
-                    {{include.thumbnail_large}} 1280w"
+                    {{ include.thumbnail_mobile }} 640w,
+                    {{ include.thumbnail_desktop }} 960w,
+                    {{ include.thumbnail_large }} 1280w"
                 sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-                alt="{{include.title}}"
+                alt="{{ include.title }}"
                 loading="lazy" />
             <div class="overlay">
                 <video muted loop preload="none" playsinline></video>
-                <h2 data-content="{{include.title}}" class="glitch">{{include.title}}</h2>
+                <h2 data-content="{{ include.title }}" class="glitch">{{ include.title }}</h2>
             </div>
         </a>
         {% if include.tags_category != empty %}
             <a href="{{ '/' | append: include.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
-                <span class="glitch {{include.tags_category}}" data-content="{{include.tags_category}}">{{include.tags_category}}</span>
+                <span class="glitch {{ include.tags_category }}" data-content="{{ include.tags_category }}">{{ include.tags_category }}</span>
             </a>
         {% endif %}
     {% endif %}
