@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="simple-video videos" data-id="{{ page.video_id }}">
+    <a href="https://player.vimeo.com/video/{{ page.video_id }}?h={{ page.video_hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
+       data-title="{{ page.title }}"
+       data-description="{{ page.description }}"
+       lightbox="iframe">
+        <img
+            src="{{ page.thumbnail_desktop }}"
+            srcset="
+                {{ page.thumbnail_mobile }} 640w,
+                {{ page.thumbnail_desktop }} 960w,
+                {{ page.thumbnail_large }} 1280w"
+            sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
+            alt="{{ page.title }}"
+            loading="lazy" />
+        <div class="overlay">
+            <video muted loop preload="none" playsinline></video>
+            <h2 data-content="{{ page.title }}" class="glitch">{{ page.title }}</h2>
+        </div>
+    </a>
+
+    {% if page.tags_category and page.tags_category != empty %}
+        {% for cat in page.tags_category %}
+        <a href="{{ '/' | append: cat | slugify: 'pretty' | append: '/' | relative_url }}">
+            <span class="{{ cat }}">{{ cat }}</span>
+        </a>
+        {% endfor %}
+    {% endif %}
+</div>

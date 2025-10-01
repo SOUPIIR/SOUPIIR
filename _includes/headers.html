@@ -1,14 +1,31 @@
-
-<meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<title>
+{% capture page_title %}
   {% if include.title %}
     {{ include.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
   {% else %}
     {{ site.title }}
   {% endif %}
-</title>
-<meta name="description" content="{{site.description}}" />
+{% endcapture %}
+
+{% assign page_title = page_title | strip %}
+
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ site.description }}" />
+
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:image" content="{{ page.thumbnail_desktop | default: '/assets/images/default-og.jpg' | absolute_url }}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="{{ site.url | replace: 'https://', '' | replace: 'http://', '' }}" />
+<meta property="twitter:url" content="{{ page.url | absolute_url }}" />
+<meta name="twitter:title" content="{{ page_title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:image" content="{{ page.thumbnail_desktop | default: '/assets/images/default-og.jpg' | absolute_url }}" />
+<meta name="twitter:site" content="@{{ site.title | downcase }}" />
 
 <link rel="icon" href="/assets/img/favicon.png" />
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />

@@ -22,12 +22,25 @@
 }
 
 .grid-item-mosaic {
+    & img {
+        width: 100%;
+    }
+}
+
+.simple-video {
+    & img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.grid-item-mosaic,
+.simple-video {
     position: relative;
     overflow: hidden;
 
     & img {
         display: block;
-        width: 100%;
         height: auto;
     }
 

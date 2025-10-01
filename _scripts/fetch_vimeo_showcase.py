@@ -8,12 +8,14 @@ VIMEO_API_KEY = os.getenv("VIMEO_API_KEY")
 SHOWCASE_SOUPIIR = os.getenv("SHOWCASE_SOUPIIR")
 SHOWCASE_CLIENTS = os.getenv("SHOWCASE_CLIENTS")
 
+
 def slugify(value: str) -> str:
     value = str(value)
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
     value = re.sub(r'[^a-zA-Z0-9]+', '-', value)
     value = value.strip('-')
     return value.lower()
+
 
 def fetch_vimeo_videos(api_key: str, showcase_id: str):
     url = f"https://api.vimeo.com/albums/{showcase_id}/videos"
@@ -103,11 +105,13 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
 
     return video_list
 
+
 def save_yaml(video_list, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         yaml.dump(video_list, f, allow_unicode=True)
     print(f"✅ Généré {path} avec {len(video_list)} vidéos")
+
 
 def generate_category_pages(video_list):
     os.makedirs("categories", exist_ok=True)
@@ -146,6 +150,7 @@ sitemap: true
             f.write(content)
     print(f"✅ Généré {len(all_slugs)} fichiers dans /groups/")
 
+
 def generate_showcase_page(showcase_id, data_file):
     os.makedirs("showcases", exist_ok=True)
     data_file_no_ext = os.path.splitext(data_file)[0]
@@ -162,6 +167,54 @@ sitemap: false
         f.write(content)
     print(f"✅ Généré page {filename}")
 
+
+def generate_video_pages(video_list):
+    os.makedirs("videos", exist_ok=True)
+    template = """---
+layout: video
+title: "__TITLE__"
+video_id: "__VIDEO_ID__"
+video_hash: "__VIDEO_HASH__"
+permalink: "/videos/__VIDEO_URL__/"
+sitemap: true
+thumbnail_mobile: "__THUMB_MOBILE__"
+thumbnail_desktop: "__THUMB_DESKTOP__"
+thumbnail_large: "__THUMB_LARGE__"
+tags_category: [__TAGS_CATEGORY__]
+tags_photos: [__TAGS_PHOTOS__]
+tags_slugs: [__TAGS_SLUGS__]
+tags_videos: [__TAGS_VIDEOS__]
+description: "__DESCRIPTION__"
+---
+"""
+
+    count = 0
+    for v in video_list:
+        if v["tags_photos"]:
+            continue
+
+        filename = f"videos/{v['id']}.md"
+
+        content = template
+        content = content.replace("__TITLE__", v["title"].replace('"', "'"))
+        content = content.replace("__VIDEO_ID__", v["id"])
+        content = content.replace("__VIDEO_HASH__", v["hash"])
+        content = content.replace("__VIDEO_URL__", slugify(v["title"]))
+        content = content.replace("__THUMB_MOBILE__", v["thumbnail_mobile"] or "")
+        content = content.replace("__THUMB_DESKTOP__", v["thumbnail_desktop"] or "")
+        content = content.replace("__THUMB_LARGE__", v["thumbnail_large"] or "")
+        content = content.replace("__TAGS_CATEGORY__", ", ".join(v["tags_category"]))
+        content = content.replace("__TAGS_PHOTOS__", ", ".join(v["tags_photos"]))
+        content = content.replace("__TAGS_SLUGS__", ", ".join(v["tags_slugs"]))
+        content = content.replace("__TAGS_VIDEOS__", ", ".join(v["tags_videos"]))
+        content = content.replace("__DESCRIPTION__", (v["description"] or "").replace('"', "'"))
+
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(content)
+        count += 1
+    print(f"✅ Généré {count} fichiers dans /videos/")
+
+
 def main():
     if not VIMEO_API_KEY:
         print("❌ VIMEO_API_KEY manquant")
@@ -172,6 +225,7 @@ def main():
         save_yaml(videos, "_data/videos.yml")
         generate_group_pages(videos)
         generate_category_pages(videos)
+        generate_video_pages(videos)
         print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
 
     if SHOWCASE_CLIENTS:
