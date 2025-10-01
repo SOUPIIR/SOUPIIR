@@ -17,14 +17,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ site.description }}" />
-<meta property="og:image" content="{{ page.thumbnail_desktop | default: '/assets/images/default-og.jpg' | absolute_url }}" />
+<meta property="og:image" content="{{ page.thumbnail_desktop | default: '/web-app-manifest-512x512.png' | absolute_url }}" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:domain" content="{{ site.url | replace: 'https://', '' | replace: 'http://', '' }}" />
 <meta property="twitter:url" content="{{ page.url | absolute_url }}" />
 <meta name="twitter:title" content="{{ page_title }}" />
 <meta name="twitter:description" content="{{ site.description }}" />
-<meta name="twitter:image" content="{{ page.thumbnail_desktop | default: '/assets/images/default-og.jpg' | absolute_url }}" />
+<meta name="twitter:image" content="{{ page.thumbnail_desktop | default: '/web-app-manifest-512x512.png' | absolute_url }}" />
 <meta name="twitter:site" content="@{{ site.title | downcase }}" />
 
 <link rel="icon" href="/assets/img/favicon.png" />
