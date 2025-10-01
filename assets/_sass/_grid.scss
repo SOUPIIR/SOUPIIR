@@ -22,16 +22,15 @@
 }
 
 .grid-item-mosaic {
-    & img {
+    & img,
+    & h2 {
         width: 100%;
     }
 }
 
 .simple-video {
-    & img {
         width: 70%;
         margin: 0 auto;
-    }
 }
 
 .grid-item-mosaic,
@@ -47,7 +46,6 @@
     & h2 {
         position: relative;
         z-index: 2;
-        width: 100%;
         padding: 1em 5em 1em 1em;
         font-size: 1em;
         mix-blend-mode: difference;
