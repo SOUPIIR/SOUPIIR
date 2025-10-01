@@ -1,9 +1,9 @@
 {% capture page_title %}
-  {% if include.title %}
-    {{ include.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
-  {% else %}
-    {{ site.title }}
-  {% endif %}
+    {% if include.title %}
+        {{ include.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
 {% endcapture %}
 
 {% assign page_title = page_title | strip %}
