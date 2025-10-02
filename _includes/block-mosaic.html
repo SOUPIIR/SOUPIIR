@@ -23,11 +23,13 @@
                 loading="lazy" />
         </a>
     {% else %}
-        <a href="https://player.vimeo.com/video/{{ include.id }}?h={{ include.hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
-           data-title="{{ include.title }}"
-           data-description="{{ include.description }}"
-           lightbox="iframe"
-           {% if gallery != '' %}data-gallery="{{ gallery }}"{% endif %}>
+        <a
+            href="/videos/{{ include.title_slugify }}/"
+            data-title="{{ include.title }}"
+            data-description="{{ include.description }}"
+            lightbox="iframe"
+            url="https://player.vimeo.com/video/{{ include.id }}?h={{ include.hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
+        {% if gallery != '' %}data-gallery="{{ gallery }}"{% endif %}>
             <img
                 src="{{ include.thumbnail_desktop }}"
                 srcset="

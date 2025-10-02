@@ -88,6 +88,7 @@ def fetch_vimeo_videos(api_key: str, showcase_id: str):
                 "id": video_id,
                 "hash": video_hash,
                 "title": v["name"],
+                "title_slugify": slugify(v["name"]),
                 "description": v.get("description", ""),
                 "thumbnail_mobile": thumbnail_mobile,
                 "thumbnail_desktop": thumbnail_desktop,
