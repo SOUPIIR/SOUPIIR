@@ -14,6 +14,7 @@ sitemap: true
                 id=video.id
                 hash=video.hash
                 title=video.title
+                title_slugify = video.title_slugify
                 thumbnail_desktop=video.thumbnail_desktop
                 thumbnail_mobile=video.thumbnail_mobile
                 thumbnail_large=video.thumbnail_large
