@@ -112,10 +112,9 @@
         top: 2.5em;
         left: .1em;
     }
-}
 
-
-h2.glitch:before,
-h2.glitch:after {
-    padding: 1em;
+    h2.glitch:before,
+    h2.glitch:after {
+        padding: 1em;
+    }
 }

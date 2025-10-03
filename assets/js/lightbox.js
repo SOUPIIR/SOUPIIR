@@ -95,7 +95,7 @@ Lightbox.prototype.loadVideo = function() {
 Lightbox.prototype.loadIframe = function() {
     this.setDimensions(this.width, this.height);
     this.body.innerHTML = '<iframe src="' + this.href + '" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>'
-        + '<h2>' + this.title + '</h2>'
+        + '<h2 class="glitch">' + this.title + '</h2>'
         + '<p>' + this.text + '</p>';
 }
 
