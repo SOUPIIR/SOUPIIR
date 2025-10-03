@@ -35,6 +35,8 @@ sitemap: true
                                 {{ video.thumbnail_large }} 1280w"
                             sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
                             alt="{{ video.title }}"
+                            width="1280"
+                            height="720"
                             loading="lazy" />
                         <div class="overlay">
                             <video muted loop preload="none" playsinline></video>

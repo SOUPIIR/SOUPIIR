@@ -3,10 +3,11 @@ layout: default
 ---
 
 <div class="grid-item-mosaic simple-video videos" data-id="{{ page.video_id }}">
-    <a href="https://player.vimeo.com/video/{{ page.video_id }}?h={{ page.video_hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
-       data-title="{{ page.title }}"
-       data-description="{{ page.description }}"
-       lightbox="iframe">
+    <a
+        href="https://player.vimeo.com/video/{{ page.video_id }}?h={{ page.video_hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
+        data-title="{{ page.title }}"
+        data-description="{{ page.description }}"
+        lightbox="iframe">
         <img
             src="{{ page.thumbnail_desktop }}"
             srcset="
@@ -15,6 +16,8 @@ layout: default
                 {{ page.thumbnail_large }} 1280w"
             sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
             alt="{{ page.title }}"
+            width="1280"
+            height="720"
             loading="lazy" />
         <div class="overlay">
             <video muted loop preload="none" playsinline></video>
