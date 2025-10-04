@@ -61,6 +61,12 @@ jobs:
         - name: Build Jekyll site
           run: bundle exec jekyll build
 
+        - name: Copy favicons to site root
+          run: |
+            mkdir -p _site
+            cp -r assets/favicons/* _site/
+            echo "Favicons copied to _site root"
+
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v3
           with:

@@ -1,7 +1,12 @@
+---
+layout: null
+permalink: /site.webmanifest
+---
+
 {
-  "name": "SOUPIIR",
-  "short_name": "SOUPIIR",
-  "description": "SOUPIIR is a French creative studio blending real and unreal.",
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "description": "{{ site.description }}",
   "start_url": "/",
   "icons": [
     {
