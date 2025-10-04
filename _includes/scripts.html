@@ -81,6 +81,13 @@
                 history.back();
             });
         }
+
+        document.querySelectorAll('.glitch').forEach(el => {
+            const delay = (Math.random() * 6).toFixed(2);
+            const duration = (6 + Math.random() * 8).toFixed(2);
+            el.style.setProperty('--glitch-delay', `${delay}s`);
+            el.style.setProperty('--glitch-duration', `${duration}s`);
+        })
     }
 
     document.addEventListener("DOMContentLoaded", () => {

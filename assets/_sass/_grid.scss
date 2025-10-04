@@ -154,7 +154,8 @@ span.glitch:after {
     color: $light-color;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
-    animation: noise-anim 8s infinite linear alternate-reverse;
+    animation: noise-anim var(--glitch-duration, 8s) infinite linear alternate-reverse;
+    animation-delay: calc(var(--glitch-delay, 0s) / 2);
 }
 
 .glitch:before {
@@ -166,5 +167,6 @@ span.glitch:after {
     color: $light-color;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
-    animation: noise-anim-2 12s infinite linear alternate-reverse;
+    animation: noise-anim-2 var(--glitch-duration, 12s) infinite linear alternate-reverse;
+    animation-delay: var(--glitch-delay, 0s);
 }
