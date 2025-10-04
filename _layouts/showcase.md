@@ -1,5 +1,5 @@
 ---
-layout: default_without_nav
+layout: default
 ---
 
 <div class="grid showcase {{ page.url | slugify: 'pretty' }}">

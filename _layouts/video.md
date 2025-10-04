@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<div class="back-link-container"><a href="#" id="back-link">Back</a></div>
 <div class="grid-item-mosaic simple-video videos" data-id="{{ page.video_id }}">
     <a
         href="https://player.vimeo.com/video/{{ page.video_id }}?h={{ page.video_hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=1080p"
@@ -26,9 +27,9 @@ layout: default
     </a>
 
     {% if page.tags_category and page.tags_category != empty %}
-        {% for cat in page.tags_category %}
-        <a href="{{ '/' | append: cat | slugify: 'pretty' | append: '/' | relative_url }}">
-            <span class="{{ cat }}">{{ cat }}</span>
+        {% for category in page.tags_category %}
+        <a href="{{ '/' | append: category | slugify: 'pretty' | append: '/' | relative_url }}">
+            <span class="{{ category }}">{{ category }}</span>
         </a>
         {% endfor %}
     {% endif %}
