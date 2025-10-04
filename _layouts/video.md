@@ -16,7 +16,7 @@ layout: default
                 {{ page.thumbnail_desktop }} 960w,
                 {{ page.thumbnail_large }} 1280w"
             sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-            alt="{{ page.title }}"
+            alt="Photo from {{ page.title }}"
             width="1280"
             height="720"
             loading="lazy" />

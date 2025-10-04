@@ -32,7 +32,7 @@ layout: default
                                 {{ video.thumbnail_desktop }} 960w,
                                 {{ video.thumbnail_large }} 1280w"
                             sizes="(max-width: 600px) 640px, (max-width: 1024px) 960px, 1280px"
-                            alt="{{ video.title }}"
+                            alt="Photo from {{ video.title }}"
                             width="1280"
                             height="720"
                             loading="lazy" />
