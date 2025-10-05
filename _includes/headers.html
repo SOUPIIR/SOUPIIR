@@ -1,6 +1,6 @@
 {% capture page_title %}
     {% if include.title %}
-        {{ include.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
+        {{ page.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
     {% else %}
         {{ site.title }}
     {% endif %}
