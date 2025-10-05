@@ -23,10 +23,10 @@ sitemap: true
                 tags_photos=video.tags_photos
                 tags_videos=video.tags_videos %}
         {% else %}
-            {% for t in video.tags_slugs %}
-            {% unless shown_tags contains t %}
+            {% for tag in video.tags_slugs %}
+            {% unless shown_tags contains tag %}
                 <div class="grid-item-mosaic link" data-id="{{ video.id }}">
-                    <a href="{{ '/' | append: t | slugify: 'pretty' | append: '/' | relative_url }}">
+                    <a href="{{ '/' | append: tag | slugify: 'pretty' | append: '/' | relative_url }}">
                         <img
                             src="{{ video.thumbnail_desktop }}"
                             srcset="
@@ -40,15 +40,16 @@ sitemap: true
                             loading="lazy" />
                         <div class="overlay">
                             <video muted loop preload="none" playsinline></video>
-                            <h2 data-content="{{ t }}" class="glitch">{{ t }}</h2>
+                            <h2 data-content="{{ tag }}" class="glitch">{{ tag }}</h2>
                         </div>
                     </a>
                     {% if video.tags_category != empty %}
                         <a href="{{ '/' | append: video.tags_category | slugify: 'pretty' | append: '/' | relative_url }}">
-                        <span  class="glitch {{ video.tags_category }}" data-content="{{ video.tags_category }}">{{ video.tags_category }}</span></a>
+                            <span  class="glitch {{ video.tags_category }}" data-content="{{ video.tags_category }}">{{ video.tags_category }}</span>
+                        </a>
                     {% endif %}
                 </div>
-                {%- assign shown_tags = shown_tags | push: t -%}
+                {%- assign shown_tags = shown_tags | push: tag -%}
             {% endunless %}
             {% endfor %}
         {% endif %}

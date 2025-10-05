@@ -138,3 +138,9 @@ main {
     bottom: 1rem;
     font-size: .7em;
 }
+
+.hidden {
+    text-indent: -9999px;
+    padding: 0;
+    font-size: 0;
+}
