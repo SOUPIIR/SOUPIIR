@@ -111,11 +111,11 @@ def save_yaml(video_list, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         yaml.dump(video_list, f, allow_unicode=True)
-    print(f"✅ Généré {path} avec {len(video_list)} vidéos")
+    print(f"✅ Generated {path} with {len(video_list)} videos")
 
 
 def generate_category_pages(video_list):
-    os.makedirs("categories", exist_ok=True)
+    os.makedirs("pages/categories", exist_ok=True)
     tag_template = """---
 layout: category
 title: "__CATEGORY_TAG__"
@@ -126,15 +126,15 @@ sitemap: true
 """
     all_slugs = set(slug for v in video_list for slug in v["tags_category"])
     for tag_slug in all_slugs:
-        filename = f"categories/{tag_slug}.md"
+        filename = f"pages/categories/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
             content = tag_template.replace("__CATEGORY_TAG__", tag_slug)
             f.write(content)
-    print(f"✅ Généré {len(all_slugs)} fichiers dans /categories/")
+    print(f"✅ Generated {len(all_slugs)} files in /pages/categories/")
 
 
 def generate_group_pages(video_list):
-    os.makedirs("groups", exist_ok=True)
+    os.makedirs("pages/groups", exist_ok=True)
     tag_template = """---
 layout: group
 title: "__GROUP_TAG__"
@@ -145,15 +145,15 @@ sitemap: true
 """
     all_slugs = set(slug for v in video_list for slug in v["tags_slugs"])
     for tag_slug in all_slugs:
-        filename = f"groups/{tag_slug}.md"
+        filename = f"pages/groups/{tag_slug}.md"
         with open(filename, "w", encoding="utf-8") as f:
             content = tag_template.replace("__GROUP_TAG__", tag_slug)
             f.write(content)
-    print(f"✅ Généré {len(all_slugs)} fichiers dans /groups/")
+    print(f"✅ Generated {len(all_slugs)} files in /pages/groups/")
 
 
 def generate_showcase_page(showcase_id, data_file):
-    os.makedirs("showcases", exist_ok=True)
+    os.makedirs("pages/showcases", exist_ok=True)
     data_file_no_ext = os.path.splitext(data_file)[0]
     content = f"""---
 layout: showcase
@@ -163,14 +163,14 @@ permalink: "/showcase/{showcase_id}/"
 sitemap: false
 ---
 """
-    filename = f"showcases/showcase-{showcase_id}.md"
+    filename = f"pages/showcases/showcase-{showcase_id}.md"
     with open(filename, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"✅ Généré page {filename}")
+    print(f"✅ Generated page {filename}")
 
 
 def generate_video_pages(video_list):
-    os.makedirs("videos", exist_ok=True)
+    os.makedirs("pages/videos", exist_ok=True)
     template = """---
 layout: video
 title: "__TITLE__"
@@ -194,7 +194,7 @@ description: "__DESCRIPTION__"
         if v["tags_photos"]:
             continue
 
-        filename = f"videos/{v['id']}.md"
+        filename = f"pages/videos/{v['id']}.md"
 
         content = template
         content = content.replace("__TITLE__", v["title"].replace('"', "'"))
@@ -213,7 +213,7 @@ description: "__DESCRIPTION__"
         with open(filename, "w", encoding="utf-8") as f:
             f.write(content)
         count += 1
-    print(f"✅ Généré {count} fichiers dans /videos/")
+    print(f"✅ Generated {count} files in /pages/videos/")
 
 
 def main():
@@ -227,7 +227,7 @@ def main():
         generate_group_pages(videos)
         generate_category_pages(videos)
         generate_video_pages(videos)
-        print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) traité")
+        print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) completed")
 
     if SHOWCASE_CLIENTS:
         showcase_ids = [s.strip() for s in SHOWCASE_CLIENTS.split(",") if s.strip()]
@@ -236,7 +236,7 @@ def main():
             yaml_file = f"videos_{sid}.yml"
             save_yaml(videos_clients, f"_data/{yaml_file}")
             generate_showcase_page(sid, yaml_file)
-        print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) traités")
+        print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) completed")
 
 if __name__ == "__main__":
     main()
