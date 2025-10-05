@@ -2,10 +2,11 @@
 <html lang="fr">
 
 <head>
-    {% include headers.html title=page.title %}
+    {% include headers.html %}
     {% if page.layout == "showcase" %}
         <meta name="robots" content="noindex" />
     {% endif %}
+    {% include top-scripts.html %}
 </head>
 <body>
     {% if page.layout == "showcase" %}
@@ -18,9 +19,9 @@
 
     <main id="content">
         {{ content }}
-        {% include scripts.html %}
+        <script>initPage();</script>
     </main>
 
-    <script>initPage();</script>
+    {% include bottom-scripts.html %}
 </body>
 </html>
