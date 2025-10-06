@@ -46,14 +46,6 @@ permalink: pretty
 plugins:
   - jekyll-feed
 
-# see https://github.com/penibelst/jekyll-compress-html
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  startings: [head, body]
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
