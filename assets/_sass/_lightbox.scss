@@ -82,14 +82,7 @@
         height: 35px;
         z-index: 99999;
         cursor: pointer;
-
-        & svg {
-            display: block;
-            width: 18px;
-            height: auto;
-            overflow: hidden;
-            fill: $light-color;
-        }
+        font-size: 2.5rem;
     }
 
     &.show {
