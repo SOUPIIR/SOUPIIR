@@ -32,8 +32,9 @@
 
         document.body.addEventListener("click", (e) => {
             const link = e.target.closest("a");
-            if (link.hasAttribute("lightbox")) return;
-            if (link && link.getAttribute("href")?.startsWith("/") && !link.hasAttribute("target")) {
+            if (link.hasAttribute("lightbox") || !link) return;
+
+            if (link.getAttribute("href")?.startsWith("/") && !link.hasAttribute("target")) {
                 e.preventDefault();
                 loadPage(link.href, true);
             }
