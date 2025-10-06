@@ -61,9 +61,13 @@
 
     & iframe {
         position: relative;
-        width: 90%;
+        width: 80%;
         aspect-ratio: 16 / 9;
         z-index: 1;
+    }
+
+    & h2 {
+        font-size: 1.8em;
     }
 
     & h2,
