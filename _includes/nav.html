@@ -1,5 +1,9 @@
 <header id="header">
-    <span class="home-title"><a href="/" class="logo">{{ site.title }}</a></span>
+    {% if page.layout == "showcase" %}
+        <h1 class="home-title"><span class="logo">{{ site.title }}</span></h1>
+    {% else %}
+        <span class="home-title"><a href="/" class="logo">{{ site.title }}</a></span>
+    {% endif %}
 
     <input type="checkbox" id="toggle" />
     <label for="toggle" class="burger">☰</label>

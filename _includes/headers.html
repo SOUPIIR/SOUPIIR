@@ -1,5 +1,5 @@
 {% capture page_title %}
-    {% if include.title %}
+    {% if page.title %}
         {{ page.title | split: "-" | join: " " | capitalize }} | {{ site.title }}
     {% else %}
         {{ site.title }}

@@ -9,13 +9,7 @@
     {% include top-scripts.html %}
 </head>
 <body>
-    {% if page.layout == "showcase" %}
-        <header id="header">
-            <h1 class="home-title"><span class="logo">{{ site.title }}</span></h1>
-        </header>
-    {% else %}
-        {% include nav.html %}
-    {% endif %}
+    {% include nav.html %}
 
     <main id="content">
         {{ content }}
