@@ -103,7 +103,7 @@ Lightbox.prototype.open = function() {
     if (this.gallery) {
         this.images = Array.from(document.querySelectorAll('[data-gallery="' + this.gallery + '"]'));
         this.index = this.images.indexOf(this.trigger);
-        this.href = this.images[this.index].getAttribute('href');
+        this.href = this.images[this.index].getAttribute('url') || this.images[this.index].getAttribute('href');
         this.type = this.images[this.index].getAttribute('lightbox');
         this.showMedia();
         this.addNav();
@@ -160,7 +160,7 @@ Lightbox.prototype.isOpen = function() {
 Lightbox.prototype.next = function() {
     if (!this.gallery) return;
     this.index = (this.index + 1) % this.images.length;
-    this.href = this.images[this.index].getAttribute('href');
+    this.href = this.images[this.index].getAttribute('url') || this.images[this.index].getAttribute('href');
     this.type = this.images[this.index].getAttribute('lightbox');
     this.body.innerHTML = '';
     this.showMedia();
@@ -169,7 +169,7 @@ Lightbox.prototype.next = function() {
 Lightbox.prototype.prev = function() {
     if (!this.gallery) return;
     this.index = (this.index - 1 + this.images.length) % this.images.length;
-    this.href = this.images[this.index].getAttribute('href');
+    this.href = this.images[this.index].getAttribute('url') || this.images[this.index].getAttribute('href');
     this.type = this.images[this.index].getAttribute('lightbox');
     this.body.innerHTML = '';
     this.showMedia();

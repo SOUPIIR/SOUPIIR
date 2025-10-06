@@ -12,6 +12,7 @@
             data-title="{{ include.title }}"
             data-description="{{ include.desciption }}"
             lightbox="image"
+            url="{{ include.thumbnail_desktop }}"
             {% if gallery != '' %}data-gallery="{{gallery}}"{% endif %}>
             <img
                 src="{{ include.thumbnail_desktop }}"
