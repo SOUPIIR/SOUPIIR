@@ -54,6 +54,7 @@ main:has(.not-found) {
         background: url(../img/cursor-play-reverse.png) 15px 0 no-repeat;
         text-decoration: none;
         text-transform: uppercase;
+        font-weight: bold;
 
         &::after {
             content: "";
