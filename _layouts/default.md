@@ -9,13 +9,17 @@
     {% include top-scripts.html %}
 </head>
 <body>
-    {% include nav.html %}
+    {% if page.simple_layout != false %}
+        {% include nav.html %}
+    {% endif %}
 
     <main id="content">
         {{ content }}
         <script>initPage();</script>
     </main>
 
-    {% include bottom-scripts.html %}
+    {% if page.simple_layout != false %}
+        {% include bottom-scripts.html %}
+    {% endif %}
 </body>
 </html>

@@ -17,6 +17,10 @@ main {
     }
 }
 
+main:has(.not-found) {
+    padding-top: 0;
+}
+
 .not-found {
     position: relative;
     margin: 0 auto;
