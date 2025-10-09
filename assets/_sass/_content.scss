@@ -50,8 +50,11 @@ main:has(.not-found) {
 
     a {
         position: relative;
-        padding: 0 0 1em 3em;
-        background: url(../img/cursor-play-reverse.png) 15px 0 no-repeat;
+        padding: .6em 1em .6em 2.5em;
+        background-color: transparent;
+        background-image: url(../img/cursor-play-reverse.png);
+        background-position: 12px 10px;;
+        background-repeat: no-repeat;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
@@ -74,6 +77,10 @@ main:has(.not-found) {
 
         &:hover {
             color: $hover-color;
+            background-color: rgba(255,255,255, .7);
+            border-radius: 8px;
+            // transition: background-color 200ms ease;
+            color: #000;
         }
     }
 }
