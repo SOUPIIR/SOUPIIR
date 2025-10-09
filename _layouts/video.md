@@ -22,8 +22,8 @@ layout: default
             loading="lazy" />
         <div class="overlay">
             <video muted loop preload="none" playsinline></video>
-            <h2 data-content="{{ page.title }}" class="glitch">{{ page.title }}</h2>
         </div>
+        <h1 data-content="{{ page.title }}">{{ page.title }}</h1>
     </a>
 
     {% if page.tags_category and page.tags_category != empty %}
