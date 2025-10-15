@@ -1,6 +1,6 @@
 <header id="header">
     {% if page.layout == "showcase" or page.url == "/" %}
-        <h1 class="home-title"><span class="logo">{{ site.title }}</span></h1>
+        <h1 class="home-title"><a href="/" class="logo">{{ site.title }}</a></h1>
     {% else %}
         <span class="home-title"><a href="/" class="logo">{{ site.title }}</a></span>
     {% endif %}
