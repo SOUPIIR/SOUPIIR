@@ -3,6 +3,10 @@ main {
     width: 100%;
     margin: 0 auto 3em;
     padding-top: 6em;
+
+    &:has(.not-found) {
+        padding-top: 0;
+    }
 }
 
 #content {
@@ -15,10 +19,6 @@ main {
     &.fade-in {
         opacity: 1;
     }
-}
-
-main:has(.not-found) {
-    padding-top: 0;
 }
 
 .not-found {
