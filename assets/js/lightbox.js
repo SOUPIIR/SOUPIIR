@@ -73,26 +73,6 @@ Lightbox.prototype.loadImage = function () {
     this.body.appendChild(this.image);
 };
 
-Lightbox.prototype.loadVideo = function () {
-    var _this = this;
-
-    this.video = document.createElement("video");
-    this.video.addEventListener("loadedmetadata", function () {
-        var dim = _this.fitToSize(
-            this.videoWidth,
-            this.videoHeight,
-            _this.width,
-            _this.height
-        );
-        _this.setDimensions(dim.width, dim.height);
-    });
-    this.video.src = this.href;
-    this.video.autoplay = true;
-    this.video.controls = true;
-
-    this.body.appendChild(this.video);
-};
-
 Lightbox.prototype.loadIframe = function () {
     this.body.innerHTML =
         '<iframe src="' +
@@ -162,9 +142,6 @@ Lightbox.prototype.showMedia = function () {
         case "image":
             this.loadImage();
             break;
-        case "video":
-            this.loadVideo();
-            break;
         default:
             this.loadIframe();
     }
@@ -199,25 +176,6 @@ Lightbox.prototype.prev = function () {
         this.images[this.index].getAttribute("href");
     this.type = this.images[this.index].getAttribute("lightbox");
     this.showMedia();
-};
-
-Lightbox.prototype.setDimensions = function (w, h) {
-    this.width = w;
-    this.height = h;
-    this.content.style.width = w + "px";
-    this.content.style.height = h + "px";
-};
-
-Lightbox.prototype.fitToSize = function (w, h, maxW, maxH) {
-    var r = h / w;
-    if (w >= maxW && r <= 1) {
-        w = maxW;
-        h = w * r;
-    } else if (h >= maxH) {
-        h = maxH;
-        w = h / r;
-    }
-    return { width: w, height: h }
 };
 
 // === Global keydown handler ===
