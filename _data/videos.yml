@@ -40,10 +40,10 @@
 - description: null
   hash: 0dffa3b306
   id: '1131683404'
-  tags_category: []
-  tags_photos: []
-  tags_slugs:
+  tags_category:
   - short
+  tags_photos: []
+  tags_slugs: []
   tags_videos: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2075758417-4791ccff0d381ea723ce43753718e094a08ed9d24fb1f1b073d7c8eb00922d92-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2075758417-4791ccff0d381ea723ce43753718e094a08ed9d24fb1f1b073d7c8eb00922d92-d_1280x720?&r=pad&region=us
@@ -214,10 +214,10 @@
 - description: null
   hash: d5a9c613be
   id: '1127850219'
-  tags_category: []
-  tags_photos: []
-  tags_slugs:
+  tags_category:
   - short
+  tags_photos: []
+  tags_slugs: []
   tags_videos: []
   thumbnail_desktop: https://i.vimeocdn.com/video/2088411158-1d70188cb34c58107fe39def8b9284b2798105f8d5af478e3a736a2b4f8da32f-d_960x540?&r=pad&region=us
   thumbnail_large: https://i.vimeocdn.com/video/2088411158-1d70188cb34c58107fe39def8b9284b2798105f8d5af478e3a736a2b4f8da32f-d_1280x720?&r=pad&region=us
