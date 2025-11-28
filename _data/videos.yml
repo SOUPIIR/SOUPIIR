@@ -78,18 +78,19 @@
   title: CAMBRURE - LE  CRAN
   title_slugify: cambrure-le-cran
 - description: null
-  hash: 186f7e6482
-  id: '1056318073'
+  hash: 836f4cb11a
+  id: '1141474299'
   tags_category:
-  - short
+  - ads
   tags_photos: []
-  tags_slugs: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
   tags_videos: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_640x360?&r=pad&region=us
-  title: HER
-  title_slugify: her
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088875217-fbaaa2e7ae85352a09117e60f6a63f2b290f8fc7d92596a61e5c627ae1b1e630-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088875217-fbaaa2e7ae85352a09117e60f6a63f2b290f8fc7d92596a61e5c627ae1b1e630-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088875217-fbaaa2e7ae85352a09117e60f6a63f2b290f8fc7d92596a61e5c627ae1b1e630-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 0
+  title_slugify: l-ile-bleue-0
 - description: null
   hash: c76e0462c9
   id: '1085410388'
@@ -119,19 +120,18 @@
   title: DRAKE - D4L
   title_slugify: drake-d4l
 - description: null
-  hash: 7381ec59d9
-  id: '1072766882'
+  hash: 186f7e6482
+  id: '1056318073'
   tags_category:
-  - music
+  - short
   tags_photos: []
-  tags_slugs:
-  - a-ghost-tribute
+  tags_slugs: []
   tags_videos: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_640x360?&r=pad&region=us
-  title: AMY - SIGH  OF LOVE
-  title_slugify: amy-sigh-of-love
+  thumbnail_desktop: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/1982590149-3a73b1041f19939b0f613b6e50a301ec5e6cc855622bd2db7fc2b17f9ed694e7-d_640x360?&r=pad&region=us
+  title: HER
+  title_slugify: her
 - description: null
   hash: 6beca16215
   id: '1079431545'
@@ -224,6 +224,20 @@
   thumbnail_mobile: https://i.vimeocdn.com/video/1964601265-804c50187de0acc73f6778fab93ca4590c8210e9ba6d887621e31d7095f4e670-d_640x360?&r=pad&region=us
   title: CAMBRURE - EAUX PALES
   title_slugify: cambrure-eaux-pales
+- description: null
+  hash: 7381ec59d9
+  id: '1072766882'
+  tags_category:
+  - music
+  tags_photos: []
+  tags_slugs:
+  - a-ghost-tribute
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2005890993-432da50306305d46c6ecac5aa93aa01680921574dffe931606b4ee0ab5fe88dd-d_640x360?&r=pad&region=us
+  title: AMY - SIGH  OF LOVE
+  title_slugify: amy-sigh-of-love
 - description: null
   hash: e22a414d78
   id: '1095163536'
@@ -1911,3 +1925,129 @@
   thumbnail_mobile: https://i.vimeocdn.com/video/2059934087-58c976a69978a13550c0013e30c85219382aefc8d46f1cae77b5c33206da08a1-d_640x360?&r=pad&region=us
   title: Contours Of Silence
   title_slugify: contours-of-silence
+- description: null
+  hash: 9b7bba7d8f
+  id: '1141475628'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088874444-6c2786df8a1e9833ecf229c5fac0f42a49679d7b0b7a81138d7d17baf4878125-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088874444-6c2786df8a1e9833ecf229c5fac0f42a49679d7b0b7a81138d7d17baf4878125-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088874444-6c2786df8a1e9833ecf229c5fac0f42a49679d7b0b7a81138d7d17baf4878125-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 1
+  title_slugify: l-ile-bleue-1
+- description: null
+  hash: a52cf84580
+  id: '1141474674'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088875557-ca4dfd2dd1294c946b5af116329b7eff810e1088d3c7e933032d587467dccb21-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088875557-ca4dfd2dd1294c946b5af116329b7eff810e1088d3c7e933032d587467dccb21-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088875557-ca4dfd2dd1294c946b5af116329b7eff810e1088d3c7e933032d587467dccb21-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 2
+  title_slugify: l-ile-bleue-2
+- description: null
+  hash: 0f290ac88f
+  id: '1141475765'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088876090-99755ce0e6de8b81138e194a1992a5aa56157584e24d85500e48735d469695cd-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088876090-99755ce0e6de8b81138e194a1992a5aa56157584e24d85500e48735d469695cd-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088876090-99755ce0e6de8b81138e194a1992a5aa56157584e24d85500e48735d469695cd-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 3
+  title_slugify: l-ile-bleue-3
+- description: null
+  hash: e57d0ad58f
+  id: '1141474757'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088876515-77b4da44a2c3b6fae483870c45a4fa7d88a5fad9dd4b0653eee107ef3bd8c9ee-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088876515-77b4da44a2c3b6fae483870c45a4fa7d88a5fad9dd4b0653eee107ef3bd8c9ee-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088876515-77b4da44a2c3b6fae483870c45a4fa7d88a5fad9dd4b0653eee107ef3bd8c9ee-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 4
+  title_slugify: l-ile-bleue-4
+- description: null
+  hash: 51ac9b276c
+  id: '1141474878'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088877023-73ef65efe300a8caa6828ac64ed3366a9c100054a5e282e831fd6a1664912c50-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088877023-73ef65efe300a8caa6828ac64ed3366a9c100054a5e282e831fd6a1664912c50-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088877023-73ef65efe300a8caa6828ac64ed3366a9c100054a5e282e831fd6a1664912c50-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 5
+  title_slugify: l-ile-bleue-5
+- description: null
+  hash: 84861e800c
+  id: '1141475847'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088877510-dcdd337310061405b55d34ee4058d11de5d4aa8ffa14436a78741300615129c5-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088877510-dcdd337310061405b55d34ee4058d11de5d4aa8ffa14436a78741300615129c5-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088877510-dcdd337310061405b55d34ee4058d11de5d4aa8ffa14436a78741300615129c5-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 6
+  title_slugify: l-ile-bleue-6
+- description: null
+  hash: b56dd43a16
+  id: '1141475228'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088878301-ee33efa8d30952e8aea9fd392032758f27c68fe89326be0204348520bd2ddcc9-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088878301-ee33efa8d30952e8aea9fd392032758f27c68fe89326be0204348520bd2ddcc9-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088878301-ee33efa8d30952e8aea9fd392032758f27c68fe89326be0204348520bd2ddcc9-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 7
+  title_slugify: l-ile-bleue-7
+- description: null
+  hash: 8a77bbfc50
+  id: '1141475946'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088878660-371b6ecc7698f798cefdca2d87024b5387b5ec465cff13e6e6c53daaf005ba13-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088878660-371b6ecc7698f798cefdca2d87024b5387b5ec465cff13e6e6c53daaf005ba13-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088878660-371b6ecc7698f798cefdca2d87024b5387b5ec465cff13e6e6c53daaf005ba13-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 8
+  title_slugify: l-ile-bleue-8
+- description: null
+  hash: bf71c4e99f
+  id: '1141475469'
+  tags_category:
+  - ads
+  tags_photos: []
+  tags_slugs:
+  - l-ile-bleue-autumn-spring
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2088879198-eb74c0a28c4323f0cfdcd3e1ce6c76252596a51d3b97db7ddf4a9211e3703116-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2088879198-eb74c0a28c4323f0cfdcd3e1ce6c76252596a51d3b97db7ddf4a9211e3703116-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2088879198-eb74c0a28c4323f0cfdcd3e1ce6c76252596a51d3b97db7ddf4a9211e3703116-d_640x360?&r=pad&region=us
+  title: L'Île Bleue - 9
+  title_slugify: l-ile-bleue-9
