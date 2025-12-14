@@ -74,7 +74,7 @@ Lightbox.prototype.loadImage = function () {
 };
 
 Lightbox.prototype.loadIframe = function () {
-    this.body.innerHTML =`
+    this.body.innerHTML = `
         <iframe src="${ this.href }" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <h2 class="glitch">${ (this.title || "") }</h2>
         <p>${ (this.text || "") }</p>
@@ -144,6 +144,7 @@ Lightbox.prototype.showMedia = function () {
 
 Lightbox.prototype.close = function () {
     this.el.classList.remove("open");
+    history.back();
     if (activeLightbox === this) {
         activeLightbox = null;
     }

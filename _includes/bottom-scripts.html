@@ -34,10 +34,13 @@
             if (e.target.closest(".lightbox")) return;
 
             const link = e.target.closest("a");
+            const url = link.href
+
             if (!link) return;
 
             if (link.hasAttribute("lightbox")) {
                 e.preventDefault();
+                history.pushState({ url }, "", url);
                 return;
             }
 
