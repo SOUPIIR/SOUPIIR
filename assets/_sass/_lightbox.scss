@@ -71,16 +71,11 @@
     }
 
     & h2,
-    & p,
-    & .share {
+    & p {
         width: 80%;
         text-align: left;
         margin: 0;
         padding: 0;
-    }
-
-    & .share li {
-        display: inline-block;
     }
 
     & .close {

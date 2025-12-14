@@ -77,30 +77,6 @@ Lightbox.prototype.loadIframe = function () {
     this.body.innerHTML =`
         <iframe src="${ this.href }" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <h2 class="glitch">${ (this.title || "") }</h2>
-        <div class="share">
-            <ul>
-                <li class="whatsapp">
-                    <a href="https://api.whatsapp.com/send?text=${ window.location.origin + this.link }" target="_blank">
-                        <img src="/assets/img/icons8-whatsapp-32.png" alt="whatsapp" height="32" width="32" />
-                    </a>
-                </li>
-                <li class="twitter">
-                    <a href="https://twitter.com/intent/tweet?url=${ window.location.origin + this.link }" target="_blank">
-                        <img src="/assets/img/icons8-x-32.png" alt="reddit" height="32" width="32" />
-                    </a>
-                </li>
-                <li class="facebook">
-                    <a href="https://www.facebook.com/sharer.php?u=${ window.location.origin + this.link }" target="_blank">
-                        <img src="/assets/img/icons8-facebook-32.png" alt="reddit" height="32" width="32" />
-                    </a>
-                </li>
-                <li class="linkedin">
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${ window.location.origin + this.link }" target="_blank">
-                        <img src="/assets/img/icons8-linkedin-32.png" alt="reddit" height="32" width="32" />
-                    </a>
-                </li>
-            </ul>
-        </div>
         <p>${ (this.text || "") }</p>
     `;
 };
