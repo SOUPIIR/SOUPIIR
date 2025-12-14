@@ -1,6 +1,6 @@
 # SOUPIIR
 
-Fonctionnement des tags:
+## Fonctionnement des tags Vimeo
 
 * Tag libre pour faire les regroupements par page
 * Tag `category:xxx` pour faire les regroupements par page catégorie (ads/music/shorts)
