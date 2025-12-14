@@ -51,12 +51,12 @@
         transform: translate3d(0, 0, 0);
         gap: 1rem;
 
-        & img {
-            position: relative;
-            z-index: 1;
-            width: 90%;
-            aspect-ratio: 16 / 9;
-        }
+        // & img {
+        //     position: relative;
+        //     z-index: 1;
+        //     width: 90%;
+        //     aspect-ratio: 16 / 9;
+        // }
     }
 
     & iframe {

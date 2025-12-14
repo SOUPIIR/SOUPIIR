@@ -23,7 +23,6 @@ layout: default
         <div class="overlay">
             <video muted loop preload="none" playsinline></video>
         </div>
-        <h1 data-content="{{ page.title }}">{{ page.title }}</h1>
     </a>
 
     {% if page.tags_category and page.tags_category != empty %}
@@ -33,4 +32,8 @@ layout: default
         </a>
         {% endfor %}
     {% endif %}
+</div>
+<div class="simple-video">
+    <h1 data-content="{{ page.title }}">{{ page.title }}</h1>
+    {% include social-media-share.html %}
 </div>
