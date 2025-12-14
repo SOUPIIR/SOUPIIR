@@ -144,7 +144,9 @@ Lightbox.prototype.showMedia = function () {
 
 Lightbox.prototype.close = function () {
     this.el.classList.remove("open");
-    history.back();
+    if (this.type != 'image') {
+        history.back();
+    }
     if (activeLightbox === this) {
         activeLightbox = null;
     }
