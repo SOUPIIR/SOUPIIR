@@ -174,17 +174,3 @@ span.glitch:after {
     animation: noise-anim-2 var(--glitch-duration, 12s) infinite linear alternate-reverse;
     animation-delay: var(--glitch-delay, 0s);
 }
-
-.share {
-    width: 90%;
-
-    li {
-        display: inline-block;
-
-        svg {
-            width: 50px;
-            height: 50px;
-            fill: #fff;
-        }
-    }
-}
