@@ -4,11 +4,11 @@
     gap: .1rem;
     grid-auto-flow: row dense;
 
-& > *:nth-child(7n + 2),
-& > *:nth-child(11n + 5) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+    & > *:nth-child(7n + 2),
+    & > *:nth-child(11n + 5) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 
     &.tag > div:first-child,
     &.showcase > div:first-child {
