@@ -2,7 +2,7 @@
     document.addEventListener("DOMContentLoaded", () => {
         const content = document.querySelector("#content");
 
-        async function loadPage(url, push = true) {
+        const loadPage = async (url, push = true) => {
             content.classList.add("fade-out");
 
             const response = await fetch(url);

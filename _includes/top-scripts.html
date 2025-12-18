@@ -1,7 +1,7 @@
 <script src="/assets/js/lightbox.js"></script>
 <script>
-    function initPage(container = document) {
-        [].forEach.call(document.querySelectorAll('[lightbox]'), function(el) {
+    const initPage = (container = document) => {
+        [].forEach.call(document.querySelectorAll('[lightbox]'), (el) => {
             el.lightbox = new Lightbox(el);
         });
 
