@@ -11,3 +11,7 @@
 ```bash
 bundle exec jekyll serve --livereload
 ```
+
+```bash
+ffmpeg -i "$file" -vcodec libx264 -crf 28 -preset veryfast -movflags +faststart "$output" -y
+```
