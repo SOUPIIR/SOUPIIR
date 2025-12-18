@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="back-link-container"><a href="#" id="back-link">Back</a></div>
+<div class="back-link-container"></div>
 <div class="grid-item-mosaic simple-video videos" data-id="{{ page.video_id }}">
     <a
         href="https://player.vimeo.com/video/{{ page.video_id }}?h={{ page.video_hash }}&autoplay=1&color=000000&title=0&byline=0&progress_bar=1&controls=1&quality=2K"

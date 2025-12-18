@@ -75,12 +75,18 @@
             });
         });
 
-        const backLink = document.querySelector("#back-link");
-        if (backLink) {
+        const backLinkContainer = document.querySelector(".back-link-container");
+        if (backLinkContainer) {
+            const backLink = document.createElement("a");
+            backLink.href = "#";
+            backLink.id = "back-link";
+            backLink.textContent = "Back";
+
             backLink.addEventListener("click", (e) => {
                 e.preventDefault();
-                history.back();
+                window.history.back();
             });
+            backLinkContainer.appendChild(backLink);
         }
 
         document.querySelectorAll('.glitch').forEach(el => {
@@ -88,6 +94,6 @@
             const duration = (6 + Math.random() * 8).toFixed(2);
             el.style.setProperty('--glitch-delay', `${delay}s`);
             el.style.setProperty('--glitch-duration', `${duration}s`);
-        })
-    }
+        });
+    };
 </script>
