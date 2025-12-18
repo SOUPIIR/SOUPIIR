@@ -24,15 +24,6 @@
     }
 }
 
-.simple-video {
-    width: 70%;
-    margin: 0 auto;
-
-    h1 {
-        padding: 1em 0 .5em;
-    }
-}
-
 .grid-item-mosaic,
 .simple-video {
     position: relative;
@@ -131,8 +122,17 @@
     }
 }
 
-h2 {
-    mix-blend-mode: normal;
+.simple-video {
+    width: 70%;
+    margin: 0 auto;
+
+    h1 {
+        padding: 1em 0 .5em;
+    }
+
+    span {
+        opacity: 1;
+    }
 }
 
 h2.glitch:before,
@@ -145,28 +145,30 @@ span.glitch:after {
     padding: .5em 1em;
 }
 
-.glitch:after {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: 1px;
-    text-shadow: -1px 0 $glitch1;
-    color: $light-color;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim var(--glitch-duration, 8s) infinite linear alternate-reverse;
-    animation-delay: calc(var(--glitch-delay, 0s) / 2);
-}
+.glitch {
+    &:after {
+        content: attr(data-content);
+        position: absolute;
+        top: 0;
+        left: 1px;
+        text-shadow: -1px 0 $glitch1;
+        color: $light-color;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim var(--glitch-duration, 8s) infinite linear alternate-reverse;
+        animation-delay: calc(var(--glitch-delay, 0s) / 2);
+    }
 
-.glitch:before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: -1px;
-    text-shadow: 1px 0 $glitch2;
-    color: $light-color;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim-2 var(--glitch-duration, 12s) infinite linear alternate-reverse;
-    animation-delay: var(--glitch-delay, 0s);
+    &:before {
+        content: attr(data-content);
+        position: absolute;
+        top: 0;
+        left: -1px;
+        text-shadow: 1px 0 $glitch2;
+        color: $light-color;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 var(--glitch-duration, 12s) infinite linear alternate-reverse;
+        animation-delay: var(--glitch-delay, 0s);
+    }
 }

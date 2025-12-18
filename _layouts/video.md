@@ -24,7 +24,9 @@ layout: default
             <video muted loop preload="none" playsinline></video>
         </div>
     </a>
+</div>
 
+<div class="simple-video">
     {% if page.tags_category and page.tags_category != empty %}
         {% for category in page.tags_category %}
         <a href="{{ '/' | append: category | slugify: 'pretty' | append: '/' | relative_url }}">
@@ -32,8 +34,5 @@ layout: default
         </a>
         {% endfor %}
     {% endif %}
-</div>
-
-<div class="simple-video">
     <h1 data-content="{{ page.title }}">{{ page.title }}</h1>
 </div>
