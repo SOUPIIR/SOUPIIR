@@ -1,19 +1,17 @@
 #!/bin/bash
 
-SRC_DIR="./assets/videos"
 OUT_DIR="./assets/videos/optimized"
-
-mkdir -p "$OUT_DIR"
 
 for file in "$SRC_DIR"/*.mp4; do
   [ -e "$file" ] || continue
 
   filename=$(basename "$file")
-
-  output="$OUT_DIR/$filename"
+  temp_file="${file%.mp4}_tmp.mp4"
 
   echo "🎬 Optimisation de $filename ..."
-  ffmpeg -i "$file" -vcodec libx264 -crf 28 -preset veryfast -movflags +faststart "$output" -y
+  ffmpeg -i "$file" -vcodec libx264 -crf 28 -preset veryfast -movflags +faststart "$temp_file" -y
 
-  echo "✅ Fichier optimisé : $output"
+  mv "$temp_file" "$file"
+
+  echo "✅ Fichier optimisé : $file"
 done
