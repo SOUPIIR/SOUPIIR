@@ -8,10 +8,10 @@ for file in "$SRC_DIR"/*.mp4; do
   filename=$(basename "$file")
   temp_file="${file%.mp4}_tmp.mp4"
 
-  echo "🎬 Optimisation de $filename ..."
+  echo "🎬 Optimization of $filename ..."
   ffmpeg -i "$file" -vcodec libx264 -crf 28 -preset veryfast -movflags +faststart "$temp_file" -y
 
   mv "$temp_file" "$file"
 
-  echo "✅ Fichier optimisé : $file"
+  echo "✅ Optimized file : $file"
 done
