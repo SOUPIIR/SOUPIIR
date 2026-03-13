@@ -41,22 +41,7 @@ jobs:
           python _scripts/fetch_vimeo_showcase.py
 
       - name: Optimize videos
-        run: |
-          SRC_DIR="./assets/videos"
-
-          for file in "$SRC_DIR"/*.mp4; do
-            [ -e "$file" ] || continue
-
-            filename=$(basename "$file")
-            temp_file="${file%.mp4}_tmp.mp4"
-
-            echo "🎬 Optimizing $filename ..."
-            ffmpeg -i "$file" -vcodec libx264 -crf 28 -preset veryfast -movflags +faststart "$temp_file" -y
-
-            mv "$temp_file" "$file"
-
-            echo "✅ Optimized $filename"
-          done
+        run: ./optimize_mp4.sh
 
       - name: Commit and push changes
         run: |
