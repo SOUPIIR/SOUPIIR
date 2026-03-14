@@ -1,6 +1,6 @@
 let activeLightbox = null;
 
-var Lightbox = function (elem) {
+var Lightbox = (elem) => {
     this.trigger = elem;
     this.el = document.querySelector(".lightbox");
     this.body = document.querySelector(".lightbox .body");
@@ -15,18 +15,18 @@ var Lightbox = function (elem) {
     this.init();
 };
 
-Lightbox.prototype.init = function () {
+Lightbox.prototype.init = () => {
     var _this = this;
 
     if (!this.el) this.create();
 
-    this.trigger.addEventListener("click", function (e) {
+    this.trigger.addEventListener("click", (e) => {
         e.preventDefault();
         _this.open();
     });
 };
 
-Lightbox.prototype.create = function () {
+Lightbox.prototype.create = () => {
     var _this = this,
         cl = document.createElement("div"),
         bd = document.createElement("div");
@@ -49,16 +49,16 @@ Lightbox.prototype.create = function () {
     this.el.appendChild(this.content);
     document.body.appendChild(this.el);
 
-    cl.addEventListener("click", function () {
+    cl.addEventListener("click", () => {
         _this.close();
     });
-    bd.addEventListener("click", function () {
+    bd.addEventListener("click", () => {
         _this.close();
     });
 
     this.el.addEventListener(
         "transitionend",
-        function () {
+        () => {
             if (_this.isOpen()) return;
             _this.el.classList.remove("show");
             _this.body.innerHTML = "";
@@ -67,13 +67,13 @@ Lightbox.prototype.create = function () {
     );
 };
 
-Lightbox.prototype.loadImage = function () {
+Lightbox.prototype.loadImage = () => {
     this.image = new Image();
     this.image.src = this.href;
     this.body.appendChild(this.image);
 };
 
-Lightbox.prototype.loadIframe = function () {
+Lightbox.prototype.loadIframe = () => {
     this.body.innerHTML = `
         <iframe src="${ this.href }" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <h2 class="glitch">${ (this.title || "") }</h2>
@@ -81,7 +81,7 @@ Lightbox.prototype.loadIframe = function () {
     `;
 };
 
-Lightbox.prototype.open = function () {
+Lightbox.prototype.open = () => {
     this.gallery = this.trigger.getAttribute("data-gallery");
 
     if (this.gallery) {
@@ -106,7 +106,7 @@ Lightbox.prototype.open = function () {
     this.el.classList.add("open");
 };
 
-Lightbox.prototype.addNav = function () {
+Lightbox.prototype.addNav = () => {
     var _this = this;
     this.content.querySelectorAll(".nav").forEach((el) => el.remove());
 
@@ -120,18 +120,18 @@ Lightbox.prototype.addNav = function () {
         this.content.appendChild(prev);
         this.content.appendChild(next);
 
-        prev.addEventListener("click", function (e) {
+        prev.addEventListener("click", (e) => {
             e.stopPropagation();
             _this.prev();
         });
-        next.addEventListener("click", function (e) {
+        next.addEventListener("click", (e) => {
             e.stopPropagation();
             _this.next();
         });
     }
 };
 
-Lightbox.prototype.showMedia = function () {
+Lightbox.prototype.showMedia = () => {
     this.body.innerHTML = "";
     switch (this.type) {
         case "image":
@@ -142,7 +142,7 @@ Lightbox.prototype.showMedia = function () {
     }
 };
 
-Lightbox.prototype.close = function () {
+Lightbox.prototype.close = () => {
     this.el.classList.remove("open");
     if (this.type != 'image') {
         history.back();
@@ -152,11 +152,11 @@ Lightbox.prototype.close = function () {
     }
 };
 
-Lightbox.prototype.isOpen = function () {
+Lightbox.prototype.isOpen = () => {
     return this.el.classList.contains("open");
 };
 
-Lightbox.prototype.next = function () {
+Lightbox.prototype.next = () => {
     if (!this.gallery) return;
     this.index = (this.index + 1) % this.images.length;
     this.href =
@@ -166,7 +166,7 @@ Lightbox.prototype.next = function () {
     this.showMedia();
 };
 
-Lightbox.prototype.prev = function () {
+Lightbox.prototype.prev = () => {
     if (!this.gallery) return;
     this.index = (this.index - 1 + this.images.length) % this.images.length;
     this.href =
@@ -177,7 +177,7 @@ Lightbox.prototype.prev = function () {
 };
 
 // === Global keydown handler ===
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", (e) => {
     if (!activeLightbox) return;
 
     if (e.key === "Escape") {
