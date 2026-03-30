@@ -59,9 +59,9 @@
   tags_slugs:
   - l-ile-bleue-noel
   tags_videos: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/2140244178-ca683f539c0fefd22bcc3ea4c186e2cd66d71de2b58440d55e0566ba13d3ca28-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2140244178-ca683f539c0fefd22bcc3ea4c186e2cd66d71de2b58440d55e0566ba13d3ca28-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2140244178-ca683f539c0fefd22bcc3ea4c186e2cd66d71de2b58440d55e0566ba13d3ca28-d_640x360?&r=pad&region=us
+  thumbnail_desktop: https://i.vimeocdn.com/video/2140270315-eedbb48c2cde77d1ef0148ddee3ebbcc73c1d2ae3384e4fc6e044b35912e0799-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2140270315-eedbb48c2cde77d1ef0148ddee3ebbcc73c1d2ae3384e4fc6e044b35912e0799-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2140270315-eedbb48c2cde77d1ef0148ddee3ebbcc73c1d2ae3384e4fc6e044b35912e0799-d_640x360?&r=pad&region=us
   title: L'Île Bleue - Le Jardin
   title_slugify: l-ile-bleue-le-jardin
 - description: null
@@ -2139,8 +2139,8 @@
   tags_slugs:
   - l-ile-bleue-noel
   tags_videos: []
-  thumbnail_desktop: https://i.vimeocdn.com/video/2140243965-3bfcf701e1eed6c3bd925143e0884e97b27cdf7112ca68a112fdfacc98a65620-d_960x540?&r=pad&region=us
-  thumbnail_large: https://i.vimeocdn.com/video/2140243965-3bfcf701e1eed6c3bd925143e0884e97b27cdf7112ca68a112fdfacc98a65620-d_1280x720?&r=pad&region=us
-  thumbnail_mobile: https://i.vimeocdn.com/video/2140243965-3bfcf701e1eed6c3bd925143e0884e97b27cdf7112ca68a112fdfacc98a65620-d_640x360?&r=pad&region=us
+  thumbnail_desktop: https://i.vimeocdn.com/video/2140270246-1dec59d484afb3e81fa3a47c17ee81ae0d23cab54237662b87bd691d5bec2df5-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2140270246-1dec59d484afb3e81fa3a47c17ee81ae0d23cab54237662b87bd691d5bec2df5-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2140270246-1dec59d484afb3e81fa3a47c17ee81ae0d23cab54237662b87bd691d5bec2df5-d_640x360?&r=pad&region=us
   title: L'Île Bleue - La Gloriette
   title_slugify: l-ile-bleue-la-gloriette
