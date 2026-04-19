@@ -40,7 +40,8 @@
 - description: null
   hash: 09498a0e64
   id: '1184535771'
-  tags_category: []
+  tags_category:
+  - short
   tags_photos: []
   tags_slugs: []
   tags_videos: []
