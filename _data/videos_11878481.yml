@@ -111,3 +111,16 @@
   thumbnail_mobile: https://i.vimeocdn.com/video/2142401206-dd2d11babb1b13434e915a5c8259331266d833024ff1cc9a45ae8474c49d2d43-d_640x360?&r=pad&region=us
   title: Air France - Wemby
   title_slugify: air-france-wemby
+- description: null
+  hash: 09498a0e64
+  id: '1184535771'
+  tags_category:
+  - short
+  tags_photos: []
+  tags_slugs: []
+  tags_videos: []
+  thumbnail_desktop: https://i.vimeocdn.com/video/2147728456-5c031b57540e67e5e31442af76ad79da1fdf9cac10657562ab8a4305840a4dbd-d_960x540?&r=pad&region=us
+  thumbnail_large: https://i.vimeocdn.com/video/2147728456-5c031b57540e67e5e31442af76ad79da1fdf9cac10657562ab8a4305840a4dbd-d_1280x720?&r=pad&region=us
+  thumbnail_mobile: https://i.vimeocdn.com/video/2147728456-5c031b57540e67e5e31442af76ad79da1fdf9cac10657562ab8a4305840a4dbd-d_640x360?&r=pad&region=us
+  title: BLEU MORT
+  title_slugify: bleu-mort
