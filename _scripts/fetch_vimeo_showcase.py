@@ -236,6 +236,7 @@ def main():
             yaml_file = f"videos_{sid}.yml"
             save_yaml(videos_clients, f"_data/{yaml_file}")
             generate_showcase_page(sid, yaml_file)
+            generate_video_pages(videos_clients)
         print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) completed")
 
 if __name__ == "__main__":
