@@ -230,7 +230,7 @@ def main():
             yaml_file = f"videos_{sid}.yml"
             save_yaml(videos_clients, f"_data/{yaml_file}")
             generate_showcase_page(sid, yaml_file)
-            generate_video_pages(videos_clients, "true")
+            generate_video_pages(videos_clients, "false")
         print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) completed")
 
     if SHOWCASE_SOUPIIR:
@@ -238,7 +238,7 @@ def main():
         save_yaml(videos, "_data/videos.yml")
         generate_group_pages(videos)
         generate_category_pages(videos)
-        generate_video_pages(videos, "false")
+        generate_video_pages(videos, "true")
         print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) completed")
 
 if __name__ == "__main__":
