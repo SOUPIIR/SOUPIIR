@@ -169,10 +169,11 @@ sitemap: false
     print(f"✅ Generated page {filename}")
 
 
-def generate_video_pages(video_list):
+def generate_video_pages(video_list, simple_layout: str):
     os.makedirs("pages/videos", exist_ok=True)
     template = """---
 layout: video
+simple_layout: __SIMPLE_LAYOUT__
 title: "__TITLE__"
 video_id: "__VIDEO_ID__"
 video_hash: "__VIDEO_HASH__"
@@ -197,6 +198,7 @@ description: "__DESCRIPTION__"
         filename = f"pages/videos/{v['id']}.md"
 
         content = template
+        content = content.replace("__SIMPLE_LAYOUT__", simple_layout)
         content = content.replace("__TITLE__", v["title"].replace('"', "'"))
         content = content.replace("__VIDEO_ID__", v["id"])
         content = content.replace("__VIDEO_HASH__", v["hash"])
@@ -221,14 +223,6 @@ def main():
         print("❌ VIMEO_API_KEY manquant")
         exit(1)
 
-    if SHOWCASE_SOUPIIR:
-        videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
-        save_yaml(videos, "_data/videos.yml")
-        generate_group_pages(videos)
-        generate_category_pages(videos)
-        generate_video_pages(videos)
-        print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) completed")
-
     if SHOWCASE_CLIENTS:
         showcase_ids = [s.strip() for s in SHOWCASE_CLIENTS.split(",") if s.strip()]
         for sid in showcase_ids:
@@ -236,8 +230,16 @@ def main():
             yaml_file = f"videos_{sid}.yml"
             save_yaml(videos_clients, f"_data/{yaml_file}")
             generate_showcase_page(sid, yaml_file)
-            generate_video_pages(videos_clients)
+            generate_video_pages(videos_clients, "true")
         print(f"✅ Showcases CLIENTS ({len(showcase_ids)} IDs) completed")
+
+    if SHOWCASE_SOUPIIR:
+        videos = fetch_vimeo_videos(VIMEO_API_KEY, SHOWCASE_SOUPIIR)
+        save_yaml(videos, "_data/videos.yml")
+        generate_group_pages(videos)
+        generate_category_pages(videos)
+        generate_video_pages(videos, "false")
+        print(f"✅ Showcase SOUPIIR ({SHOWCASE_SOUPIIR}) completed")
 
 if __name__ == "__main__":
     main()
