@@ -6,6 +6,9 @@
     {% if page.layout == "showcase" %}
         <meta name="robots" content="noindex" />
     {% endif %}
+    {% if page.simple_layout != false %}
+        <script>let simple_layout = true</script>
+    {% endif %}
     {% include top-scripts.html %}
 </head>
 <body>

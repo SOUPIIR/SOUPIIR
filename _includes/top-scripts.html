@@ -75,18 +75,20 @@
             });
         });
 
-        const backLinkContainer = document.querySelector(".back-link-container");
-        if (backLinkContainer) {
-            const backLink = document.createElement("a");
-            backLink.href = "#";
-            backLink.id = "back-link";
-            backLink.textContent = "Back";
+        if (simple_layout) {
+            const backLinkContainer = document.querySelector(".back-link-container");
+            if (backLinkContainer) {
+                const backLink = document.createElement("a");
+                backLink.href = "#";
+                backLink.id = "back-link";
+                backLink.textContent = "Back";
 
-            backLink.addEventListener("click", (e) => {
-                e.preventDefault();
-                window.history.back();
-            });
-            backLinkContainer.appendChild(backLink);
+                backLink.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    window.history.back();
+                });
+                backLinkContainer.appendChild(backLink);
+            }
         }
 
         document.querySelectorAll('.glitch').forEach(el => {
