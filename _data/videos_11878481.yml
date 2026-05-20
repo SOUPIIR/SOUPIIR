@@ -2,7 +2,7 @@
   hash: 4e336a9ad5
   id: '1118542372'
   tags_category:
-  - commercial
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -14,7 +14,8 @@
 - description: null
   hash: fa95fbb786
   id: '1192860670'
-  tags_category: []
+  tags_category:
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -26,7 +27,8 @@
 - description: null
   hash: c5a784da42
   id: '1184948175'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -51,7 +53,8 @@
 - description: null
   hash: 0edf7091ed
   id: '1118554661'
-  tags_category: []
+  tags_category:
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -77,7 +80,7 @@
   hash: ce9061c573
   id: '1118541688'
   tags_category:
-  - commercial
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -90,7 +93,7 @@
   hash: 8af76e7b33
   id: '1118554682'
   tags_category:
-  - commercial
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []
@@ -102,7 +105,8 @@
 - description: null
   hash: 3c4a86351e
   id: '1179884450'
-  tags_category: []
+  tags_category:
+  - ads
   tags_photos: []
   tags_slugs: []
   tags_videos: []

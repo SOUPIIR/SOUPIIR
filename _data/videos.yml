@@ -14,7 +14,8 @@
 - description: null
   hash: c5a784da42
   id: '1184948175'
-  tags_category: []
+  tags_category:
+  - music
   tags_photos: []
   tags_slugs: []
   tags_videos: []
