@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <h1 class="hidden">{{ page.tag | split: "-" | join: " " | capitalize }}</h1>
 <div class="back-link-container"></div>
 <div class="grid tag {{ page.url | slugify: 'pretty' }}">

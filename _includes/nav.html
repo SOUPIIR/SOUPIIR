@@ -5,14 +5,16 @@
         <span class="home-title"><a href="/" class="logo">{{ site.title }}</a></span>
     {% endif %}
 
-    <input type="checkbox" id="toggle" />
-    <label for="toggle" class="burger">☰</label>
-    <nav class="third-nav">
-        <ul>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://www.instagram.com/_soupiir_/" target="_blank" class="icon" aria-label="Go to instagram !"><img src="/assets/img/instagram-50.png" alt="instagram" /></a></li>
-        </ul>
-    </nav>
-    <label for="toggle" class="close-menu">✕</label>
+    {% if page.simple_layout == false %}
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="burger">☰</label>
+        <nav class="third-nav">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="https://www.instagram.com/_soupiir_/" target="_blank" class="icon" aria-label="Go to instagram !"><img src="/assets/img/instagram-50.png" alt="instagram" /></a></li>
+            </ul>
+        </nav>
+        <label for="toggle" class="close-menu">✕</label>
+    {% endif %}
 </header>

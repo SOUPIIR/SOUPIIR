@@ -6,22 +6,19 @@
     {% if page.layout == "showcase" %}
         <meta name="robots" content="noindex" />
     {% endif %}
-    {% if page.simple_layout != false %}
-        <script>let simple_layout = true</script>
-    {% endif %}
+    <script>let simple_layout = {{ page.simple_layout }}</script>
     {% include top-scripts.html %}
 </head>
 <body>
-    {% if page.simple_layout != false %}
-        {% include nav.html %}
-    {% endif %}
+
+    {% include nav.html %}
 
     <main id="content">
         {{ content }}
         <script>initPage();</script>
     </main>
 
-    {% if page.simple_layout != false %}
+    {% if page.simple_layout == false %}
         {% include bottom-scripts.html %}
     {% endif %}
 </body>

@@ -2,9 +2,7 @@
 layout: default
 ---
 
-{% if page.simple_layout != false %}
-    <script>let simple_layout = {{ page.simple_layout }}</script>
-{% endif %}
+<script>let simple_layout = {{ page.simple_layout }}</script>
 <div class="back-link-container"></div>
 <div class="grid-item-mosaic simple-video videos" data-id="{{ page.video_id }}">
     <a

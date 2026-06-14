@@ -118,6 +118,7 @@ def generate_category_pages(video_list):
     os.makedirs("pages/categories", exist_ok=True)
     tag_template = """---
 layout: category
+simple_layout: false
 title: "__CATEGORY_TAG__"
 tag: "__CATEGORY_TAG__"
 permalink: "/__CATEGORY_TAG__/"
@@ -137,6 +138,7 @@ def generate_group_pages(video_list):
     os.makedirs("pages/groups", exist_ok=True)
     tag_template = """---
 layout: group
+simple_layout: false
 title: "__GROUP_TAG__"
 tag: "__GROUP_TAG__"
 permalink: "/__GROUP_TAG__/"
@@ -157,6 +159,7 @@ def generate_showcase_page(showcase_id, data_file):
     data_file_no_ext = os.path.splitext(data_file)[0]
     content = f"""---
 layout: showcase
+simple_layout: true
 title: "Showcase {showcase_id}"
 data_file: "{data_file_no_ext}"
 permalink: "/showcase/{showcase_id}/"
