@@ -1,0 +1,9 @@
+SWISSQUOTE × CAVALCADE × SOUPIIR — NOTE V3
+
+Pour partager rapidement : envoyer SOUPIIR_Swissquote_NOTE_V3_AUTONOME.html
+ou le ZIP associé. Toutes les images, les 3 GIFs et les 6 maquettes y sont intégrés.
+Ouvrir localement dans Chrome, Firefox ou Safari récent. Les maquettes partent du début au clic et restent silencieuses.
+
+Pour héberger : transférer tous les fichiers du dossier SOUPIIR_Swissquote_Note_V3, en conservant index.html, assets/ et media/ à la racine de ce dossier. Ne pas déplacer les médias hors de ces dossiers.
+
+Document de recherche : les mouvements, performances et matières restent à finaliser pour la campagne.
